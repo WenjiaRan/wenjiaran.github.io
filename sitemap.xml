@@ -64,6 +64,15 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://wenjiaran.github.io/catch_the_cat/index.html</loc>
+    
+    <lastmod>2020-11-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>http://wenjiaran.github.io/</loc>
