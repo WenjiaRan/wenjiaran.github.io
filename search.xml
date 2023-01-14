@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>中国国家治理的制度逻辑摘抄</title>
-    <url>/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/</url>
-    <content><![CDATA[<ul>
-<li>中国历史上的”简约国家”形态下, 形成了”政不下县”的传统; 与此形成鲜明对比的是当代中国的人民公社时期, 其间农民被高度组织起来, 成为国家直接全面管理的对象</li>
-<li>认同和顺从中央权威的观念制度正是提供了这样一个机制, 儒教文化在中国历史上曾长期地扮演了这一角色; 而在当代中国, 国家依靠马列主义统一执政党内部的观念</li>
-<li>当代中国的一统观念是通过持续不断的思想教育, 政治活动, 甚至是通过官方组织的大规模的激烈的”群众活动”来不断地加以维系修补和强化的</li>
-<li><strong>官僚组织制度</strong>和<strong>认同中央威权的观念制度</strong>是维系和延续一统体制的基本体制</li>
-</ul>
-<hr>
-]]></content>
-      <categories>
-        <category>中国国家治理的制度逻辑摘抄</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2023/01/07/hello-world/</url>
     <content><![CDATA[<p>Hello World!</p>
@@ -29,9 +14,61 @@
     <url>/2023/01/13/%E6%89%92%E4%B8%80%E6%89%92buaa%E7%9A%84%E9%80%89%E8%AF%BE%E7%BD%91%E7%AB%99/</url>
     <content><![CDATA[<p>又到了半年一度的选课的时间, 正好在放假, 抽空扒一扒buaa教务网站的前端(主要是后端咱也看不到啊:(</p>
 <img data-src="/2023/01/13/扒一扒buaa的选课网站/1.png" style="zoom:40%;">
+
+<p>麻利输完账号密码，然后进入教务官网, 得再输一次, 登录提交!</p>
+<p>抓一个包, 看看提交了哪些东西</p>
+<img data-src="/2023/01/13/扒一扒buaa的选课网站/2.png" style="zoom:60%;">
+
+<p>好家伙，密码都不加密呢，直接发一个post请求把账号密码等数据发到服务器</p>
+<p>一顿操作，终于进入选课页面</p>
+<p>然后摁开F12看看html源码，html里值得关注的有几个函数：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//切换角色</span>
+<span class="token keyword">function</span> <span class="token function">qhjsLogin</span><span class="token punctuation">(</span><span class="token parameter">jsdm</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">//qhjs：切换角色；jsdm：角色代码</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#dljs"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> jsdm<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+		<span class="token keyword">return</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+		<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#jsdm"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span>jsdm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span>action <span class="token operator">=</span> <span class="token string">"/ieas2.1/login"</span><span class="token punctuation">;</span><span class="token comment">//这是登录界面的网址</span>
+	    document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//然后转到登录界面重新登陆来切换身份，角色代码根本没啥用其实</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>好家伙，拼音缩写变量函数啊。为了方便理解，我在上面翻译一下，给了一些注释</p>
+<p>对函数一波分析完之后，原来这个函数没啥值得关注的:(</p>
+<p>然后还有切换角色、返回主页、修改密码、切换到新版界面等，不谈</p>
+<p>然后正式开始选课</p>
+<p>首先是体育选课，选课按钮上绑定了一个函数，<code> saveXsxk_qz(&#39;2022-2023-2-B2E332060-157&#39;, &#39;0&#39;);</code></p>
+<p>Xsxk就是学生选课，qz就是权值，体育选课是有一个权重的，0到100</p>
+<p>在源代码里找到这个函数</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">saveXsxk_qz</span><span class="token punctuation">(</span><span class="token parameter">rwh<span class="token punctuation">,</span>rownum</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
+<span class="token comment">//rwh是任务号，rownum是序号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>我们分析一下上面的rwh的格式，<code>&#39;2022-2023-2-B2E332060-157&#39;</code></p>
+<p><code>2022-2023-2</code>就是2022-2023年的第2学期，<code>B2E332060</code>是课程代码，<code>B2E33</code>应该是体育，2060不详</p>
+<p>此外还有志愿学生选课和学生选课两个函数，都差不多</p>
+<p>然后是一个比较重要的函数：<code>function saveXsxk1(rwh);</code></p>
+<p>通过这个函数可以直接选课</p>
+<p>然后我们点击一下选一门课试试，可以看到浏览器向<code>https://d.buaa.edu.cn/http-8080/77726476706e69737468656265737421fae0598869327d517f468ca88d1b203b/ieas2.1/xslbxk/saveXsxk</code>发送了一个POST请求</p>
+<p>我们分析一下抓包，可以看到，里面携带了rwh，看来我们可以通过更改rwh改变选课</p>
+<p>我们刚才选了课，现在退课一试，退课调用函数<code>saveXstk(&#39;2022-2023-2-B3J212731-001&#39;);</code> 也发送了一个退课的POST请求</p>
 ]]></content>
       <categories>
         <category>buaa</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>中国国家治理的制度逻辑摘抄</title>
+    <url>/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/</url>
+    <content><![CDATA[<ul>
+<li>中国历史上的”简约国家”形态下, 形成了”政不下县”的传统; 与此形成鲜明对比的是当代中国的人民公社时期, 其间农民被高度组织起来, 成为国家直接全面管理的对象</li>
+<li>认同和顺从中央权威的观念制度正是提供了这样一个机制, 儒教文化在中国历史上曾长期地扮演了这一角色; 而在当代中国, 国家依靠马列主义统一执政党内部的观念</li>
+<li>当代中国的一统观念是通过持续不断的思想教育, 政治活动, 甚至是通过官方组织的大规模的激烈的”群众活动”来不断地加以维系修补和强化的</li>
+<li><strong>官僚组织制度</strong>和<strong>认同中央威权的观念制度</strong>是维系和延续一统体制的基本体制</li>
+</ul>
+<hr>
+]]></content>
+      <categories>
+        <category>中国国家治理的制度逻辑摘抄</category>
       </categories>
   </entry>
 </search>
