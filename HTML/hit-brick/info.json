@@ -1,0 +1,148 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.wang/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://www.yikm.net/play?id=4360&n=L2Zjcm9tL3h5eC9GYW1pbHkgQmxvY2sgKEopLm5lcw==&t=%E5%AE%B6%E5%BA%AD%E6%89%93%E7%A0%96%E5%9D%97(%E6%97%A5%E7%89%88)&ac=3&p=/fcpic/xyx/698a.png",
+            "path": "index.html",
+            "saved": true,
+            "size": 30676,
+            "children": [
+                {
+                    "url": "https://www.yikm.net/gpd.png",
+                    "path": "img/gpd.png",
+                    "saved": true,
+                    "size": 8071
+                },
+                {
+                    "url": "https://www.googletagmanager.com/gtag/js?id=UA-151529063-1",
+                    "saved": false
+                },
+                {
+                    "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+                    "saved": false
+                },
+                {
+                    "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+                    "saved": false
+                },
+                {
+                    "url": "https://www.yikm.net/jquery.min.js",
+                    "path": "js/jquery.min.js",
+                    "saved": true,
+                    "size": 83100
+                },
+                {
+                    "url": "https://www.yikm.net/fc/js/jquery-ui.min.js",
+                    "path": "js/jquery-ui.min.js",
+                    "saved": true,
+                    "size": 253668
+                },
+                {
+                    "url": "https://www.yikm.net/fc/js/play-10e0778a0b61417ba80b58197e44c5ff.json?v=17",
+                    "path": "js/play-10e0778a0b61417ba80b58197e44c5ff.js",
+                    "saved": true,
+                    "size": 30928
+                },
+                {
+                    "url": "https://file.1990i.com/libs/browserfs.min.js",
+                    "path": "js/browserfs.min.js",
+                    "saved": true,
+                    "size": 270033
+                },
+                {
+                    "url": "https://file.1990i.com/libs/fc-pc.min.js?v=8",
+                    "path": "js/fc-pc.min.js",
+                    "saved": true,
+                    "size": 140080
+                },
+                {
+                    "url": "https://www.yikm.net/bootstrap.min.css",
+                    "path": "css/bootstrap.min.css",
+                    "saved": true,
+                    "size": 99400,
+                    "children": [
+                        {
+                            "url": "https://www.yikm.net/",
+                            "path": "index",
+                            "saved": true,
+                            "size": 59046
+                        },
+                        {
+                            "url": "https://www.yikm.net/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css",
+                    "saved": false
+                },
+                {
+                    "url": "https://www.yikm.net/fc/css/play-940d1153b8f4df9def467f2547099e75.css?v=3",
+                    "path": "css/play-940d1153b8f4df9def467f2547099e75.css",
+                    "saved": true,
+                    "size": 55576
+                },
+                {
+                    "url": "https://www.yikm.net/f.png",
+                    "path": "img/f.png",
+                    "saved": true,
+                    "size": 3086
+                }
+            ]
+        }
+    ],
+    "alias": "www-yikm-net-cpyrzhb",
+    "info": {
+        "remark": [],
+        "title": "家庭打砖块(日版)",
+        "domain": "www.yikm.net",
+        "origin": "https://www.yikm.net",
+        "ip": "64.64.249.2",
+        "main": "index.html",
+        "url": "https://www.yikm.net/play?id=4360&n=L2Zjcm9tL3h5eC9GYW1pbHkgQmxvY2sgKEopLm5lcw==&t=%E5%AE%B6%E5%BA%AD%E6%89%93%E7%A0%96%E5%9D%97(%E6%97%A5%E7%89%88)&ac=3&p=/fcpic/xyx/698a.png",
+        "totalSize": "1.03 MB",
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://www.yikm.net/play?id=4360&n=L2Zjcm9tL3h5eC9GYW1pbHkgQmxvY2sgKEopLm5lcw==&t=%E5%AE%B6%E5%BA%AD%E6%89%93%E7%A0%96%E5%9D%97(%E6%97%A5%E7%89%88)&ac=3&p=/fcpic/xyx/698a.png",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.wang/"
+            }
+        },
+        "response": {
+            "responseUrl": "https://www.yikm.net/play?id=4360&n=L2Zjcm9tL3h5eC9GYW1pbHkgQmxvY2sgKEopLm5lcw==&t=%E5%AE%B6%E5%BA%AD%E6%89%93%E7%A0%96%E5%9D%97(%E6%97%A5%E7%89%88)&ac=3&p=/fcpic/xyx/698a.png",
+            "redirects": [],
+            "statusCode": 200,
+            "headers": {
+                "server": "nginx/1.12.2",
+                "date": "Wed, 18 Jan 2023 08:04:14 GMT",
+                "content-type": "text/html;charset=UTF-8",
+                "transfer-encoding": "chunked",
+                "connection": "close",
+                "content-language": "zh-CN"
+            }
+        },
+        "time": {
+            "start": "2023-01-18T08:04:13.828Z",
+            "end": "2023-01-18T08:04:17.955Z"
+        }
+    },
+    "options": {
+        "url": "https://www.yikm.net/play?id=4360&n=L2Zjcm9tL3h5eC9GYW1pbHkgQmxvY2sgKEopLm5lcw==&t=%E5%AE%B6%E5%BA%AD%E6%89%93%E7%A0%96%E5%9D%97(%E6%97%A5%E7%89%88)&ac=3&p=/fcpic/xyx/698a.png",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "formatter": [],
+        "filenameGenerator": "byType"
+    }
+}
