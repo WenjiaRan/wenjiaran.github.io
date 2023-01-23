@@ -230,6 +230,128 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%8A%E7%BD%91%E5%86%B2%E6%B5%AA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="冉冉文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/01/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%8A%E7%BD%91%E5%86%B2%E6%B5%AA/" class="post-title-link" itemprop="url">计算机学生的上网冲浪</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-01-23 14:22:24 / 修改时间：16:55:56" itemprop="dateCreated datePublished" datetime="2023-01-23T14:22:24+08:00">2023-01-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h1><p> 作为一名大学生, <del>摸鱼</del>学习的时候看看新闻提升素养很有必要. 于是我打开浏览器, 键入wsj.com, <del>然后返回了<code>404 not found</code></del></p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/1.PNG" style="zoom:60%;">
+
+<p>打开姿势不对，重来</p>
+<p>好，我们现在终于打开了新闻，成功就在眼前。我随机点开了一篇新闻，</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/2.PNG" style="zoom:60%;">
+
+<p>太哈人了，一个月就是14人民币，<del>有这钱开会员看剧谁还来看新闻啊</del></p>
+<p>于是摁下F12，打开开发者工具，抓包一下这个恼人的弹窗为什么会出现</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/3.PNG" style="zoom:60%;">
+
+<p>在第一个请求网址返回的页面预览中, 我们发现此时弹窗就已经在了, 莫不是在没有购买的情况下, 后端就只返回数据这么点儿数据? 算了还是看看html源代码, 发现特别长, 于是我们在浏览器找到新闻最后能看见的句子, 直接在源代码里搜索, 看能不能找到一些线索</p>
+<p>经过尝试之后发现确实后端只返回了这么点儿数据，后端的东西我们就没办法了。wall street journal，真有你的</p>
+<p>但是我之后尝试访问了其它好些网站(NYT, Economist, …)，他们从后端返回的数据都是新闻的全部，然后再用JavaScript抹掉其中一些数据，我们只要找到对应的js文件，在chrom浏览器安装一个<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/http-request-blocker/eckpjmeijpoipmldfbckahppeonkoeko?hl=en-US">HTTP Request Blocker</a>插件，然后把对应的地址屏蔽掉即可~这个方法几乎可以跳过70%的新闻网站的付费墙</p>
+<p>其实绕过付费墙有一个非常方便的方法，甚至可以绕过wsj这种”毒瘤墙”，下载这个<a target="_blank" rel="noopener" href="https://github.com/iamadamdev/bypass-paywalls-chrome">文件</a>，解压，然后放到chrome的extension的文件夹目录下即可，亲测可以绕过几乎所有付费墙，关心全球大事再无困扰</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/4.PNG" style="zoom:100%;">
+
+<figcaption>开始美美看新闻</figcaption>
+
+<h1 id="论坛"><a href="#论坛" class="headerlink" title="论坛"></a>论坛</h1><p>作为计算机学生，学习计算机知识才是本职，看英语新闻看得头大了之后，是该开始学习技术了。顺手打开某廖雪峰的网站</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/5.PNG" style="zoom:60%;">
+
+<p>满屏广告不堪入目, 这个时候我们当然可以用上面提到的屏蔽js的方法去除广告, 但是还有更好的插件<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb?hl=en-US">Adblock Plus</a>，屏蔽绝大部分网站的广告</p>
+<p>但是知乎和csdn一直弹出的登录界面, 就只能去找它对应的js文件, 然后block掉</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/6.PNG" style="zoom:60%;">
+
+<p>非常简单, 自己抓包一下就知道啦</p>
+<p>http request blocker还是非常好用的, 能够让自己的上网体验更加清爽~</p>
+<p>大众论坛人多shit多(csdn为甚)，好多水人互相抄一些垃圾就post上去，实在影响体验。所以相比于这种大众论坛，我反而更喜欢独立博客。</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/7.PNG" style="zoom:100%;">
+
+<p>比如我看到一篇好的博文, 我就去翻一下他的博客, 学习一下源代码. 这个博客左下角的音乐播放器太妨碍视线了，一眼.js, 抓包禁止就可以了。正当我美美摁下F12的时候，我眼巴巴看着这边博客一下被重定向到博主的github主页了。鼠标右键也被禁了. wtf？？看来博主不想让人扒底裤啊。但是这难不住我。在设置-更多工具里点击开发者工具，我们就看到前端的代码啦，然后美美抓包，刷新再打开，音乐播放器就没有啦</p>
+<p>好，现在开始学习文章！麻利点开一篇文章</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/8.PNG" style="zoom:100%;">
+
+<p>好家伙, 这是得输密码的意思啊, 他要让我关注他的公众号才能获得密码, 纯纯的流氓行为啊:(</p>
+<p>这个时候我抱着试一试的心态, 打开了开发者工具, 输入”密码”二字尝试搜索, 看能不能找到线索</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/9.PNG" style="zoom:50%;">
+
+<p>笑麻了好嘛, 于是麻利输入123123, 回车, 成功!</p>
+<p>虽然被戏耍了一波，但是也颇受启发，我也可以给博客增加一些<del>流氓功能</del>好玩的功能嘛:smiley_cat:</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/20/%E6%88%91%E7%9A%84%E7%96%AB%E6%83%85%E8%AE%B0%E5%BF%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -362,88 +484,6 @@
 <p>后来上海疫情爆发，有人记录下上海四月的各种纪实对话发布到网上，是为“四月之声”。引起极大反响，迅速遭到全面禁封。越来越多的人开始怀疑和反思，继续严格的封控是否真的可持续。5月5日，中共中央政治局常务委员会召开会议，习近平表示要坚持动态清零，坚决同一切歪曲、怀疑、否定中国防疫方针政策的言行作斗争。</p>
 <p>然后完全是我的记忆了。</p>
 <p>北京的疫情从四月底开始，每况愈下，流言纷飞，</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/20/%E6%B5%85%E6%9E%90ios%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="冉冉文">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一叶小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/20/%E6%B5%85%E6%9E%90ios%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">浅析ios屏蔽开屏广告方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-01-20 11:01:43 / 修改时间：11:11:45" itemprop="dateCreated datePublished" datetime="2023-01-20T11:01:43+08:00">2023-01-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ios/" itemprop="url" rel="index"><span itemprop="name">ios</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>14</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>不知道什么时候开始, 苹果手机</p>
 
       
     </div>
@@ -888,12 +928,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">7k</span>
+    <span title="站点总字数">8k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11 分钟</span>
+    <span title="站点阅读时长">13 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT</a> 强力驱动
     

@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>buaa转专业概况</title>
+    <url>/2023/01/16/buaa%E8%BD%AC%E4%B8%93%E4%B8%9A%E6%A6%82%E5%86%B5/</url>
+    <content><![CDATA[<p>2022年秋转专业, 21级的非大类学生(中法、国通、生医)迎来第一次转专业机会<br><img data-src="/2023/01/16/buaa转专业概况/2022秋转专业.png" style="zoom:100%;"></p>
+<p>2023年春转专业, 21级的大类学生迎来第一次转专业机会<br><img data-src="/2023/01/16/buaa转专业概况/2023春.png" style="zoom:100%;"></p>
+]]></content>
+      <categories>
+        <category>buaa</category>
+      </categories>
+      <tags>
+        <tag>转专业</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中国国家治理的制度逻辑摘抄</title>
     <url>/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/</url>
     <content><![CDATA[<ul>
@@ -27,16 +40,105 @@
       </categories>
   </entry>
   <entry>
-    <title>buaa转专业概况</title>
-    <url>/2023/01/16/buaa%E8%BD%AC%E4%B8%93%E4%B8%9A%E6%A6%82%E5%86%B5/</url>
-    <content><![CDATA[<p>2022年秋转专业, 21级的非大类学生(中法、国通、生医)迎来第一次转专业机会<br><img data-src="/2023/01/16/buaa转专业概况/2022秋转专业.png" style="zoom:100%;"></p>
-<p>2023年春转专业, 21级的大类学生迎来第一次转专业机会<br><img data-src="/2023/01/16/buaa转专业概况/2023春.png" style="zoom:100%;"></p>
+    <title>扒一扒buaa的选课网站</title>
+    <url>/2023/01/13/%E6%89%92%E4%B8%80%E6%89%92buaa%E7%9A%84%E9%80%89%E8%AF%BE%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>又到了半年一度的选课的时间, 正好在放假, 抽空扒一扒buaa教务网站的前端(主要是后端咱也看不到啊:(</p>
+<img data-src="/2023/01/13/扒一扒buaa的选课网站/1.png" style="zoom:40%;">
+
+<p>麻利输完账号密码，然后进入教务官网, 得再输一次, 登录提交!</p>
+<p>抓一个包, 看看提交了哪些东西</p>
+<img data-src="/2023/01/13/扒一扒buaa的选课网站/2.png" style="zoom:60%;">
+
+<p>好家伙，密码都不加密呢，直接发一个post请求把账号密码等数据发到服务器</p>
+<p>一顿操作，终于进入选课页面</p>
+<p>然后摁开F12看看html源码，html里值得关注的有几个函数：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//切换角色</span>
+<span class="token keyword">function</span> <span class="token function">qhjsLogin</span><span class="token punctuation">(</span><span class="token parameter">jsdm</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">//qhjs：切换角色；jsdm：角色代码</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#dljs"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> jsdm<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+		<span class="token keyword">return</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+		<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#jsdm"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span>jsdm<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span>action <span class="token operator">=</span> <span class="token string">"/ieas2.1/login"</span><span class="token punctuation">;</span><span class="token comment">//这是登录界面的网址</span>
+	    document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//然后转到登录界面重新登陆来切换身份，角色代码根本没啥用其实</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>好家伙，拼音缩写变量函数啊。为了方便理解，我在上面翻译一下，给了一些注释</p>
+<p>对函数一波分析完之后，原来这个函数没啥值得关注的:(</p>
+<p>然后还有切换角色、返回主页、修改密码、切换到新版界面等，不谈</p>
+<p>然后正式开始选课</p>
+<p>首先是体育选课，选课按钮上绑定了一个函数，<code> saveXsxk_qz(&#39;2022-2023-2-B2E332060-157&#39;, &#39;0&#39;);</code></p>
+<p>Xsxk就是学生选课，qz就是权值，体育选课是有一个权重的，0到100</p>
+<p>在源代码里找到这个函数</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">saveXsxk_qz</span><span class="token punctuation">(</span><span class="token parameter">rwh<span class="token punctuation">,</span>rownum</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
+<span class="token comment">//rwh是任务号，rownum是序号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>我们分析一下上面的rwh的格式，<code>&#39;2022-2023-2-B2E332060-157&#39;</code></p>
+<p><code>2022-2023-2</code>就是2022-2023年的第2学期，<code>B2E332060</code>是课程代码，<code>B2E33</code>应该是体育，2060不详</p>
+<p>此外还有志愿学生选课和学生选课两个函数，都差不多</p>
+<p>然后是一个比较重要的函数：<code>function saveXsxk1(rwh);</code></p>
+<p>通过这个函数可以直接选课</p>
+<p>然后我们点击一下选一门课试试，可以看到浏览器向<code>https://d.buaa.edu.cn/http-8080/77726476706e69737468656265737421fae0598869327d517f468ca88d1b203b/ieas2.1/xslbxk/saveXsxk</code>发送了一个POST请求</p>
+<p>我们分析一下抓包，可以看到，里面携带了rwh，看来我们可以通过更改rwh改变选课</p>
+<p>我们刚才选了课，现在退课一试，退课调用函数<code>saveXstk(&#39;2022-2023-2-B3J212731-001&#39;);</code> 也发送了一个退课的POST请求</p>
 ]]></content>
       <categories>
         <category>buaa</category>
       </categories>
       <tags>
-        <tag>转专业</tag>
+        <tag>选课</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机学生的上网冲浪</title>
+    <url>/2023/01/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%8A%E7%BD%91%E5%86%B2%E6%B5%AA/</url>
+    <content><![CDATA[<h1 id="新闻"><a href="#新闻" class="headerlink" title="新闻"></a>新闻</h1><p> 作为一名大学生, <del>摸鱼</del>学习的时候看看新闻提升素养很有必要. 于是我打开浏览器, 键入wsj.com, <del>然后返回了<code>404 not found</code></del></p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/1.PNG" style="zoom:60%;">
+
+<p>打开姿势不对，重来</p>
+<p>好，我们现在终于打开了新闻，成功就在眼前。我随机点开了一篇新闻，</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/2.PNG" style="zoom:60%;">
+
+<p>太哈人了，一个月就是14人民币，<del>有这钱开会员看剧谁还来看新闻啊</del></p>
+<p>于是摁下F12，打开开发者工具，抓包一下这个恼人的弹窗为什么会出现</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/3.PNG" style="zoom:60%;">
+
+<p>在第一个请求网址返回的页面预览中, 我们发现此时弹窗就已经在了, 莫不是在没有购买的情况下, 后端就只返回数据这么点儿数据? 算了还是看看html源代码, 发现特别长, 于是我们在浏览器找到新闻最后能看见的句子, 直接在源代码里搜索, 看能不能找到一些线索</p>
+<p>经过尝试之后发现确实后端只返回了这么点儿数据，后端的东西我们就没办法了。wall street journal，真有你的</p>
+<p>但是我之后尝试访问了其它好些网站(NYT, Economist, …)，他们从后端返回的数据都是新闻的全部，然后再用JavaScript抹掉其中一些数据，我们只要找到对应的js文件，在chrom浏览器安装一个<a href="https://chrome.google.com/webstore/detail/http-request-blocker/eckpjmeijpoipmldfbckahppeonkoeko?hl=en-US">HTTP Request Blocker</a>插件，然后把对应的地址屏蔽掉即可~这个方法几乎可以跳过70%的新闻网站的付费墙</p>
+<p>其实绕过付费墙有一个非常方便的方法，甚至可以绕过wsj这种”毒瘤墙”，下载这个<a href="https://github.com/iamadamdev/bypass-paywalls-chrome">文件</a>，解压，然后放到chrome的extension的文件夹目录下即可，亲测可以绕过几乎所有付费墙，关心全球大事再无困扰</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/4.PNG" style="zoom:100%;">
+
+<figcaption>开始美美看新闻</figcaption>
+
+<h1 id="论坛"><a href="#论坛" class="headerlink" title="论坛"></a>论坛</h1><p>作为计算机学生，学习计算机知识才是本职，看英语新闻看得头大了之后，是该开始学习技术了。顺手打开某廖雪峰的网站</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/5.PNG" style="zoom:60%;">
+
+<p>满屏广告不堪入目, 这个时候我们当然可以用上面提到的屏蔽js的方法去除广告, 但是还有更好的插件<a href="https://chrome.google.com/webstore/detail/adblock-plus-free-ad-bloc/cfhdojbkjhnklbpkdaibdccddilifddb?hl=en-US">Adblock Plus</a>，屏蔽绝大部分网站的广告</p>
+<p>但是知乎和csdn一直弹出的登录界面, 就只能去找它对应的js文件, 然后block掉</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/6.PNG" style="zoom:60%;">
+
+<p>非常简单, 自己抓包一下就知道啦</p>
+<p>http request blocker还是非常好用的, 能够让自己的上网体验更加清爽~</p>
+<p>大众论坛人多shit多(csdn为甚)，好多水人互相抄一些垃圾就post上去，实在影响体验。所以相比于这种大众论坛，我反而更喜欢独立博客。</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/7.PNG" style="zoom:100%;">
+
+<p>比如我看到一篇好的博文, 我就去翻一下他的博客, 学习一下源代码. 这个博客左下角的音乐播放器太妨碍视线了，一眼.js, 抓包禁止就可以了。正当我美美摁下F12的时候，我眼巴巴看着这边博客一下被重定向到博主的github主页了。鼠标右键也被禁了. wtf？？看来博主不想让人扒底裤啊。但是这难不住我。在设置-更多工具里点击开发者工具，我们就看到前端的代码啦，然后美美抓包，刷新再打开，音乐播放器就没有啦</p>
+<p>好，现在开始学习文章！麻利点开一篇文章</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/8.PNG" style="zoom:100%;">
+
+<p>好家伙, 这是得输密码的意思啊, 他要让我关注他的公众号才能获得密码, 纯纯的流氓行为啊:(</p>
+<p>这个时候我抱着试一试的心态, 打开了开发者工具, 输入”密码”二字尝试搜索, 看能不能找到线索</p>
+<img data-src="/2023/01/23/计算机学生的上网冲浪/9.PNG" style="zoom:50%;">
+
+<p>笑麻了好嘛, 于是麻利输入123123, 回车, 成功!</p>
+<p>虽然被戏耍了一波，但是也颇受启发，我也可以给博客增加一些<del>流氓功能</del>好玩的功能嘛:smiley_cat:</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
@@ -112,68 +214,6 @@
       </categories>
       <tags>
         <tag>记忆</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>扒一扒buaa的选课网站</title>
-    <url>/2023/01/13/%E6%89%92%E4%B8%80%E6%89%92buaa%E7%9A%84%E9%80%89%E8%AF%BE%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>又到了半年一度的选课的时间, 正好在放假, 抽空扒一扒buaa教务网站的前端(主要是后端咱也看不到啊:(</p>
-<img data-src="/2023/01/13/扒一扒buaa的选课网站/1.png" style="zoom:40%;">
-
-<p>麻利输完账号密码，然后进入教务官网, 得再输一次, 登录提交!</p>
-<p>抓一个包, 看看提交了哪些东西</p>
-<img data-src="/2023/01/13/扒一扒buaa的选课网站/2.png" style="zoom:60%;">
-
-<p>好家伙，密码都不加密呢，直接发一个post请求把账号密码等数据发到服务器</p>
-<p>一顿操作，终于进入选课页面</p>
-<p>然后摁开F12看看html源码，html里值得关注的有几个函数：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//切换角色</span>
-<span class="token keyword">function</span> <span class="token function">qhjsLogin</span><span class="token punctuation">(</span><span class="token parameter">jsdm</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">//qhjs：切换角色；jsdm：角色代码</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#dljs"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> jsdm<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-		<span class="token keyword">return</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-		<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#jsdm"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span>jsdm<span class="token punctuation">)</span><span class="token punctuation">;</span>
-		document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span>action <span class="token operator">=</span> <span class="token string">"/ieas2.1/login"</span><span class="token punctuation">;</span><span class="token comment">//这是登录界面的网址</span>
-	    document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//然后转到登录界面重新登陆来切换身份，角色代码根本没啥用其实</span>
-	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>好家伙，拼音缩写变量函数啊。为了方便理解，我在上面翻译一下，给了一些注释</p>
-<p>对函数一波分析完之后，原来这个函数没啥值得关注的:(</p>
-<p>然后还有切换角色、返回主页、修改密码、切换到新版界面等，不谈</p>
-<p>然后正式开始选课</p>
-<p>首先是体育选课，选课按钮上绑定了一个函数，<code> saveXsxk_qz(&#39;2022-2023-2-B2E332060-157&#39;, &#39;0&#39;);</code></p>
-<p>Xsxk就是学生选课，qz就是权值，体育选课是有一个权重的，0到100</p>
-<p>在源代码里找到这个函数</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">saveXsxk_qz</span><span class="token punctuation">(</span><span class="token parameter">rwh<span class="token punctuation">,</span>rownum</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
-<span class="token comment">//rwh是任务号，rownum是序号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>我们分析一下上面的rwh的格式，<code>&#39;2022-2023-2-B2E332060-157&#39;</code></p>
-<p><code>2022-2023-2</code>就是2022-2023年的第2学期，<code>B2E332060</code>是课程代码，<code>B2E33</code>应该是体育，2060不详</p>
-<p>此外还有志愿学生选课和学生选课两个函数，都差不多</p>
-<p>然后是一个比较重要的函数：<code>function saveXsxk1(rwh);</code></p>
-<p>通过这个函数可以直接选课</p>
-<p>然后我们点击一下选一门课试试，可以看到浏览器向<code>https://d.buaa.edu.cn/http-8080/77726476706e69737468656265737421fae0598869327d517f468ca88d1b203b/ieas2.1/xslbxk/saveXsxk</code>发送了一个POST请求</p>
-<p>我们分析一下抓包，可以看到，里面携带了rwh，看来我们可以通过更改rwh改变选课</p>
-<p>我们刚才选了课，现在退课一试，退课调用函数<code>saveXstk(&#39;2022-2023-2-B3J212731-001&#39;);</code> 也发送了一个退课的POST请求</p>
-]]></content>
-      <categories>
-        <category>buaa</category>
-      </categories>
-      <tags>
-        <tag>选课</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浅析ios屏蔽开屏广告方法</title>
-    <url>/2023/01/20/%E6%B5%85%E6%9E%90ios%E5%B1%8F%E8%94%BD%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>不知道什么时候开始, 苹果手机</p>
-]]></content>
-      <categories>
-        <category>ios</category>
-      </categories>
-      <tags>
-        <tag>屏蔽广告</tag>
       </tags>
   </entry>
 </search>
