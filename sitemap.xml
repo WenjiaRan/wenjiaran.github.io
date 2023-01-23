@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wenjiaran.github.io/about/index.html</loc>
+    
+    <lastmod>2023-01-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://wenjiaran.github.io/2023/01/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%8A%E7%BD%91%E5%86%B2%E6%B5%AA/</loc>
     
     <lastmod>2023-01-23</lastmod>
@@ -75,15 +84,6 @@
   
   <url>
     <loc>http://wenjiaran.github.io/resources/index.html</loc>
-    
-    <lastmod>2023-01-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://wenjiaran.github.io/about/index.html</loc>
     
     <lastmod>2023-01-07</lastmod>
     
