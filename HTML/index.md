@@ -15,14 +15,23 @@ description: "hh"
 <style>
     button
     {
-        padding: 10px;
-        background-color: rgb(138, 146, 138);
-        color: #111;
+        
+        /* background-color: rgb(138, 146, 138); */
+        /* color: #111;
         font-weight: 600;
         font-size: 1.25em;
         letter-spacing: 0.05em;
         cursor: pointer;
+        border-radius: 10px; */
+
+        display: block;
+        width: 30%;
+        padding: 10px 15px;
+        border: 0;
+        background: #333;
+        color: #fff;
         border-radius: 10px;
+        margin: 5px 0;
     }
 </style>
 
