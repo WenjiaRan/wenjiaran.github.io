@@ -23,7 +23,7 @@ description: "hh"
         letter-spacing: 0.05em;
         cursor: pointer;
         border-radius: 10px; */
-
+        
         display: block;
         width: 30%;
         padding: 10px 15px;
