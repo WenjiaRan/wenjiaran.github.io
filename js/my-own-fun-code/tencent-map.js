@@ -33,8 +33,8 @@ function getDistance(e1, n1, e2, n2) {
 //根据自己的需求定制
 function showWelcome() {
     if (!document.getElementById("welcome-info")) return
-
-    let dist = getDistance(105.8870,29.3624, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
+    
+    let dist = getDistance(105.889732,29.358431, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
 
     let pos = ipLoacation.result.ad_info.nation;
     let posdesc;
