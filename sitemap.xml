@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wenjiaran.github.io/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2023-01-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://wenjiaran.github.io/2023/01/13/%E6%89%92%E4%B8%80%E6%89%92buaa%E7%9A%84%E9%80%89%E8%AF%BE%E7%BD%91%E7%AB%99/</loc>
     
     <lastmod>2023-01-24</lastmod>
@@ -117,6 +126,13 @@
   </url>
   
   <url>
+    <loc>http://wenjiaran.github.io/tags/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98/</loc>
+    <lastmod>2023-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://wenjiaran.github.io/tags/%E8%AE%B0%E5%BF%86/</loc>
     <lastmod>2023-01-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -147,7 +163,7 @@
   </url>
   
   <url>
-    <loc>http://wenjiaran.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>http://wenjiaran.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2023-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -161,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://wenjiaran.github.io/categories/covid-19/</loc>
+    <loc>http://wenjiaran.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2023-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://wenjiaran.github.io/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>http://wenjiaran.github.io/categories/covid-19/</loc>
     <lastmod>2023-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
