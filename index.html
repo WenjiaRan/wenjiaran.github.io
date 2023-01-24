@@ -623,7 +623,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-01-16 15:45:36" itemprop="dateModified" datetime="2023-01-16T15:45:36+08:00">2023-01-16</time>
+                <time title="修改时间：2023-01-24 10:52:24" itemprop="dateModified" datetime="2023-01-24T10:52:24+08:00">2023-01-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -660,46 +660,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>又到了半年一度的选课的时间, 正好在放假, 抽空扒一扒buaa教务网站的前端(主要是后端咱也看不到啊:(</p>
-<img data-src="/2023/01/13/扒一扒buaa的选课网站/1.png" style="zoom:40%;">
-
-<p>麻利输完账号密码，然后进入教务官网, 得再输一次, 登录提交!</p>
-<p>抓一个包, 看看提交了哪些东西</p>
-<img data-src="/2023/01/13/扒一扒buaa的选课网站/2.png" style="zoom:60%;">
-
-<p>好家伙，密码都不加密呢，直接发一个post请求把账号密码等数据发到服务器</p>
-<p>一顿操作，终于进入选课页面</p>
-<p>然后摁开F12看看html源码，html里值得关注的有几个函数：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//切换角色</span>
-<span class="token keyword">function</span> <span class="token function">qhjsLogin</span><span class="token punctuation">(</span><span class="token parameter">jsdm</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">//qhjs：切换角色；jsdm：角色代码</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#dljs"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> jsdm<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-		<span class="token keyword">return</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-		<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#jsdm"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span>jsdm<span class="token punctuation">)</span><span class="token punctuation">;</span>
-		document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span>action <span class="token operator">=</span> <span class="token string">"/ieas2.1/login"</span><span class="token punctuation">;</span><span class="token comment">//这是登录界面的网址</span>
-	    document<span class="token punctuation">.</span>queryform<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//然后转到登录界面重新登陆来切换身份，角色代码根本没啥用其实</span>
-	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>好家伙，拼音缩写变量函数啊。为了方便理解，我在上面翻译一下，给了一些注释</p>
-<p>对函数一波分析完之后，原来这个函数没啥值得关注的:(</p>
-<p>然后还有切换角色、返回主页、修改密码、切换到新版界面等，不谈</p>
-<p>然后正式开始选课</p>
-<p>首先是体育选课，选课按钮上绑定了一个函数，<code> saveXsxk_qz(&#39;2022-2023-2-B2E332060-157&#39;, &#39;0&#39;);</code></p>
-<p>Xsxk就是学生选课，qz就是权值，体育选课是有一个权重的，0到100</p>
-<p>在源代码里找到这个函数</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">saveXsxk_qz</span><span class="token punctuation">(</span><span class="token parameter">rwh<span class="token punctuation">,</span>rownum</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token operator">...</span><span class="token punctuation">&#125;</span>
-<span class="token comment">//rwh是任务号，rownum是序号</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>我们分析一下上面的rwh的格式，<code>&#39;2022-2023-2-B2E332060-157&#39;</code></p>
-<p><code>2022-2023-2</code>就是2022-2023年的第2学期，<code>B2E332060</code>是课程代码，<code>B2E33</code>应该是体育，2060不详</p>
-<p>此外还有志愿学生选课和学生选课两个函数，都差不多</p>
-<p>然后是一个比较重要的函数：<code>function saveXsxk1(rwh);</code></p>
-<p>通过这个函数可以直接选课</p>
-<p>然后我们点击一下选一门课试试，可以看到浏览器向<code>https://d.buaa.edu.cn/http-8080/77726476706e69737468656265737421fae0598869327d517f468ca88d1b203b/ieas2.1/xslbxk/saveXsxk</code>发送了一个POST请求</p>
-<p>我们分析一下抓包，可以看到，里面携带了rwh，看来我们可以通过更改rwh改变选课</p>
-<p>我们刚才选了课，现在退课一试，退课调用函数<code>saveXstk(&#39;2022-2023-2-B3J212731-001&#39;);</code> 也发送了一个退课的POST请求</p>
-
+          Welcome to my blog, enter password to read.
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/01/13/%E6%89%92%E4%B8%80%E6%89%92buaa%E7%9A%84%E9%80%89%E8%AF%BE%E7%BD%91%E7%AB%99/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
