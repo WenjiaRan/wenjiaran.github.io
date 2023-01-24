@@ -208,8 +208,8 @@ function showWelcome() {
     else timeChange = "夜深了，早点休息，少熬夜";
 
     //自定义文本需要放的位置
-    document.getElementById("welcome-info").innerHTML = `欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>你距离文文文约有<span>${dist}</span>公里，${posdesc}`;
-    document.getElementById("sidebar-welcome-info").innerHTML = `欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>你距离文文文约有<span>${dist}</span>公里，${posdesc}`;
+    document.getElementById("welcome-info").innerHTML = `欢迎来自<span><strong>${pos}</strong></span>的小伙伴，${timeChange}<br>你距离文文文约有<span><strong>${dist}</strong></span>公里，${posdesc}`;
+    //document.getElementById("sidebar-welcome-info").innerHTML = `欢迎来自<span>${pos}</span>的小伙伴，${timeChange}<br>你距离文文文约有<span>${dist}</span>公里，${posdesc}`;
 }
 
 window.onload = showWelcome;
