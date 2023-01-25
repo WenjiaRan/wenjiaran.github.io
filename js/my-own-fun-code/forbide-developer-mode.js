@@ -1,22 +1,13 @@
 (function () {
 
-    document.onkeydown = function () {
-        if (window.event && (window.event.keyCode == 123|| window.event.keyCode == 73)) {
-            event.keyCode = 0;
-            event.returnValue = false;
-            console.log("不要扒我代码!");
-            return false;
-        }
+    var h = window.innerHeight,w=window.innerWidth; 
+    window.onresize = function () { 
+        if (h!= window.innerHeight||w!=window.innerWidth){ 
+            alert("No!不要看我代码/(ㄒoㄒ)/~~");
+            window.close(); 
+            window.location = "about:blank"; 
+        } 
     }
-    document.onkeydown = function () {
-        if (window.event && (window.event.keyCode == 123|| window.event.keyCode == 73)) {
-            event.keyCode = 0;
-            event.returnValue = false;
-            console.log("不要扒我代码!");
-            return false;
-        }
-    }
-
     
     /**
     * 屏蔽右键菜单
@@ -114,17 +105,5 @@
         }
     };
 
-    /**
-    * 尝试阻止开发者模式
-    * @type {HTMLElement}
-    */
-    var fuck = document.createElement('div');
-    Object.defineProperty(fuck, 'id', {
-        get: function () {
-            console.log("Hello World!");
-            location.href = "about:blank";
-            history.replaceState();
-        }
-    });
-    console.log(fuck);
+    
 })();

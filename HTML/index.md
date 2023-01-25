@@ -4,7 +4,7 @@ date: 2023-01-07 16:04:30
 description: "hh"
 ---
 
-<p><button onclick="window.location.href= 'fireworks.html'" type="button" id="add">新年快乐！放个烟花</button></p>
+<p><button onclick="window.location.href= 'fireworks.html'" type="button" id="add">放个烟花</button></p>
 <p><button onclick="window.location.href= 'Stopwatch/'" type="button" id="add">玩儿个秒表</button></p>
 <p><button onclick="window.location.href= 'javascript-countdown-time-2023/'" type="button" id="add">新年倒计时</button></p>
 <p><button onclick="window.location.href= '粒子效果/dBubbles.html'" type="button" id="add">粒子效果</button></p>
