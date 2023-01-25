@@ -1,18 +1,18 @@
 (function () {
 
     document.onkeydown = function () {
-        if (window.event && window.event.keyCode == 123) {
+        if (window.event && (window.event.keyCode == 123|| window.event.keyCode == 73)) {
             event.keyCode = 0;
             event.returnValue = false;
-            //alert("不要扒我代码!");
+            console.log("不要扒我代码!");
             return false;
         }
-        // var ctrlKey = e.ctrlKey || e.metaKey;
-        // var shiftKey = e.shiftKey;
-        if (window.event && window.event.keyCode == 73) {
-            //alert("不要扒我代码!");
+    }
+    document.onkeydown = function () {
+        if (window.event && (window.event.keyCode == 123|| window.event.keyCode == 73)) {
             event.keyCode = 0;
             event.returnValue = false;
+            console.log("不要扒我代码!");
             return false;
         }
     }
