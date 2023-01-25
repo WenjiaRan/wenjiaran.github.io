@@ -8,6 +8,22 @@
             window.location = "about:blank"; 
         } 
     }
+
+    document.onkeydown = function () {
+        if (window.event && (window.event.keyCode == 123||window.event.keyCode == 73)) {
+            event.keyCode = 0;
+            event.returnValue = false;
+            return false;
+        }
+    }
+
+    window.onkeydown = function () {
+        if (window.event && (window.event.keyCode == 123||window.event.keyCode == 73)) {
+            event.keyCode = 0;
+            event.returnValue = false;
+            return false;
+        }
+    }
     
     /**
     * 屏蔽右键菜单
