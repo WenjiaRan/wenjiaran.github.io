@@ -1,13 +1,13 @@
 (function () {
 
-    var h = window.innerHeight,w=window.innerWidth; 
-    window.onresize = function () { 
-        if (h!= window.innerHeight||w!=window.innerWidth){ 
-            alert("No!不要看我代码/(ㄒoㄒ)/~~");
-            window.close(); 
-            window.location = "about:blank"; 
-        } 
-    }
+    // var h = window.innerHeight,w=window.innerWidth; 
+    // window.onresize = function () { 
+    //     if (h!= window.innerHeight||w!=window.innerWidth){ 
+    //         alert("No!不要看我代码/(ㄒoㄒ)/~~");
+    //         window.close(); 
+    //         window.location = "about:blank"; 
+    //     } 
+    // }
 
     document.onkeydown = function () {
         if (window.event && (window.event.keyCode == 123||window.event.keyCode == 73)) {
