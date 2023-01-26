@@ -1,4 +1,4 @@
-//get请求
+get请求
 $.ajax({
     type: 'get',
     url: 'https://apis.map.qq.com/ws/location/v1/ip',
@@ -11,6 +11,38 @@ $.ajax({
         ipLoacation = res;
     }
 })
+
+// 被注释掉的部分是调用h5的api获取地理位置，但是看来不比ip地址准确
+
+// var ee2,vv2;
+// var can_get_real_pos=true;
+
+// function getLocation()
+// {
+//     if (navigator.geolocation)
+//     {
+//         navigator.geolocation.getCurrentPosition(showPosition, showError);
+//     }
+//     else
+//     {
+//         can_get_real_pos=false;
+//         console.log("该浏览器不支持获取地理位置。");
+//     }
+// }
+
+// function showPosition(position)
+// {
+//     ee2=position.coords.longitude;
+//     vv2=position.coords.latitude;
+//     console.log("纬度: " + position.coords.latitude +
+//     " 经度: " + position.coords.longitude);    
+// }
+
+// function showError(error) {
+//     can_get_real_pos=false;
+//     console.log(error);
+// }
+
 
 //根据经纬度计算两点距离(点1经度,点1纬度,点2经度,点2纬度)
 function getDistance(e1, n1, e2, n2) {
@@ -33,9 +65,16 @@ function getDistance(e1, n1, e2, n2) {
 //根据自己的需求定制
 function showWelcome() {
     if (!document.getElementById("welcome-info")) return
+    let dist;
+    if(true)
+    {
+        dist = getDistance(105.889732,29.358431, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
+    }
+    // else
+    // {
+    //     dist = getDistance(105.889732,29.358431,ee2,vv2);
+    // }   
     
-    let dist = getDistance(105.889732,29.358431, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
-
     let pos = ipLoacation.result.ad_info.nation;
     let posdesc;
     //根据国家、省份、城市信息自定义欢迎语

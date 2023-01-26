@@ -15,7 +15,7 @@ const day_dot = document.querySelector('.day_dot'),
       sec_dot = document.querySelector('.sec_dot');
 
 
-const endDate = '01/22/2023 00:00:00';
+const endDate = '01/01/2024 00:00:00';
 
 // date format mm/dd/yyyy
 
