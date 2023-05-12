@@ -68,7 +68,10 @@ function showWelcome() {
     let dist;
     if(true)
     {
-        dist = getDistance(105.889732,29.358431, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
+        //重庆
+        // dist = getDistance(105.889732,29.358431, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
+        //北京
+        dist = getDistance(116.30,39.95, ipLoacation.result.location.lng, ipLoacation.result.location.lat); //这里记录你自己的经纬度
     }
     // else
     // {
