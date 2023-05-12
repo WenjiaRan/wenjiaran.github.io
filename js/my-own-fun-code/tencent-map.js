@@ -1,4 +1,4 @@
-get请求
+
 $.ajax({
     type: 'get',
     url: 'https://apis.map.qq.com/ws/location/v1/ip',
