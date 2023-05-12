@@ -11,6 +11,7 @@ description: "hh"
 <p><button onclick="window.location.href= 'pacman-master/'" type="button" id="add">吃豆人</button></p>
 <p><button onclick="window.location.href= '2048-master/'" type="button" id="add">玩2048</button></p>
 <p><button onclick="window.location.href= 'https://wenjiaran.github.io/RanGPT/'" type="button" id="add">RanGPT</button></p>
+<p><button onclick="window.location.href= 'https://wenjiaran.github.io/xing-cheng-ka/'" type="button" id="add">行程卡</button></p>
 
 <style>
     button

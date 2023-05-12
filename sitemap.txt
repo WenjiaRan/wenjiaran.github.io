@@ -17,8 +17,8 @@ http://wenjiaran.github.io/categories/index.html
 http://wenjiaran.github.io/
 http://wenjiaran.github.io/tags/AI/
 http://wenjiaran.github.io/tags/%E7%94%BB%E5%9B%BE/
-http://wenjiaran.github.io/tags/%E7%BC%96%E7%A8%8B/
 http://wenjiaran.github.io/tags/%E6%97%A5%E5%B8%B8/
+http://wenjiaran.github.io/tags/%E7%BC%96%E7%A8%8B/
 http://wenjiaran.github.io/tags/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98/
 http://wenjiaran.github.io/tags/%E9%80%89%E8%AF%BE/
 http://wenjiaran.github.io/tags/%E6%91%98%E6%8A%84/
