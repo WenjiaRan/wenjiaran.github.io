@@ -172,3 +172,26 @@ if ((lunar["IMonthCn"] == "九月" && lunar["IDayCn"] == "初九")) {
 //         sessionStorage.setItem("isPopupWindow", "1");
 //     }
 // }
+
+if (sessionStorage.getItem("isPopupWindow") != "1")
+{
+    const fs = require('fs');
+
+    // 读取文件内容，按行分割为数组
+    const data = fs.readFileSync('sentence.js', 'utf8').trim().split('\n');
+
+    // 将每一行解析为JSON对象
+    const records = data.map((line) => JSON.parse(line));
+
+    // 在记录数组中随机选择一项
+    const randomIndex = Math.floor(Math.random() * records.length);
+    const randomRecord = records[randomIndex];
+
+    // 获取选中记录的"name"和"from"属性值
+    const name = randomRecord.name;
+    const from = randomRecord.from;
+
+    // 打印结果
+    console.log(`选中的记录是：${name}，出自${from}`);
+    Swal.fire(name );
+}
