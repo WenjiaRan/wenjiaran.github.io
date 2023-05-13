@@ -10189,4 +10189,5 @@ if (sessionStorage.getItem("isPopupWindow") != "1")
     // 打印结果
     console.log(`选中的记录是：${name}，出自${from}`);
     Swal.fire(name );
+    sessionStorage.setItem("isPopupWindow", "1");
 }
