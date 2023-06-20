@@ -16,15 +16,15 @@ http://wenjiaran.github.io/tags/index.html
 http://wenjiaran.github.io/resources/index.html
 http://wenjiaran.github.io/categories/index.html
 http://wenjiaran.github.io/
+http://wenjiaran.github.io/tags/AI/
 http://wenjiaran.github.io/tags/%E6%91%98%E6%8A%84/
 http://wenjiaran.github.io/tags/%E7%94%BB%E5%9B%BE/
-http://wenjiaran.github.io/tags/AI/
 http://wenjiaran.github.io/tags/%E7%BC%96%E7%A8%8B/
 http://wenjiaran.github.io/tags/%E6%97%A5%E5%B8%B8/
 http://wenjiaran.github.io/tags/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98/
 http://wenjiaran.github.io/tags/%E9%80%89%E8%AF%BE/
-http://wenjiaran.github.io/categories/%E6%91%98%E6%8A%84/
 http://wenjiaran.github.io/categories/AI/
+http://wenjiaran.github.io/categories/%E6%91%98%E6%8A%84/
 http://wenjiaran.github.io/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/
 http://wenjiaran.github.io/categories/%E5%89%8D%E7%AB%AF/
 http://wenjiaran.github.io/categories/%E6%8A%80%E6%9C%AF/
