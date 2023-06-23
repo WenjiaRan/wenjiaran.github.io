@@ -124,51 +124,6 @@
       </tags>
   </entry>
   <entry>
-    <title>next主题源文件说明</title>
-    <url>/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="368da167e04842e6d638dd411de3eaf0985e1fd1e49e0cd93dd8a20db73c944f">165d50f05814027fb7fe5e4ae8a088d8f7cfffcdc95203901a12477cc5fbe5cbb81c10d9c56c7af4c452b3a3a95bace6ec4fdaf2c4354d0d4f881e178402bff21596bb21b9ad4cd3821d0a353e0d727263e0d4fa8b8ad0a483b2213580df067c65ae44251dc8aa2ecce08c2bb31a4d3d2549e40f5935e92e67fc9c0aad07a36f9d53b8f42dcaf87b0adbb0abc1f0e631d522a67d4e55f6da71bed9b065efdd836ccf461e02e82fabdaedf52324c2dce01daccf447937dc5d677ff7134279e1595d1ad89eb12e28509c918c2316632e8068f5eb2214b16af67967692b47208cb94ecce2d3e26935fe6f87c8f2b1727d7d8a6d213837919ff3e9d48349c0e4749d3aa0b09e974969de0bf74fb862a39383605a31c848f1be6dc24c56c3e419c3cc68049c37e6d6a815eb7a4f763bba90459558518aedc61a83e69b68854987c0445fac6b1f13527d112584e4cc49636e9aecc21f59c46bfecf70da6065c15443cd69e618a1e4fe42ec9e850fe9305b1687ab706ee78b578081db51517fd0a96eea86c43a7444c1f9862c491bd44c0210ee362f3ee2ebfe06fac1e8a0efb371c897a74f1d25c32424a26ccfd791c1600a72952fdfc160c6c130948e583b823546ec843dcb16fe41415a3d8560702b03ca7a3994c25de32b5d4e2bac5d9b48ae9f6f0bf5d42735d77f4383e73c3f027c488ab0a3dbf08e2887ad44edf202e1cdf2b5fafcdcffee3a7b113124608ddb7c34a014ea80dbe1ced2c0553272fd27923bc14c655667b63cb93488926e50f3f695b770a4ca5350146848a5cfd0e0693081164a81acdd91ff33918dd87c455671cbbeca298c925bd5383fa63f4bcaab015d85bf92ed02037f8aae7af9cf6cd4c88913ee0a221df8ce7c0db33efc1d35473e9c762dee317e19f0f822b94ed15e1a64e004014a9aef52510643a888c5dcd4225cd3a6e93479e534cdacbbf71583f088f1ec7f501e97f33a0ee485963c547ac8a565a4f7af7bd90040ba32d850f64c78a4323758c0cc2d52ebcfb7ca546024da56bbfd3a4a1bd8c2937889a64c92e9ef4309ef90f99d46f416aadb08437ba2159cabdb9f579dfc95c08bd48399272a2818c5f4e0baf332ce7b9fd5a3abea7da90e1ae710c050a4d27c432ca1cbe2c1e30f35b53217fd68db220a7f7e208077e56fcef99aa6b37f1d1d302a1b22cd743ea20edb1bcfab878caa6c5ecbc69308a7c341bafea5c00686138e3a311305ee12ce01e3bf8a19ae56ddd8442a89b4235c7674e147baa95b2607a87f6189e8817c7d5a3fb422a834ba40702446c46ab8866ec15930580d48e7d25c2ccf1a086ef4adab7d70df4992959a64b28b31204b1486df3534d1cb31c8cb7833189b5893f9e1b7f2b77a53f69d0a1ba1a3cb1fe5ed1c72af37c6f0b0cb203a8941fba030ea8b77f179d8c32fbbc277bf5a9e1054cc88fd9f7971098461284e6e37dee7d721fc8b79b15dc7de3952f16b9b0fdbcfca7f9437aea0510b555abf6da926b03191a3eabcce9a1c9f713b874dfa9c5416b088afc1493bb6e9f599eb03539fa9f79d73f2bd3d6af23e74b8140641adeede4ef56c566ef68bf49eded854249f96eb46641a9dde0c49d91f6ee0eb75c83e43e6eb9605f8ad278902a4516c84af3fb06ab1d7b60e902e29751095871e3c1ebfdfe63612fa07389ed22eb9a6849783d6c2aff78e1440a5772c43053137f4d4e3291c1f3f0e8fce9c0e1915030e2648a9391d444b17c4c739116272947cd5ad6b6bbb3663e4c657d429db12a4915ba3a735940d7181ef4ce660cfd5efb5b28fcebf8237842d3acaf38f80e64b3c9fce750feef69e7920f5c9de14f25fa557f74d3c02c7612373436db5032b53002c0a52ddfe05992f02411f9c24c0712d090e7f4cd75d45ae137bc4a2ff6ff9e9c0a665d882b0e0f58a328fd103f161168d340d51535b4a2aaa4250e7ef24e355401d1eb7dc11388a05fc863ec40f05af1f8d70ddcdc399f39c3ca12525a867eab880c795d0697c40c1db55e03f90fdadc1b478040156be1738a85a657b11ea16ad48ae4b73214e07a2f21d260bb6031d4dbeaae5047bb4dbf8c3d3241ba44e9ef6ca83cd333c6d01372508cda911c647d950ce18a78a754a9226360bf5c55aa8a7522b992361e4ef9e1742e6dc6c894a356e17df19361a7dd15ac34fc389fdce4d04a45c0b1e5a57f37110c2c6ea99cd0b7fd5e6a6bf9fdee59e24df9f2a6abc7ed00fc5c5a04ede0d18bc9df3d1421de68a9f4e97dc91ed6bc9a846bb656a7a1d9eeaa4e312e370bef78abd9127f959207df76d37db83b45986bed47935beb08e90e3b619579f86821b568865275d317e9da14da85b9065d88076b4b2dcfd1d080fce83e63d3f9cb6280ef01817ecc9c98ac54025a6d60648a6a50ab5133172fcf1bcbaa61f1051c7b1074a810b56841f1d782d8ef81ce3d516f04198ac88a2feb63240414870bfc9b7ed5a5ee2eae1f2e21e0332c576a1becf66e16c899feea7758df603f70e7b61e739fc447804805f55f0da979614269b65cffc15d4ef4150a370143b3bbefa92ab9fc81abde08822074fff985ab3bb45ec5dc351a59e020a63fea5f3915e10d6cec659c5e75d72088d3198b3dc676c1275b036af633eb2970a8a2e70bc99c418030341571dae6789cf80c3a1</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密码123</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>hexo的next主题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>win10消除弹窗</title>
-    <url>/2023/04/06/win10%E6%B6%88%E9%99%A4%E5%BC%B9%E7%AA%97/</url>
-    <content><![CDATA[<p>需要管理员权限才能执行以下操作：</p>
-<ol>
-<li>打开任务管理器（快捷键Ctrl+Shift+Esc）。</li>
-<li>在“进程”选项卡中找到要禁止启动的进程。</li>
-<li>右键点击该进程，选择“打开文件位置”。</li>
-<li>关闭任务管理器，找到刚才打开的文件位置。</li>
-<li>右键点击该程序或文件，选择“属性”。</li>
-<li>在“安全”选项卡中，选择当前用户。</li>
-<li>在“权限”中，选中“拒绝”启动该进程。</li>
-<li>确认保存更改。</li>
-</ol>
-<p>这样就可以长期禁止某个进程启动了。注意，如果想要启动该进程，需要解除该进程的启动禁止权限。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python openai库教程</title>
     <url>/2023/03/07/python-openai%E5%BA%93%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">pip install openai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -326,6 +281,28 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
       </tags>
   </entry>
   <entry>
+    <title>next主题源文件说明</title>
+    <url>/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="368da167e04842e6d638dd411de3eaf0985e1fd1e49e0cd93dd8a20db73c944f">165d50f05814027fb7fe5e4ae8a088d8f7cfffcdc95203901a12477cc5fbe5cbb81c10d9c56c7af4c452b3a3a95bace6ec4fdaf2c4354d0d4f881e178402bff21596bb21b9ad4cd3821d0a353e0d727263e0d4fa8b8ad0a483b2213580df067c65ae44251dc8aa2ecce08c2bb31a4d3d2549e40f5935e92e67fc9c0aad07a36f9d53b8f42dcaf87b0adbb0abc1f0e631d522a67d4e55f6da71bed9b065efdd836ccf461e02e82fabdaedf52324c2dce01daccf447937dc5d677ff7134279e1595d1ad89eb12e28509c918c2316632e8068f5eb2214b16af67967692b47208cb94ecce2d3e26935fe6f87c8f2b1727d7d8a6d213837919ff3e9d48349c0e4749d3aa0b09e974969de0bf74fb862a39383605a31c848f1be6dc24c56c3e419c3cc68049c37e6d6a815eb7a4f763bba90459558518aedc61a83e69b68854987c0445fac6b1f13527d112584e4cc49636e9aecc21f59c46bfecf70da6065c15443cd69e618a1e4fe42ec9e850fe9305b1687ab706ee78b578081db51517fd0a96eea86c43a7444c1f9862c491bd44c0210ee362f3ee2ebfe06fac1e8a0efb371c897a74f1d25c32424a26ccfd791c1600a72952fdfc160c6c130948e583b823546ec843dcb16fe41415a3d8560702b03ca7a3994c25de32b5d4e2bac5d9b48ae9f6f0bf5d42735d77f4383e73c3f027c488ab0a3dbf08e2887ad44edf202e1cdf2b5fafcdcffee3a7b113124608ddb7c34a014ea80dbe1ced2c0553272fd27923bc14c655667b63cb93488926e50f3f695b770a4ca5350146848a5cfd0e0693081164a81acdd91ff33918dd87c455671cbbeca298c925bd5383fa63f4bcaab015d85bf92ed02037f8aae7af9cf6cd4c88913ee0a221df8ce7c0db33efc1d35473e9c762dee317e19f0f822b94ed15e1a64e004014a9aef52510643a888c5dcd4225cd3a6e93479e534cdacbbf71583f088f1ec7f501e97f33a0ee485963c547ac8a565a4f7af7bd90040ba32d850f64c78a4323758c0cc2d52ebcfb7ca546024da56bbfd3a4a1bd8c2937889a64c92e9ef4309ef90f99d46f416aadb08437ba2159cabdb9f579dfc95c08bd48399272a2818c5f4e0baf332ce7b9fd5a3abea7da90e1ae710c050a4d27c432ca1cbe2c1e30f35b53217fd68db220a7f7e208077e56fcef99aa6b37f1d1d302a1b22cd743ea20edb1bcfab878caa6c5ecbc69308a7c341bafea5c00686138e3a311305ee12ce01e3bf8a19ae56ddd8442a89b4235c7674e147baa95b2607a87f6189e8817c7d5a3fb422a834ba40702446c46ab8866ec15930580d48e7d25c2ccf1a086ef4adab7d70df4992959a64b28b31204b1486df3534d1cb31c8cb7833189b5893f9e1b7f2b77a53f69d0a1ba1a3cb1fe5ed1c72af37c6f0b0cb203a8941fba030ea8b77f179d8c32fbbc277bf5a9e1054cc88fd9f7971098461284e6e37dee7d721fc8b79b15dc7de3952f16b9b0fdbcfca7f9437aea0510b555abf6da926b03191a3eabcce9a1c9f713b874dfa9c5416b088afc1493bb6e9f599eb03539fa9f79d73f2bd3d6af23e74b8140641adeede4ef56c566ef68bf49eded854249f96eb46641a9dde0c49d91f6ee0eb75c83e43e6eb9605f8ad278902a4516c84af3fb06ab1d7b60e902e29751095871e3c1ebfdfe63612fa07389ed22eb9a6849783d6c2aff78e1440a5772c43053137f4d4e3291c1f3f0e8fce9c0e1915030e2648a9391d444b17c4c739116272947cd5ad6b6bbb3663e4c657d429db12a4915ba3a735940d7181ef4ce660cfd5efb5b28fcebf8237842d3acaf38f80e64b3c9fce750feef69e7920f5c9de14f25fa557f74d3c02c7612373436db5032b53002c0a52ddfe05992f02411f9c24c0712d090e7f4cd75d45ae137bc4a2ff6ff9e9c0a665d882b0e0f58a328fd103f161168d340d51535b4a2aaa4250e7ef24e355401d1eb7dc11388a05fc863ec40f05af1f8d70ddcdc399f39c3ca12525a867eab880c795d0697c40c1db55e03f90fdadc1b478040156be1738a85a657b11ea16ad48ae4b73214e07a2f21d260bb6031d4dbeaae5047bb4dbf8c3d3241ba44e9ef6ca83cd333c6d01372508cda911c647d950ce18a78a754a9226360bf5c55aa8a7522b992361e4ef9e1742e6dc6c894a356e17df19361a7dd15ac34fc389fdce4d04a45c0b1e5a57f37110c2c6ea99cd0b7fd5e6a6bf9fdee59e24df9f2a6abc7ed00fc5c5a04ede0d18bc9df3d1421de68a9f4e97dc91ed6bc9a846bb656a7a1d9eeaa4e312e370bef78abd9127f959207df76d37db83b45986bed47935beb08e90e3b619579f86821b568865275d317e9da14da85b9065d88076b4b2dcfd1d080fce83e63d3f9cb6280ef01817ecc9c98ac54025a6d60648a6a50ab5133172fcf1bcbaa61f1051c7b1074a810b56841f1d782d8ef81ce3d516f04198ac88a2feb63240414870bfc9b7ed5a5ee2eae1f2e21e0332c576a1becf66e16c899feea7758df603f70e7b61e739fc447804805f55f0da979614269b65cffc15d4ef4150a370143b3bbefa92ab9fc81abde08822074fff985ab3bb45ec5dc351a59e020a63fea5f3915e10d6cec659c5e75d72088d3198b3dc676c1275b036af633eb2970a8a2e70bc99c418030341571dae6789cf80c3a1</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密码123</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>hexo的next主题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>中国国家治理的制度逻辑摘抄</title>
     <url>/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -343,6 +320,29 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
       <categories>
         <category>中国国家治理的制度逻辑摘抄</category>
       </categories>
+  </entry>
+  <entry>
+    <title>win10消除弹窗</title>
+    <url>/2023/04/06/win10%E6%B6%88%E9%99%A4%E5%BC%B9%E7%AA%97/</url>
+    <content><![CDATA[<p>需要管理员权限才能执行以下操作：</p>
+<ol>
+<li>打开任务管理器（快捷键Ctrl+Shift+Esc）。</li>
+<li>在“进程”选项卡中找到要禁止启动的进程。</li>
+<li>右键点击该进程，选择“打开文件位置”。</li>
+<li>关闭任务管理器，找到刚才打开的文件位置。</li>
+<li>右键点击该程序或文件，选择“属性”。</li>
+<li>在“安全”选项卡中，选择当前用户。</li>
+<li>在“权限”中，选中“拒绝”启动该进程。</li>
+<li>确认保存更改。</li>
+</ol>
+<p>这样就可以长期禁止某个进程启动了。注意，如果想要启动该进程，需要解除该进程的启动禁止权限。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+      </tags>
   </entry>
   <entry>
     <title>奥威尔与赫胥黎之争</title>
@@ -386,6 +386,24 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
       </tags>
   </entry>
   <entry>
+    <title>法治的细节</title>
+    <url>/2023/05/14/%E6%B3%95%E6%B2%BB%E7%9A%84%E7%BB%86%E8%8A%82/</url>
+    <content><![CDATA[<ul>
+<li>柏拉图眼中, 最理想的政体就是精英式的贵族政体, 也被称为王政. 柏拉图认为, 只有让王成为哲学家, “哲学王”被授予绝对的权力, 才能建立王道乐土的美丽新世界, 国家会充满智慧和勇气. 而柏拉图最瞧不上的就是军事独裁的僭主政体.</li>
+<li>柏拉图三次去往叙拉古, 他在&lt;法律篇&gt;中终于意识到: 只有法治才是现实的. 哲学王的统治不具有现实可能性, 如果追求最优选项, 反而会导致最坏的结果, 法治虽然不是最好的选择, 也是一个避免最坏结果的”次优”选项</li>
+<li>阿克顿勋爵说:”权力导致腐败, 绝对权力导致绝对腐败”</li>
+<li>如果法律只是一种工具, 权力的滥用也就不可避免, 人治可以打着法律的名义大行其道, 人也就不可能拥有真正的自由</li>
+<li>to be continued…</li>
+</ul>
+]]></content>
+      <categories>
+        <category>摘抄</category>
+      </categories>
+      <tags>
+        <tag>摘抄</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>摘抄</title>
     <url>/2023/03/27/%E6%91%98%E6%8A%84/</url>
     <content><![CDATA[<p>2024.2023.3.27</p>
@@ -421,24 +439,6 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
 <li>没过多久，一阵悠扬的钟声也加入这场合奏，那是招福寺的大钟，这种事他们可是从不落人后的。随后钟鼓齐鸣，交相嗡鸣，所有的庙宇、道观，所有的坊市都加入庆祝行列，整个城市陷入喜庆的狂欢。 李善德低下头，依靠着上好坊的残碑，继续专心读着眼前的纸卷。他的魂魄已在漫长的跋涉中磨蚀一空，失去了对城墙内侧那个绮丽世界的全部想象</li>
 <li>“反正日后也要你来管，不妨现在说说好了。” 杨国忠背起手来，缓缓踱步，“荔枝转运的费用，其实是颇有为难的。从太府寺的藏署出并不合适，国用虽丰，自有法度，总要量入为出；而从内帑大盈库里拿，等于是从圣人的锦袋里掏钱，也不是不行，但咱们做臣子的，非但不为陛下分忧，反而去讨债，不是为臣之道。” 李善德的姿势一动不动，听得十分专注。 “所以在你奔忙转运之时，中书门下也发下一道牒文：要求沿途的都亭驿馆，所领长行宽延半年；附地的诸等农户，按丁口加派白直庸，准以荔枝钱折免。</li>
 <li>御赐的这一篮子水果，虽不是什么紫衣金绶，可也比大唐律厉害多了。” “为什么？” “圣人刚打赏过的官员，你们转头就说他该判斩刑？是暗讽圣人识人不明么？</li>
-</ul>
-]]></content>
-      <categories>
-        <category>摘抄</category>
-      </categories>
-      <tags>
-        <tag>摘抄</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>法治的细节</title>
-    <url>/2023/05/14/%E6%B3%95%E6%B2%BB%E7%9A%84%E7%BB%86%E8%8A%82/</url>
-    <content><![CDATA[<ul>
-<li>柏拉图眼中, 最理想的政体就是精英式的贵族政体, 也被称为王政. 柏拉图认为, 只有让王成为哲学家, “哲学王”被授予绝对的权力, 才能建立王道乐土的美丽新世界, 国家会充满智慧和勇气. 而柏拉图最瞧不上的就是军事独裁的僭主政体.</li>
-<li>柏拉图三次去往叙拉古, 他在&lt;法律篇&gt;中终于意识到: 只有法治才是现实的. 哲学王的统治不具有现实可能性, 如果追求最优选项, 反而会导致最坏的结果, 法治虽然不是最好的选择, 也是一个避免最坏结果的”次优”选项</li>
-<li>阿克顿勋爵说:”权力导致腐败, 绝对权力导致绝对腐败”</li>
-<li>如果法律只是一种工具, 权力的滥用也就不可避免, 人治可以打着法律的名义大行其道, 人也就不可能拥有真正的自由</li>
-<li>to be continued…</li>
 </ul>
 ]]></content>
       <categories>
