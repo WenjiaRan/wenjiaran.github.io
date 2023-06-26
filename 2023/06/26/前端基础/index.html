@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wenjiaran.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="HTML&lt;html&gt;     &lt;body&gt;         &lt;h1&gt;             这是一个标题.         &lt;&#x2F;h1&gt;         &lt;p&gt;             段落         &lt;&#x2F;p&gt;     &lt;&#x2F;body&gt; &lt;&#x2F;html&gt;  &lt;p style&#x3D;&quot;color:red&quot;&gt;...&lt;&#x2F;p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端基础">
+<meta property="og:url" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="一叶小屋">
+<meta property="og:description" content="HTML&lt;html&gt;     &lt;body&gt;         &lt;h1&gt;             这是一个标题.         &lt;&#x2F;h1&gt;         &lt;p&gt;             段落         &lt;&#x2F;p&gt;     &lt;&#x2F;body&gt; &lt;&#x2F;html&gt;  &lt;p style&#x3D;&quot;color:red&quot;&gt;...&lt;&#x2F;p">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://7n.w3cschool.cn/statics/images/logonew2.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/1.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/2.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/3.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/4.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/5.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/6.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/7.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/8.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/9.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/10.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/11.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/12.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/13.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/14.png">
+<meta property="og:image" content="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/15.png">
+<meta property="article:published_time" content="2023-06-26T07:07:26.065Z">
+<meta property="article:modified_time" content="2023-06-26T09:36:31.756Z">
+<meta property="article:author" content="文文文">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://7n.w3cschool.cn/statics/images/logonew2.png">
+
+<link rel="canonical" href="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>前端基础 | 一叶小屋</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">一叶小屋</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-杂七杂八的链接">
+
+    <a href="/HTML/" rel="section"><i class=" fa-fw"></i>杂七杂八的链接</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          前端基础
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-26 15:07:26 / 修改时间：17:36:31" itemprop="dateCreated datePublished" datetime="2023-06-26T15:07:26+08:00">2023-06-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>958</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>
+            这是一个标题.
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+            段落
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>&lt;p style=&quot;color:red&quot;&gt;...&lt;/p&gt;</code></p>
+<p><strong>body, head</strong>: </p>
+<head>包含着页面的信息</head>,<body>内容会显示在页面中</body>
+
+<p><strong>h1~h6</strong></p>
+<h1>这是一级标题</h1>
+
+<p><strong>ol,ul,li</strong></p>
+<p>&#96;<ol><br>    <li>有序列表1</li><br>    <li>有序列表2</li></ol></p>
+`
+
+<p>&#96;<ul><br>    <li>无序列表1</li><br>    <li>无序列表2</li></ul></p>
+`
+
+<p><strong>链接,图片</strong></p>
+<p><code>&lt;a href=&quot;https://buaa.lol&quot;&gt;点击打开我的博客&lt;/a&gt;</code></p>
+<img data-src="https://7n.w3cschool.cn/statics/images/logonew2.png">
+
+<p>image是单标签, 无需成对出现</p>
+<p><strong>表格</strong></p>
+<table>
+    <tr>
+        <th></th>
+        <th>周六</th>
+        <th>周日</th>
+    </tr>
+    <tr>
+        <th>门票售出数量</th>
+        <td>120</td>
+        <td>32</td>
+    </tr>
+    <tr>
+        <th>销售额</th>
+        <td>1200</td>
+        <td>320</td>
+    </tr>
+</table>
+
+<p><strong>输入控件</strong></p>
+<p>按钮, name输入控件的名称, 会与输入控件的内容一起提交到服务器 <input type="button" name="button" value="Button"></p>
+<p>checkbox多选框 <input type="checkbox" name="checkbox"></p>
+<p>radio: 单选框</p>
+<p>password: 密码</p>
+<p>submit: 提交</p>
+<p>text: 普通文本输入</p>
+<p>指定颜色 <input type="color" name="color"></p>
+<p>输入日期 <input type="date" name="date"></p>
+<p>输入日期和时间 <input type="datetime-local" name="datetime-local"></p>
+<p>输入邮箱 <input type="email" name="email"></p>
+<p>选择文件 <input type="file" accept="image/*, text/*" name="file"> accept表示接受的文件类型</p>
+<p><strong>下拉选择框</strong></p>
+<p><select>&#x2F;&#x2F;下拉选择框<br>    <option value="0">请选择内容</option>&#x2F;&#x2F;选项<br>    <option value="1">请选择1</option><br>    <option value="2">请选择2</option><br></select></p>
+<p><strong>表单</strong></p>
+<p>&#96;<form>表单, 里面包含其他表单控件, 点击里面的提交按钮之后表单会被提交</form></p>
+<p><strong>注释</strong></p>
+<!-- 注释 -->
+
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="在html引入css"><a href="#在html引入css" class="headerlink" title="在html引入css"></a>在html引入css</h2><h3 id="外部样式"><a href="#外部样式" class="headerlink" title="外部样式"></a>外部样式</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css/style.css<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="使用内部样式"><a href="#使用内部样式" class="headerlink" title="使用内部样式"></a>使用内部样式</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+            <span class="token selector">body, a</span><span class="token punctuation">&#123;</span><span class="token property">padding</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
+        </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h2><ul>
+<li>按照<strong>标签类型</strong>指定: h1, a, input</li>
+<li>类选择器: <code>&lt;a class=&quot;highlight small&quot;&gt;example</code>, .highlight</li>
+<li>id选择器 #mid</li>
+</ul>
+<img data-src="/2023/06/26/前端基础/1.png" style="zoom:70%;">
+
+<img data-src="/2023/06/26/前端基础/2.png" style="zoom:70%;">
+
+<h1 id="Javascript与DOM"><a href="#Javascript与DOM" class="headerlink" title="Javascript与DOM"></a>Javascript与DOM</h1><h2 id="JavaScript对象-函数"><a href="#JavaScript对象-函数" class="headerlink" title="JavaScript对象,函数"></a>JavaScript对象,函数</h2><img data-src="/2023/06/26/前端基础/3.png" style="zoom:70%;">
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><img data-src="/2023/06/26/前端基础/4.png" style="zoom:70%;">
+
+<h2 id="函数调用模式与this变量"><a href="#函数调用模式与this变量" class="headerlink" title="函数调用模式与this变量"></a>函数调用模式与this变量</h2><img data-src="/2023/06/26/前端基础/5.png" style="zoom:70%;">
+
+<img data-src="/2023/06/26/前端基础/6.png" style="zoom:70%;">
+
+<img data-src="/2023/06/26/前端基础/7.png" style="zoom:70%;">
+
+<h2 id="JavaScript引入html"><a href="#JavaScript引入html" class="headerlink" title="JavaScript引入html"></a>JavaScript引入html</h2><img data-src="/2023/06/26/前端基础/8.png" style="zoom:70%;">
+
+<h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><img data-src="/2023/06/26/前端基础/9.png" style="zoom:70%;">
+
+<h2 id="HTML-DOM"><a href="#HTML-DOM" class="headerlink" title="HTML DOM"></a>HTML DOM</h2><img data-src="/2023/06/26/前端基础/10.png" style="zoom:70%;">
+
+<img data-src="/2023/06/26/前端基础/11.png" style="zoom:70%;">
+
+<h3 id="innerHTML"><a href="#innerHTML" class="headerlink" title="innerHTML"></a>innerHTML</h3><img data-src="/2023/06/26/前端基础/12.png" style="zoom:70%;">
+
+<h3 id="设置监听器"><a href="#设置监听器" class="headerlink" title="设置监听器"></a>设置监听器</h3><img data-src="/2023/06/26/前端基础/13.png" style="zoom:70%;">
+
+<h3 id="DOM加载与Javascript执行时机"><a href="#DOM加载与Javascript执行时机" class="headerlink" title="DOM加载与Javascript执行时机"></a>DOM加载与Javascript执行时机</h3><img data-src="/2023/06/26/前端基础/14.png" style="zoom:70%;">
+
+<h2 id="alert与console"><a href="#alert与console" class="headerlink" title="alert与console"></a>alert与console</h2><img data-src="/2023/06/26/前端基础/15.png" style="zoom:70%;">
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>文文文
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" title="前端基础">http://wenjiaran.github.io/2023/06/26/前端基础/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/06/23/chatgpt_%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B_by_AndrewWu/" rel="prev" title="chatgpt_提示工程_by_AndrewWu">
+      <i class="fa fa-chevron-left"></i> chatgpt_提示工程_by_AndrewWu
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      
+      <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> 
+      <script async data-pjax src="/js/my-own-fun-code/tencent-map.js"></script> 
+      <div id="welcome-info"></div>
+      <style>
+        #welcome-info {
+        background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
+        border-radius: 18px;
+        padding: 8px;
+        text-align: left;
+        }
+      </style>
+
+      
+      <div>访客足迹</div>
+      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=mYpui3S-gONfhwLJT8UyHBVeQAlAAXdTVcUNmycxhxE&cl=ffffff&w=a"></script>
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML"><span class="nav-number">1.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">这是一级标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS"><span class="nav-number">3.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8html%E5%BC%95%E5%85%A5css"><span class="nav-number">3.1.</span> <span class="nav-text">在html引入css</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E6%A0%B7%E5%BC%8F"><span class="nav-number">3.1.1.</span> <span class="nav-text">外部样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%86%85%E9%83%A8%E6%A0%B7%E5%BC%8F"><span class="nav-number">3.1.2.</span> <span class="nav-text">使用内部样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">3.2.</span> <span class="nav-text">css选择器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Javascript%E4%B8%8EDOM"><span class="nav-number">4.</span> <span class="nav-text">Javascript与DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript%E5%AF%B9%E8%B1%A1-%E5%87%BD%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">JavaScript对象,函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">4.2.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8%E6%A8%A1%E5%BC%8F%E4%B8%8Ethis%E5%8F%98%E9%87%8F"><span class="nav-number">4.3.</span> <span class="nav-text">函数调用模式与this变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript%E5%BC%95%E5%85%A5html"><span class="nav-number">4.4.</span> <span class="nav-text">JavaScript引入html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#window%E5%AF%B9%E8%B1%A1"><span class="nav-number">4.5.</span> <span class="nav-text">window对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML-DOM"><span class="nav-number">4.6.</span> <span class="nav-text">HTML DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#innerHTML"><span class="nav-number">4.6.1.</span> <span class="nav-text">innerHTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%9B%91%E5%90%AC%E5%99%A8"><span class="nav-number">4.6.2.</span> <span class="nav-text">设置监听器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM%E5%8A%A0%E8%BD%BD%E4%B8%8EJavascript%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA"><span class="nav-number">4.6.3.</span> <span class="nav-text">DOM加载与Javascript执行时机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#alert%E4%B8%8Econsole"><span class="nav-number">4.7.</span> <span class="nav-text">alert与console</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">文文文</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">文文文</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">25k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">41 分钟</span>
+</div>
+
+
+
+
+
+
+<!--添加网站的运行时间-->
+<span id="timeDate">载入天数...</span> 
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/07/2023 09:38:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "小站已经出生 "+dnum+" 天 " +hnum+ " 小时啦 "; 
+    
+    } 
+setInterval("createtime()",250);
+</script>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '3e5f7ab78b9b3953afd1',
+      clientSecret: 'a6c212045ff185ebbe6e2efbc968b93a6563fa33',
+      repo        : 'BlogCommentSystem',
+      owner       : 'WenjiaRan',
+      admin       : ['WenjiaRan'],
+      id          : 'c02c55b65f1167a87199b89e279b4858',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+  
+
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+<script defer src="/js/my-own-fun-code/forbide-developer-mode.js"></script>
+ 
+
+
+<script defer type="text/javascript" src="/js/special-day/sweetalert2.all.js"></script> 
+<script defer src="/js/special-day/lunar.js"></script>
+<script defer src="/js/special-day/day.js"></script> 
+
+<script>
+//动态标题
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    //离开当前页面时标签显示内容
+    document.title = '👀快回来φ(゜▽゜*)♪';
+    clearTimeout(titleTime);
+  } else {
+    //返回当前页面时标签显示内容
+    document.title = '🐖看到你啦ヾ(≧▽≦*)o';
+    //两秒后变回正常标题
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile;
+    }, 2000);
+  }
+});
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>
