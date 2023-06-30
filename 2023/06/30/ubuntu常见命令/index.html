@@ -1,0 +1,728 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"wenjiaran.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1. ls: list列出文件夹内容ls -l   ls -l 查看文件大小、权限、修改时间等详细信息 2. cd: 更改目录3. catcat filename  读取文本文件内容, 显示在屏幕上 4. less: 读取大文本文件当您使用 less 打开文件时，它会以页面形式打开文件。您可以向上&#x2F;向下滚动、查找文本等等。 读取完文件后，您可以按 Q 键退出 less 视图。您会注意到屏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu常见命令">
+<meta property="og:url" content="http://wenjiaran.github.io/2023/06/30/ubuntu%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="一叶小屋">
+<meta property="og:description" content="1. ls: list列出文件夹内容ls -l   ls -l 查看文件大小、权限、修改时间等详细信息 2. cd: 更改目录3. catcat filename  读取文本文件内容, 显示在屏幕上 4. less: 读取大文本文件当您使用 less 打开文件时，它会以页面形式打开文件。您可以向上&#x2F;向下滚动、查找文本等等。 读取完文件后，您可以按 Q 键退出 less 视图。您会注意到屏">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-30T12:43:01.660Z">
+<meta property="article:modified_time" content="2023-06-30T13:18:47.029Z">
+<meta property="article:author" content="文文文">
+<meta property="article:tag" content="ubuntu">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://wenjiaran.github.io/2023/06/30/ubuntu%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>ubuntu常见命令 | 一叶小屋</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">一叶小屋</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        
+            
+  <li class="menu-item menu-item-杂七杂八的链接">
+
+    <a href="/HTML/" rel="section"><i class=" fa-fw"></i>杂七杂八的链接</a>
+
+  </li>
+
+
+      
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/06/30/ubuntu%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ubuntu常见命令
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-30 20:43:01 / 修改时间：21:18:47" itemprop="dateCreated datePublished" datetime="2023-06-30T20:43:01+08:00">2023-06-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">计算机知识</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="1-ls-list列出文件夹内容"><a href="#1-ls-list列出文件夹内容" class="headerlink" title="1. ls: list列出文件夹内容"></a>1. ls: list列出文件夹内容</h4><pre class="line-numbers language-none"><code class="language-none">ls -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p> ls -l 查看文件大小、权限、修改时间等详细信息</p>
+<h4 id="2-cd-更改目录"><a href="#2-cd-更改目录" class="headerlink" title="2. cd: 更改目录"></a>2. cd: 更改目录</h4><h4 id="3-cat"><a href="#3-cat" class="headerlink" title="3. cat"></a>3. cat</h4><pre class="line-numbers language-none"><code class="language-none">cat filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>读取文本文件内容, 显示在屏幕上</p>
+<h4 id="4-less-读取大文本文件"><a href="#4-less-读取大文本文件" class="headerlink" title="4. less: 读取大文本文件"></a>4. less: 读取大文本文件</h4><p>当您使用 less 打开文件时，它会以页面形式打开文件。您可以向上&#x2F;向下滚动、查找文本等等。</p>
+<p>读取完文件后，您可以<strong>按 Q 键退出 less 视图</strong>。您会注意到屏幕上没有显示任何内容。你的屏幕很干净。</p>
+<h4 id="5-touch-创建新文件"><a href="#5-touch-创建新文件" class="headerlink" title="5. touch: 创建新文件"></a>5. touch: 创建新文件</h4><h4 id="6-mkdir-创建新文件夹"><a href="#6-mkdir-创建新文件夹" class="headerlink" title="6. mkdir: 创建新文件夹"></a>6. mkdir: 创建新文件夹</h4><h4 id="7-cp-copy"><a href="#7-cp-copy" class="headerlink" title="7. cp: copy"></a>7. cp: copy</h4><p>想象一下您必须修改配置文件。明智的做法是使用其他名称复制该文件。这样，您将获得该文件的备份。</p>
+<pre class="line-numbers language-none"><code class="language-none">cp existing_file.txt existing_file.back<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您也可以使用相同的 cp 命令来复制目录。为此，您必须指定递归选项<code>-r</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">cp -r dir another_location<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="8-mv-move"><a href="#8-mv-move" class="headerlink" title="8. mv: move"></a>8. mv: move</h4><p>mv 命令代表“移动”。当您将文件复制到另一个位置时，它仍保留在原来的位置。</p>
+<p>mv 命令将文件和文件夹移动到其他位置。您可以将其视为剪切粘贴操作。</p>
+<pre class="line-numbers language-none"><code class="language-none">mv file.txt &#x2F;another&#x2F;location<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您也可以使用 mv 命令重命名该文件。</p>
+<pre class="line-numbers language-none"><code class="language-none">mv file.txt new_file.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="9-rm-rmove删除文件和文件夹"><a href="#9-rm-rmove删除文件和文件夹" class="headerlink" title="9. rm: rmove删除文件和文件夹"></a>9. rm: rmove删除文件和文件夹</h4><pre class="line-numbers language-none"><code class="language-none">rm -rf *<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="10-vim-用vim编辑器打开文件"><a href="#10-vim-用vim编辑器打开文件" class="headerlink" title="10. vim: 用vim编辑器打开文件"></a>10. vim: 用vim编辑器打开文件</h4><p>退出并保存时用<code>:wq</code></p>
+<h4 id="11-clear-清除终端屏幕"><a href="#11-clear-清除终端屏幕" class="headerlink" title="11. clear: 清除终端屏幕"></a>11. clear: 清除终端屏幕</h4><h4 id="12-ps-process查看并处理进程"><a href="#12-ps-process查看并处理进程" class="headerlink" title="12. ps: process查看并处理进程"></a>12. ps: process查看并处理进程</h4><p>ps 命令用于处理系统上运行的进程。每个进程都有一个称为 PID 的关联 ID</p>
+<pre class="line-numbers language-none"><code class="language-none">abhishek@itsfoss:~$ ps
+    PID TTY          TIME CMD
+  15358 ?        00:00:00 bash
+  15404 ?        00:00:00 ps
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里，</p>
+<p>PID：进程号<br>TTY：控制与进程相关的终端<br>TIME： CPU 总使用时间<br>CMD：运行进程的命令名称</p>
+<p>要查看所有用户运行的所有进程，请使用：</p>
+<pre class="line-numbers language-none"><code class="language-none">ps aux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="13-top-系统监视器"><a href="#13-top-系统监视器" class="headerlink" title="13. top: 系统监视器"></a>13. top: 系统监视器</h4><p>ps 命令为您提供所有正在运行的进程，而 top 命令为您提供进程和系统资源消耗的实时视图。</p>
+<p>要停止正在运行的 top 命令，请使用<strong>Ctrl+C</strong>键盘快捷键。</p>
+<h4 id="14-lsblk-列出磁盘和分区"><a href="#14-lsblk-列出磁盘和分区" class="headerlink" title="14. lsblk: 列出磁盘和分区"></a>14. lsblk: 列出磁盘和分区</h4><pre class="line-numbers language-none"><code class="language-none">root@learnubuntu:~# lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0     7:0    0 79.9M  1 loop &#x2F;snap&#x2F;lxd&#x2F;22923
+loop1     7:1    0  103M  1 loop &#x2F;snap&#x2F;lxd&#x2F;23541
+loop2     7:2    0 63.2M  1 loop &#x2F;snap&#x2F;core20&#x2F;1623
+loop3     7:3    0   48M  1 loop &#x2F;snap&#x2F;snapd&#x2F;17336
+loop4     7:4    0   48M  1 loop &#x2F;snap&#x2F;snapd&#x2F;17029
+loop6     7:6    0 63.2M  1 loop &#x2F;snap&#x2F;core20&#x2F;1634
+vda     252:0    0   25G  0 disk 
+├─vda1  252:1    0 24.9G  0 part &#x2F;
+├─vda14 252:14   0    4M  0 part 
+└─vda15 252:15   0  106M  0 part &#x2F;boot&#x2F;efi
+vdb     252:16   0  466K  1 disk 
+root@learnubuntu:~# <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="15-fdisk-列出和管理磁盘和分区"><a href="#15-fdisk-列出和管理磁盘和分区" class="headerlink" title="15. fdisk: 列出和管理磁盘和分区"></a>15. fdisk: 列出和管理磁盘和分区</h4><p>另一个类似但更好的命令是<strong>fdisk</strong>命令。它允许您<strong>操作磁盘分区</strong>。这意味着您可以使用此命令创建新分区并删除现有分区并调整其大小。</p>
+<h4 id="16-find-搜索文件"><a href="#16-find-搜索文件" class="headerlink" title="16. find:搜索文件"></a>16. find:搜索文件</h4><p>这是 find 命令的示例，它将为您提供所有以 . 当前目录中的<strong>txt扩展名。</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">find . -type f -name &quot;*.txt&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="17-grep-在文件内容中搜索"><a href="#17-grep-在文件内容中搜索" class="headerlink" title="17. grep: 在文件内容中搜索"></a>17. grep: 在文件内容中搜索</h4><p>find 命令根据文件名和类型搜索文件。如果要根据文件内容进行搜索，可以使用 grep 命令。</p>
+<pre class="line-numbers language-none"><code class="language-none">grep -r &quot;word&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>全局搜索word</p>
+<h4 id="18-kill-终止进程"><a href="#18-kill-终止进程" class="headerlink" title="18. kill: 终止进程"></a>18. kill: 终止进程</h4><pre class="line-numbers language-none"><code class="language-none">sudo kill -9 process_ID_or_Name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>正如您在上面的命令中看到的，您需要知道进程 ID (PID) 或名称才能终止它。您可以使用 ps 或 top 命令来获取 PID 或确切的进程名称。</p>
+<pre class="line-numbers language-none"><code class="language-none">ps aux | grep -i “name of your desired program”<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您注意到 grep 命令的使用了吗？您已经在使用此列表中提到的命令</p>
+<h4 id="19-history命令历史记录"><a href="#19-history命令历史记录" class="headerlink" title="19: history命令历史记录"></a>19: history命令历史记录</h4><p>您可以选择使用其编号来运行历史记录中的条目，如下所示：</p>
+<pre class="line-numbers language-none"><code class="language-none">!number<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>但即使历史记录也可能很大，所以再次使用 grep 命令来过滤您的搜索词。</p>
+<pre class="line-numbers language-none"><code class="language-none">abhishek@itsfoss:~$ history | grep aux
+ 1915  ps aux
+ 1952  ps aux | grep -i spotify
+ 1955  ps -aux | grep -i calculator
+ 1957  ps -aux | grep -i calculator
+ 1959  ps -aux | grep -i calculator
+ 1970  history | grep aux<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="20-chmod-change-mod更改文件权限"><a href="#20-chmod-change-mod更改文件权限" class="headerlink" title="20. chmod: change mod更改文件权限"></a>20. chmod: change mod更改文件权限</h4><p>例如，如果希望<strong>所有者拥有所有权限</strong>，而组和公共没有权限，则需要以绝对模式设置权限<strong>7</strong>00：(7&#x3D;1X+2W+4R)</p>
+<pre class="line-numbers language-none"><code class="language-none">chmod 700 filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>****chmod****最常用的情况之一可能是为文件提供执行位。通常在下载可执行文件后，您需要在使用它之前添加此权限。授予所有者、组和其他所有人执行文件的权限：</p>
+<pre class="line-numbers language-none"><code class="language-none">chmod +x &#x2F;path&#x2F;to&#x2F;file<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="21-lshw：获取硬件详细信息"><a href="#21-lshw：获取硬件详细信息" class="headerlink" title="21. lshw：获取硬件详细信息"></a>21. lshw：获取硬件详细信息</h4><h4 id="22-sudo-i"><a href="#22-sudo-i" class="headerlink" title="22. sudo -i"></a>22. sudo -i</h4><h4 id="23-apt：安装、删除和管理-deb包"><a href="#23-apt：安装、删除和管理-deb包" class="headerlink" title="23. apt：安装、删除和管理.deb包"></a>23. apt：安装、删除和管理.deb包</h4><p>要安装包，请使用：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt install package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>要删除已安装的软件，请使用：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt remove package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>要一次性使用所有可升级包更新您的 Ubuntu 系统：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt update &amp;&amp; sudo apt upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="24-ip：查看IP地址等信息"><a href="#24-ip：查看IP地址等信息" class="headerlink" title="24. ip：查看IP地址等信息"></a>24. ip：查看IP地址等信息</h4><pre class="line-numbers language-none"><code class="language-none">ip a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="25-ping-检查远程系统是否可达"><a href="#25-ping-检查远程系统是否可达" class="headerlink" title="25. ping: 检查远程系统是否可达"></a>25. ping: 检查远程系统是否可达</h4><h4 id="26-ssh-连接到远程系统"><a href="#26-ssh-连接到远程系统" class="headerlink" title="26. ssh: 连接到远程系统"></a>26. ssh: 连接到远程系统</h4><pre class="line-numbers language-none"><code class="language-none">ssh user@ip_address_of_remote_system<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="27-scp：在远程系统之间复制文件"><a href="#27-scp：在远程系统之间复制文件" class="headerlink" title="27. scp：在远程系统之间复制文件"></a>27. scp：在远程系统之间复制文件</h4><p>scp 命令的工作方式几乎与您之前看到的 cp 命令类似。</p>
+<p>下面的示例将文件从远程系统上用户的主目录复制到本地登录系统的当前目录。</p>
+<pre class="line-numbers language-none"><code class="language-none">scp username@ip_address:&#x2F;home&#x2F;username&#x2F;filename .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="28-exit-关闭终端"><a href="#28-exit-关闭终端" class="headerlink" title="28. exit: 关闭终端"></a>28. exit: 关闭终端</h4><h4 id="29-shutdown：关闭或重新启动系统"><a href="#29-shutdown：关闭或重新启动系统" class="headerlink" title="29.  shutdown：关闭或重新启动系统"></a>29.  shutdown：关闭或重新启动系统</h4>
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>文文文
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://wenjiaran.github.io/2023/06/30/ubuntu%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/" title="ubuntu常见命令">http://wenjiaran.github.io/2023/06/30/ubuntu常见命令/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/" rel="prev" title="前端基础">
+      <i class="fa fa-chevron-left"></i> 前端基础
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/06/30/docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/" rel="next" title="docker常见命令">
+      docker常见命令 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      
+      <script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script> 
+      <script async data-pjax src="/js/my-own-fun-code/tencent-map.js"></script> 
+      <div id="welcome-info"></div>
+      <style>
+        #welcome-info {
+        background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
+        border-radius: 18px;
+        padding: 8px;
+        text-align: left;
+        }
+      </style>
+
+      
+      <div>访客足迹</div>
+      <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=mYpui3S-gONfhwLJT8UyHBVeQAlAAXdTVcUNmycxhxE&cl=ffffff&w=a"></script>
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-ls-list%E5%88%97%E5%87%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">1. ls: list列出文件夹内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-cd-%E6%9B%B4%E6%94%B9%E7%9B%AE%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">2. cd: 更改目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-cat"><span class="nav-number">3.</span> <span class="nav-text">3. cat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-less-%E8%AF%BB%E5%8F%96%E5%A4%A7%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">4. less: 读取大文本文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-touch-%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E4%BB%B6"><span class="nav-number">5.</span> <span class="nav-text">5. touch: 创建新文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-mkdir-%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">6.</span> <span class="nav-text">6. mkdir: 创建新文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-cp-copy"><span class="nav-number">7.</span> <span class="nav-text">7. cp: copy</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-mv-move"><span class="nav-number">8.</span> <span class="nav-text">8. mv: move</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-rm-rmove%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">9.</span> <span class="nav-text">9. rm: rmove删除文件和文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-vim-%E7%94%A8vim%E7%BC%96%E8%BE%91%E5%99%A8%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6"><span class="nav-number">10.</span> <span class="nav-text">10. vim: 用vim编辑器打开文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-clear-%E6%B8%85%E9%99%A4%E7%BB%88%E7%AB%AF%E5%B1%8F%E5%B9%95"><span class="nav-number">11.</span> <span class="nav-text">11. clear: 清除终端屏幕</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-ps-process%E6%9F%A5%E7%9C%8B%E5%B9%B6%E5%A4%84%E7%90%86%E8%BF%9B%E7%A8%8B"><span class="nav-number">12.</span> <span class="nav-text">12. ps: process查看并处理进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-top-%E7%B3%BB%E7%BB%9F%E7%9B%91%E8%A7%86%E5%99%A8"><span class="nav-number">13.</span> <span class="nav-text">13. top: 系统监视器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-lsblk-%E5%88%97%E5%87%BA%E7%A3%81%E7%9B%98%E5%92%8C%E5%88%86%E5%8C%BA"><span class="nav-number">14.</span> <span class="nav-text">14. lsblk: 列出磁盘和分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15-fdisk-%E5%88%97%E5%87%BA%E5%92%8C%E7%AE%A1%E7%90%86%E7%A3%81%E7%9B%98%E5%92%8C%E5%88%86%E5%8C%BA"><span class="nav-number">15.</span> <span class="nav-text">15. fdisk: 列出和管理磁盘和分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16-find-%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6"><span class="nav-number">16.</span> <span class="nav-text">16. find:搜索文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#17-grep-%E5%9C%A8%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E4%B8%AD%E6%90%9C%E7%B4%A2"><span class="nav-number">17.</span> <span class="nav-text">17. grep: 在文件内容中搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-kill-%E7%BB%88%E6%AD%A2%E8%BF%9B%E7%A8%8B"><span class="nav-number">18.</span> <span class="nav-text">18. kill: 终止进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#19-history%E5%91%BD%E4%BB%A4%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95"><span class="nav-number">19.</span> <span class="nav-text">19: history命令历史记录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20-chmod-change-mod%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="nav-number">20.</span> <span class="nav-text">20. chmod: change mod更改文件权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#21-lshw%EF%BC%9A%E8%8E%B7%E5%8F%96%E7%A1%AC%E4%BB%B6%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="nav-number">21.</span> <span class="nav-text">21. lshw：获取硬件详细信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#22-sudo-i"><span class="nav-number">22.</span> <span class="nav-text">22. sudo -i</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#23-apt%EF%BC%9A%E5%AE%89%E8%A3%85%E3%80%81%E5%88%A0%E9%99%A4%E5%92%8C%E7%AE%A1%E7%90%86-deb%E5%8C%85"><span class="nav-number">23.</span> <span class="nav-text">23. apt：安装、删除和管理.deb包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#24-ip%EF%BC%9A%E6%9F%A5%E7%9C%8BIP%E5%9C%B0%E5%9D%80%E7%AD%89%E4%BF%A1%E6%81%AF"><span class="nav-number">24.</span> <span class="nav-text">24. ip：查看IP地址等信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#25-ping-%E6%A3%80%E6%9F%A5%E8%BF%9C%E7%A8%8B%E7%B3%BB%E7%BB%9F%E6%98%AF%E5%90%A6%E5%8F%AF%E8%BE%BE"><span class="nav-number">25.</span> <span class="nav-text">25. ping: 检查远程系统是否可达</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#26-ssh-%E8%BF%9E%E6%8E%A5%E5%88%B0%E8%BF%9C%E7%A8%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">26.</span> <span class="nav-text">26. ssh: 连接到远程系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#27-scp%EF%BC%9A%E5%9C%A8%E8%BF%9C%E7%A8%8B%E7%B3%BB%E7%BB%9F%E4%B9%8B%E9%97%B4%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6"><span class="nav-number">27.</span> <span class="nav-text">27. scp：在远程系统之间复制文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#28-exit-%E5%85%B3%E9%97%AD%E7%BB%88%E7%AB%AF"><span class="nav-number">28.</span> <span class="nav-text">28. exit: 关闭终端</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#29-shutdown%EF%BC%9A%E5%85%B3%E9%97%AD%E6%88%96%E9%87%8D%E6%96%B0%E5%90%AF%E5%8A%A8%E7%B3%BB%E7%BB%9F"><span class="nav-number">29.</span> <span class="nav-text">29.  shutdown：关闭或重新启动系统</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">文文文</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">文文文</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">29k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">48 分钟</span>
+</div>
+
+
+
+
+
+
+<!--添加网站的运行时间-->
+<span id="timeDate">载入天数...</span> 
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("01/07/2023 09:38:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "小站已经出生 "+dnum+" 天 " +hnum+ " 小时啦 "; 
+    
+    } 
+setInterval("createtime()",250);
+</script>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '3e5f7ab78b9b3953afd1',
+      clientSecret: 'a6c212045ff185ebbe6e2efbc968b93a6563fa33',
+      repo        : 'BlogCommentSystem',
+      owner       : 'WenjiaRan',
+      admin       : ['WenjiaRan'],
+      id          : '2d98400aeaffab46590326d91bf20039',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+  
+
+
+
+  <script async src="/js/cursor/fireworks.js"></script>
+
+
+
+<script defer src="/js/my-own-fun-code/forbide-developer-mode.js"></script>
+ 
+
+
+
+
+
+
+<script>
+//动态标题
+var OriginTitile = document.title;
+var titleTime;
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    //离开当前页面时标签显示内容
+    document.title = '👀快回来φ(゜▽゜*)♪';
+    clearTimeout(titleTime);
+  } else {
+    //返回当前页面时标签显示内容
+    document.title = '🐖看到你啦ヾ(≧▽≦*)o';
+    //两秒后变回正常标题
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile;
+    }, 2000);
+  }
+});
+</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>

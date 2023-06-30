@@ -202,6 +202,340 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/06/30/docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/30/docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">docker常见命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-30 21:18:54 / 修改时间：21:28:24" itemprop="dateCreated datePublished" datetime="2023-06-30T21:18:54+08:00">2023-06-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>docker –version</p>
+</li>
+<li><p>docker search</p>
+<p>通过 Docker hub 搜索特定镜像。该命令返回具体信息，包括图像名称、描述、自动化、官方星级等。以下是如何使用它 - </p>
+<pre class="line-numbers language-none"><code class="language-none">docker search MySQL<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您可以使用 Docker Hub 网站来搜索基于 GUI 的选项。</p>
+</li>
+<li><p>docker pull</p>
+<p>从 Docker Hub 中提取特定的映像。您所要做的就是使用命令“docker pull”以及图像名称</p>
+</li>
+<li><p>docker run</p>
+<p>该命令用于从镜像创建容器。具体做法如下——</p>
+<pre class="line-numbers language-none"><code class="language-none">docker run --env MYSQL_ROOT_PASSWORD&#x3D;my-secret-pw --detach mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>‘–detach’ 选项运行容器，’–env’ 选项用于设置强制变量。如果不使用“–name”选项，docker会随机为容器分配一个名称。</p>
+</li>
+<li><p>docker ps</p>
+<p>该命令用于列出后台所有正在运行的容器</p>
+<pre class="line-numbers language-none"><code class="language-none">docker ps --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>docker stop</p>
+<p>“docker stop”命令使用容器名称或其 ID 停止容器。具体做法如下——</p>
+<pre class="line-numbers language-none"><code class="language-none">docker stop f8c52bedeecc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>docker restart</p>
+<p>该命令用于重新启动已停止的容器。<strong>建议重启系统后使用</strong>。具体做法如下——</p>
+<pre class="line-numbers language-none"><code class="language-none">greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$
+docker restart f8c52bedeecc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>docker kill</p>
+<p>该命令用于通过终止容器的执行来立即停止容器。虽然“docker stop”命令有助于在自己的时间关闭容器，<strong>但“docker Kill”命令会立即停止它</strong>。这里是使用它——</p>
+<pre class="line-numbers language-none"><code class="language-none">greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$
+docker kill 09ca6feb6efc
+To check whether the container is stopped or killed, use the following command -
+greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>docker exec</p>
+<p>该命令用于访问正在运行的容器。以下是如何使用它 –</p>
+<pre class="line-numbers language-none"><code class="language-none">docker exec -it test_db bash
+mysql -uroot -pmy-secret-pw
+SHOW DATABASES;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>您必须提供容器的名称或 ID，在本例中为“test_db”。**’-i’ 和 ‘-t’ 选项用于访问交互模式。** </p>
+</li>
+<li><p>docker login 登录dockerhub</p>
+</li>
+<li><p>docker commit</p>
+<p>该命令用于在本地系统上创建或保存编辑后的容器的映像。 </p>
+</li>
+<li><p>docker push</p>
+<p>此命令有助于在存储库或 docker hub 上推送或上传 docker 镜像</p>
+</li>
+<li><p>docker network</p>
+<p>“docker network”命令用于了解集群中网络列表的详细信息。</p>
+</li>
+<li><p>Docker rmi </p>
+<p>该命令用于释放一些磁盘空间。图像 ID 用于在使用此命令时删除图像。</p>
+<pre class="line-numbers language-none"><code class="language-none">docker rmi eb0e825dc3cf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>docker copy</p>
+<p>此命令将文件从 docker 复制到本地系统</p>
+</li>
+<li><p>docker log</p>
+</li>
+<li><p>docker logout: 退出dockerhub</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/06/30/ubuntu%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/30/ubuntu%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">ubuntu常见命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-30 20:43:01 / 修改时间：21:18:47" itemprop="dateCreated datePublished" datetime="2023-06-30T20:43:01+08:00">2023-06-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">计算机知识</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="1-ls-list列出文件夹内容"><a href="#1-ls-list列出文件夹内容" class="headerlink" title="1. ls: list列出文件夹内容"></a>1. ls: list列出文件夹内容</h4><pre class="line-numbers language-none"><code class="language-none">ls -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p> ls -l 查看文件大小、权限、修改时间等详细信息</p>
+<h4 id="2-cd-更改目录"><a href="#2-cd-更改目录" class="headerlink" title="2. cd: 更改目录"></a>2. cd: 更改目录</h4><h4 id="3-cat"><a href="#3-cat" class="headerlink" title="3. cat"></a>3. cat</h4><pre class="line-numbers language-none"><code class="language-none">cat filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>读取文本文件内容, 显示在屏幕上</p>
+<h4 id="4-less-读取大文本文件"><a href="#4-less-读取大文本文件" class="headerlink" title="4. less: 读取大文本文件"></a>4. less: 读取大文本文件</h4><p>当您使用 less 打开文件时，它会以页面形式打开文件。您可以向上&#x2F;向下滚动、查找文本等等。</p>
+<p>读取完文件后，您可以<strong>按 Q 键退出 less 视图</strong>。您会注意到屏幕上没有显示任何内容。你的屏幕很干净。</p>
+<h4 id="5-touch-创建新文件"><a href="#5-touch-创建新文件" class="headerlink" title="5. touch: 创建新文件"></a>5. touch: 创建新文件</h4><h4 id="6-mkdir-创建新文件夹"><a href="#6-mkdir-创建新文件夹" class="headerlink" title="6. mkdir: 创建新文件夹"></a>6. mkdir: 创建新文件夹</h4><h4 id="7-cp-copy"><a href="#7-cp-copy" class="headerlink" title="7. cp: copy"></a>7. cp: copy</h4><p>想象一下您必须修改配置文件。明智的做法是使用其他名称复制该文件。这样，您将获得该文件的备份。</p>
+<pre class="line-numbers language-none"><code class="language-none">cp existing_file.txt existing_file.back<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您也可以使用相同的 cp 命令来复制目录。为此，您必须指定递归选项<code>-r</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">cp -r dir another_location<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="8-mv-move"><a href="#8-mv-move" class="headerlink" title="8. mv: move"></a>8. mv: move</h4><p>mv 命令代表“移动”。当您将文件复制到另一个位置时，它仍保留在原来的位置。</p>
+<p>mv 命令将文件和文件夹移动到其他位置。您可以将其视为剪切粘贴操作。</p>
+<pre class="line-numbers language-none"><code class="language-none">mv file.txt &#x2F;another&#x2F;location<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您也可以使用 mv 命令重命名该文件。</p>
+<pre class="line-numbers language-none"><code class="language-none">mv file.txt new_file.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="9-rm-rmove删除文件和文件夹"><a href="#9-rm-rmove删除文件和文件夹" class="headerlink" title="9. rm: rmove删除文件和文件夹"></a>9. rm: rmove删除文件和文件夹</h4><pre class="line-numbers language-none"><code class="language-none">rm -rf *<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="10-vim-用vim编辑器打开文件"><a href="#10-vim-用vim编辑器打开文件" class="headerlink" title="10. vim: 用vim编辑器打开文件"></a>10. vim: 用vim编辑器打开文件</h4><p>退出并保存时用<code>:wq</code></p>
+<h4 id="11-clear-清除终端屏幕"><a href="#11-clear-清除终端屏幕" class="headerlink" title="11. clear: 清除终端屏幕"></a>11. clear: 清除终端屏幕</h4><h4 id="12-ps-process查看并处理进程"><a href="#12-ps-process查看并处理进程" class="headerlink" title="12. ps: process查看并处理进程"></a>12. ps: process查看并处理进程</h4><p>ps 命令用于处理系统上运行的进程。每个进程都有一个称为 PID 的关联 ID</p>
+<pre class="line-numbers language-none"><code class="language-none">abhishek@itsfoss:~$ ps
+    PID TTY          TIME CMD
+  15358 ?        00:00:00 bash
+  15404 ?        00:00:00 ps
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里，</p>
+<p>PID：进程号<br>TTY：控制与进程相关的终端<br>TIME： CPU 总使用时间<br>CMD：运行进程的命令名称</p>
+<p>要查看所有用户运行的所有进程，请使用：</p>
+<pre class="line-numbers language-none"><code class="language-none">ps aux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="13-top-系统监视器"><a href="#13-top-系统监视器" class="headerlink" title="13. top: 系统监视器"></a>13. top: 系统监视器</h4><p>ps 命令为您提供所有正在运行的进程，而 top 命令为您提供进程和系统资源消耗的实时视图。</p>
+<p>要停止正在运行的 top 命令，请使用<strong>Ctrl+C</strong>键盘快捷键。</p>
+<h4 id="14-lsblk-列出磁盘和分区"><a href="#14-lsblk-列出磁盘和分区" class="headerlink" title="14. lsblk: 列出磁盘和分区"></a>14. lsblk: 列出磁盘和分区</h4><pre class="line-numbers language-none"><code class="language-none">root@learnubuntu:~# lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+loop0     7:0    0 79.9M  1 loop &#x2F;snap&#x2F;lxd&#x2F;22923
+loop1     7:1    0  103M  1 loop &#x2F;snap&#x2F;lxd&#x2F;23541
+loop2     7:2    0 63.2M  1 loop &#x2F;snap&#x2F;core20&#x2F;1623
+loop3     7:3    0   48M  1 loop &#x2F;snap&#x2F;snapd&#x2F;17336
+loop4     7:4    0   48M  1 loop &#x2F;snap&#x2F;snapd&#x2F;17029
+loop6     7:6    0 63.2M  1 loop &#x2F;snap&#x2F;core20&#x2F;1634
+vda     252:0    0   25G  0 disk 
+├─vda1  252:1    0 24.9G  0 part &#x2F;
+├─vda14 252:14   0    4M  0 part 
+└─vda15 252:15   0  106M  0 part &#x2F;boot&#x2F;efi
+vdb     252:16   0  466K  1 disk 
+root@learnubuntu:~# <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="15-fdisk-列出和管理磁盘和分区"><a href="#15-fdisk-列出和管理磁盘和分区" class="headerlink" title="15. fdisk: 列出和管理磁盘和分区"></a>15. fdisk: 列出和管理磁盘和分区</h4><p>另一个类似但更好的命令是<strong>fdisk</strong>命令。它允许您<strong>操作磁盘分区</strong>。这意味着您可以使用此命令创建新分区并删除现有分区并调整其大小。</p>
+<h4 id="16-find-搜索文件"><a href="#16-find-搜索文件" class="headerlink" title="16. find:搜索文件"></a>16. find:搜索文件</h4><p>这是 find 命令的示例，它将为您提供所有以 . 当前目录中的<strong>txt扩展名。</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">find . -type f -name &quot;*.txt&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="17-grep-在文件内容中搜索"><a href="#17-grep-在文件内容中搜索" class="headerlink" title="17. grep: 在文件内容中搜索"></a>17. grep: 在文件内容中搜索</h4><p>find 命令根据文件名和类型搜索文件。如果要根据文件内容进行搜索，可以使用 grep 命令。</p>
+<pre class="line-numbers language-none"><code class="language-none">grep -r &quot;word&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>全局搜索word</p>
+<h4 id="18-kill-终止进程"><a href="#18-kill-终止进程" class="headerlink" title="18. kill: 终止进程"></a>18. kill: 终止进程</h4><pre class="line-numbers language-none"><code class="language-none">sudo kill -9 process_ID_or_Name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>正如您在上面的命令中看到的，您需要知道进程 ID (PID) 或名称才能终止它。您可以使用 ps 或 top 命令来获取 PID 或确切的进程名称。</p>
+<pre class="line-numbers language-none"><code class="language-none">ps aux | grep -i “name of your desired program”<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您注意到 grep 命令的使用了吗？您已经在使用此列表中提到的命令</p>
+<h4 id="19-history命令历史记录"><a href="#19-history命令历史记录" class="headerlink" title="19: history命令历史记录"></a>19: history命令历史记录</h4><p>您可以选择使用其编号来运行历史记录中的条目，如下所示：</p>
+<pre class="line-numbers language-none"><code class="language-none">!number<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>但即使历史记录也可能很大，所以再次使用 grep 命令来过滤您的搜索词。</p>
+<pre class="line-numbers language-none"><code class="language-none">abhishek@itsfoss:~$ history | grep aux
+ 1915  ps aux
+ 1952  ps aux | grep -i spotify
+ 1955  ps -aux | grep -i calculator
+ 1957  ps -aux | grep -i calculator
+ 1959  ps -aux | grep -i calculator
+ 1970  history | grep aux<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="20-chmod-change-mod更改文件权限"><a href="#20-chmod-change-mod更改文件权限" class="headerlink" title="20. chmod: change mod更改文件权限"></a>20. chmod: change mod更改文件权限</h4><p>例如，如果希望<strong>所有者拥有所有权限</strong>，而组和公共没有权限，则需要以绝对模式设置权限<strong>7</strong>00：(7&#x3D;1X+2W+4R)</p>
+<pre class="line-numbers language-none"><code class="language-none">chmod 700 filename<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>****chmod****最常用的情况之一可能是为文件提供执行位。通常在下载可执行文件后，您需要在使用它之前添加此权限。授予所有者、组和其他所有人执行文件的权限：</p>
+<pre class="line-numbers language-none"><code class="language-none">chmod +x &#x2F;path&#x2F;to&#x2F;file<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="21-lshw：获取硬件详细信息"><a href="#21-lshw：获取硬件详细信息" class="headerlink" title="21. lshw：获取硬件详细信息"></a>21. lshw：获取硬件详细信息</h4><h4 id="22-sudo-i"><a href="#22-sudo-i" class="headerlink" title="22. sudo -i"></a>22. sudo -i</h4><h4 id="23-apt：安装、删除和管理-deb包"><a href="#23-apt：安装、删除和管理-deb包" class="headerlink" title="23. apt：安装、删除和管理.deb包"></a>23. apt：安装、删除和管理.deb包</h4><p>要安装包，请使用：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt install package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>要删除已安装的软件，请使用：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt remove package_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>要一次性使用所有可升级包更新您的 Ubuntu 系统：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt update &amp;&amp; sudo apt upgrade<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="24-ip：查看IP地址等信息"><a href="#24-ip：查看IP地址等信息" class="headerlink" title="24. ip：查看IP地址等信息"></a>24. ip：查看IP地址等信息</h4><pre class="line-numbers language-none"><code class="language-none">ip a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="25-ping-检查远程系统是否可达"><a href="#25-ping-检查远程系统是否可达" class="headerlink" title="25. ping: 检查远程系统是否可达"></a>25. ping: 检查远程系统是否可达</h4><h4 id="26-ssh-连接到远程系统"><a href="#26-ssh-连接到远程系统" class="headerlink" title="26. ssh: 连接到远程系统"></a>26. ssh: 连接到远程系统</h4><pre class="line-numbers language-none"><code class="language-none">ssh user@ip_address_of_remote_system<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="27-scp：在远程系统之间复制文件"><a href="#27-scp：在远程系统之间复制文件" class="headerlink" title="27. scp：在远程系统之间复制文件"></a>27. scp：在远程系统之间复制文件</h4><p>scp 命令的工作方式几乎与您之前看到的 cp 命令类似。</p>
+<p>下面的示例将文件从远程系统上用户的主目录复制到本地登录系统的当前目录。</p>
+<pre class="line-numbers language-none"><code class="language-none">scp username@ip_address:&#x2F;home&#x2F;username&#x2F;filename .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="28-exit-关闭终端"><a href="#28-exit-关闭终端" class="headerlink" title="28. exit: 关闭终端"></a>28. exit: 关闭终端</h4><h4 id="29-shutdown：关闭或重新启动系统"><a href="#29-shutdown：关闭或重新启动系统" class="headerlink" title="29.  shutdown：关闭或重新启动系统"></a>29.  shutdown：关闭或重新启动系统</h4>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/06/26/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1459,184 +1793,6 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/31/copilot%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="文文文">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一叶小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/31/copilot%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="post-title-link" itemprop="url">copilot使用指导</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-01-31 10:45:05 / 修改时间：11:50:08" itemprop="dateCreated datePublished" datetime="2023-01-31T10:45:05+08:00">2023-01-31</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          copilot使用指导
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/31/copilot%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/#more" rel="contents" style="border-radius: 10px;">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/29/google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="文文文">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一叶小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/29/google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">google搜索技巧</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-01-29 20:30:20 / 修改时间：20:56:00" itemprop="dateCreated datePublished" datetime="2023-01-29T20:30:20+08:00">2023-01-29</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" itemprop="url" rel="index"><span itemprop="name">搜索引擎</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>796</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          google搜索技巧
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/29/google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/#more" rel="contents" style="border-radius: 10px;">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1722,20 +1878,20 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1771,12 +1927,12 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">25k</span>
+    <span title="站点总字数">29k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">41 分钟</span>
+    <span title="站点阅读时长">48 分钟</span>
 </div>
 
 
