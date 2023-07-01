@@ -80,87 +80,6 @@
       </tags>
   </entry>
   <entry>
-    <title>docker常见命令</title>
-    <url>/2023/06/30/docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<ol>
-<li><p>docker –version</p>
-</li>
-<li><p>docker search</p>
-<p>通过 Docker hub 搜索特定镜像。该命令返回具体信息，包括图像名称、描述、自动化、官方星级等。以下是如何使用它 - </p>
-<pre class="line-numbers language-none"><code class="language-none">docker search MySQL<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>您可以使用 Docker Hub 网站来搜索基于 GUI 的选项。</p>
-</li>
-<li><p>docker pull</p>
-<p>从 Docker Hub 中提取特定的映像。您所要做的就是使用命令“docker pull”以及图像名称</p>
-</li>
-<li><p>docker run</p>
-<p>该命令用于从镜像创建容器。具体做法如下——</p>
-<pre class="line-numbers language-none"><code class="language-none">docker run --env MYSQL_ROOT_PASSWORD&#x3D;my-secret-pw --detach mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>‘–detach’ 选项运行容器，’–env’ 选项用于设置强制变量。如果不使用“–name”选项，docker会随机为容器分配一个名称。</p>
-</li>
-<li><p>docker ps</p>
-<p>该命令用于列出后台所有正在运行的容器</p>
-<pre class="line-numbers language-none"><code class="language-none">docker ps --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>docker stop</p>
-<p>“docker stop”命令使用容器名称或其 ID 停止容器。具体做法如下——</p>
-<pre class="line-numbers language-none"><code class="language-none">docker stop f8c52bedeecc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>docker restart</p>
-<p>该命令用于重新启动已停止的容器。<strong>建议重启系统后使用</strong>。具体做法如下——</p>
-<pre class="line-numbers language-none"><code class="language-none">greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$
-docker restart f8c52bedeecc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-<li><p>docker kill</p>
-<p>该命令用于通过终止容器的执行来立即停止容器。虽然“docker stop”命令有助于在自己的时间关闭容器，<strong>但“docker Kill”命令会立即停止它</strong>。这里是使用它——</p>
-<pre class="line-numbers language-none"><code class="language-none">greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$
-docker kill 09ca6feb6efc
-To check whether the container is stopped or killed, use the following command -
-greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$ docker ps
-CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>docker exec</p>
-<p>该命令用于访问正在运行的容器。以下是如何使用它 –</p>
-<pre class="line-numbers language-none"><code class="language-none">docker exec -it test_db bash
-mysql -uroot -pmy-secret-pw
-SHOW DATABASES;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>您必须提供容器的名称或 ID，在本例中为“test_db”。**’-i’ 和 ‘-t’ 选项用于访问交互模式。** </p>
-</li>
-<li><p>docker login 登录dockerhub</p>
-</li>
-<li><p>docker commit</p>
-<p>该命令用于在本地系统上创建或保存编辑后的容器的映像。 </p>
-</li>
-<li><p>docker push</p>
-<p>此命令有助于在存储库或 docker hub 上推送或上传 docker 镜像</p>
-</li>
-<li><p>docker network</p>
-<p>“docker network”命令用于了解集群中网络列表的详细信息。</p>
-</li>
-<li><p>Docker rmi </p>
-<p>该命令用于释放一些磁盘空间。图像 ID 用于在使用此命令时删除图像。</p>
-<pre class="line-numbers language-none"><code class="language-none">docker rmi eb0e825dc3cf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>docker copy</p>
-<p>此命令将文件从 docker 复制到本地系统</p>
-</li>
-<li><p>docker log</p>
-</li>
-<li><p>docker logout: 退出dockerhub</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>计算机</category>
-      </categories>
-      <tags>
-        <tag>docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>chatgpt_提示工程_by_AndrewWu</title>
     <url>/2023/06/23/chatgpt_%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B_by_AndrewWu/</url>
     <content><![CDATA[<h1 id="prompt指南"><a href="#prompt指南" class="headerlink" title="prompt指南"></a>prompt指南</h1><h2 id="1-写出清晰具体的说明"><a href="#1-写出清晰具体的说明" class="headerlink" title="1:写出清晰具体的说明"></a>1:写出清晰具体的说明</h2><p><strong>策略 1</strong>：使用分隔符清楚地指示输入的不同部分</p>
@@ -417,6 +336,87 @@ print(response)
       </categories>
       <tags>
         <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker常见命令</title>
+    <url>/2023/06/30/docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<ol>
+<li><p>docker –version</p>
+</li>
+<li><p>docker search</p>
+<p>通过 Docker hub 搜索特定镜像。该命令返回具体信息，包括图像名称、描述、自动化、官方星级等。以下是如何使用它 - </p>
+<pre class="line-numbers language-none"><code class="language-none">docker search MySQL<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>您可以使用 Docker Hub 网站来搜索基于 GUI 的选项。</p>
+</li>
+<li><p>docker pull</p>
+<p>从 Docker Hub 中提取特定的映像。您所要做的就是使用命令“docker pull”以及图像名称</p>
+</li>
+<li><p>docker run</p>
+<p>该命令用于从镜像创建容器。具体做法如下——</p>
+<pre class="line-numbers language-none"><code class="language-none">docker run --env MYSQL_ROOT_PASSWORD&#x3D;my-secret-pw --detach mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>‘–detach’ 选项运行容器，’–env’ 选项用于设置强制变量。如果不使用“–name”选项，docker会随机为容器分配一个名称。</p>
+</li>
+<li><p>docker ps</p>
+<p>该命令用于列出后台所有正在运行的容器</p>
+<pre class="line-numbers language-none"><code class="language-none">docker ps --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>docker stop</p>
+<p>“docker stop”命令使用容器名称或其 ID 停止容器。具体做法如下——</p>
+<pre class="line-numbers language-none"><code class="language-none">docker stop f8c52bedeecc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>docker restart</p>
+<p>该命令用于重新启动已停止的容器。<strong>建议重启系统后使用</strong>。具体做法如下——</p>
+<pre class="line-numbers language-none"><code class="language-none">greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$
+docker restart f8c52bedeecc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>docker kill</p>
+<p>该命令用于通过终止容器的执行来立即停止容器。虽然“docker stop”命令有助于在自己的时间关闭容器，<strong>但“docker Kill”命令会立即停止它</strong>。这里是使用它——</p>
+<pre class="line-numbers language-none"><code class="language-none">greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$
+docker kill 09ca6feb6efc
+To check whether the container is stopped or killed, use the following command -
+greatlearning@greatlearning:&#x2F;home&#x2F;greatlearning$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>docker exec</p>
+<p>该命令用于访问正在运行的容器。以下是如何使用它 –</p>
+<pre class="line-numbers language-none"><code class="language-none">docker exec -it test_db bash
+mysql -uroot -pmy-secret-pw
+SHOW DATABASES;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>您必须提供容器的名称或 ID，在本例中为“test_db”。**’-i’ 和 ‘-t’ 选项用于访问交互模式。** </p>
+</li>
+<li><p>docker login 登录dockerhub</p>
+</li>
+<li><p>docker commit</p>
+<p>该命令用于在本地系统上创建或保存编辑后的容器的映像。 </p>
+</li>
+<li><p>docker push</p>
+<p>此命令有助于在存储库或 docker hub 上推送或上传 docker 镜像</p>
+</li>
+<li><p>docker network</p>
+<p>“docker network”命令用于了解集群中网络列表的详细信息。</p>
+</li>
+<li><p>Docker rmi </p>
+<p>该命令用于释放一些磁盘空间。图像 ID 用于在使用此命令时删除图像。</p>
+<pre class="line-numbers language-none"><code class="language-none">docker rmi eb0e825dc3cf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>docker copy</p>
+<p>此命令将文件从 docker 复制到本地系统</p>
+</li>
+<li><p>docker log</p>
+</li>
+<li><p>docker logout: 退出dockerhub</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>计算机</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
       </tags>
   </entry>
   <entry>
