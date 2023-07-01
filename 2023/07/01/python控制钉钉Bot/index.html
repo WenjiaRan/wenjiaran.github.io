@@ -24,20 +24,20 @@
     var CONFIG = {"hostname":"wenjiaran.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Welcome to my blog, enter password to read.">
+  <meta name="description" content="钉钉的群组可以构建自定义机器人, 机器人添加成功之后会返回一个token, 你也可以在配置机器人的时候加签, 就会额外再返回一个secret, 提高通讯的安全性 但是这样操作会复杂不少, 下面先给出不配置加签的代码: import requests import json  # 钉钉机器人的webhook webhook &#x3D; &quot;https:&#x2F;&#x2F;oapi.dingtalk.com&#x2F;robot&#x2F;sen">
 <meta property="og:type" content="article">
-<meta property="og:title" content="next主题源文件说明">
-<meta property="og:url" content="http://wenjiaran.github.io/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/index.html">
+<meta property="og:title" content="python控制钉钉Bot">
+<meta property="og:url" content="http://wenjiaran.github.io/2023/07/01/python%E6%8E%A7%E5%88%B6%E9%92%89%E9%92%89Bot/index.html">
 <meta property="og:site_name" content="一叶小屋">
-<meta property="og:description" content="Welcome to my blog, enter password to read.">
+<meta property="og:description" content="钉钉的群组可以构建自定义机器人, 机器人添加成功之后会返回一个token, 你也可以在配置机器人的时候加签, 就会额外再返回一个secret, 提高通讯的安全性 但是这样操作会复杂不少, 下面先给出不配置加签的代码: import requests import json  # 钉钉机器人的webhook webhook &#x3D; &quot;https:&#x2F;&#x2F;oapi.dingtalk.com&#x2F;robot&#x2F;sen">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-24T11:19:15.000Z">
-<meta property="article:modified_time" content="2023-01-26T03:43:00.353Z">
+<meta property="article:published_time" content="2023-07-01T05:32:12.039Z">
+<meta property="article:modified_time" content="2023-07-01T10:12:01.269Z">
 <meta property="article:author" content="文文文">
-<meta property="article:tag" content="hexo的next主题">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://wenjiaran.github.io/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+<link rel="canonical" href="http://wenjiaran.github.io/2023/07/01/python%E6%8E%A7%E5%88%B6%E9%92%89%E9%92%89Bot/">
 
 
 <script id="page-configurations">
@@ -50,7 +50,7 @@
   };
 </script>
 
-  <title>next主题源文件说明 | 一叶小屋</title>
+  <title>python控制钉钉Bot | 一叶小屋</title>
   
 
 
@@ -208,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/07/01/python%E6%8E%A7%E5%88%B6%E9%92%89%E9%92%89Bot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -221,7 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          next主题源文件说明
+          python控制钉钉Bot
         </h1>
 
         <div class="post-meta">
@@ -230,23 +230,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2023-01-24 19:19:15" itemprop="dateCreated datePublished" datetime="2023-01-24T19:19:15+08:00">2023-01-24</time>
+              <time title="创建时间：2023-07-01 13:32:12 / 修改时间：18:12:01" itemprop="dateCreated datePublished" datetime="2023-07-01T13:32:12+08:00">2023-07-01</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-01-26 11:43:00" itemprop="dateModified" datetime="2023-01-26T11:43:00+08:00">2023-01-26</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
                 </span>
             </span>
 
@@ -263,14 +257,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>519</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -282,18 +276,105 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="368da167e04842e6d638dd411de3eaf0985e1fd1e49e0cd93dd8a20db73c944f">165d50f05814027fb7fe5e4ae8a088d8f7cfffcdc95203901a12477cc5fbe5cbb81c10d9c56c7af4c452b3a3a95bace6ec4fdaf2c4354d0d4f881e178402bff21596bb21b9ad4cd3821d0a353e0d727263e0d4fa8b8ad0a483b2213580df067c65ae44251dc8aa2ecce08c2bb31a4d3d2549e40f5935e92e67fc9c0aad07a36f9d53b8f42dcaf87b0adbb0abc1f0e631d522a67d4e55f6da71bed9b065efdd836ccf461e02e82fabdaedf52324c2dce01daccf447937dc5d677ff7134279e1595d1ad89eb12e28509c918c2316632e8068f5eb2214b16af67967692b47208cb94ecce2d3e26935fe6f87c8f2b1727d7d8a6d213837919ff3e9d48349c0e4749d3aa0b09e974969de0bf74fb862a39383605a31c848f1be6dc24c56c3e419c3cc68049c37e6d6a815eb7a4f763bba90459558518aedc61a83e69b68854987c0445fac6b1f13527d112584e4cc49636e9aecc21f59c46bfecf70da6065c15443cd69e618a1e4fe42ec9e850fe9305b1687ab706ee78b578081db51517fd0a96eea86c43a7444c1f9862c491bd44c0210ee362f3ee2ebfe06fac1e8a0efb371c897a74f1d25c32424a26ccfd791c1600a72952fdfc160c6c130948e583b823546ec843dcb16fe41415a3d8560702b03ca7a3994c25de32b5d4e2bac5d9b48ae9f6f0bf5d42735d77f4383e73c3f027c488ab0a3dbf08e2887ad44edf202e1cdf2b5fafcdcffee3a7b113124608ddb7c34a014ea80dbe1ced2c0553272fd27923bc14c655667b63cb93488926e50f3f695b770a4ca5350146848a5cfd0e0693081164a81acdd91ff33918dd87c455671cbbeca298c925bd5383fa63f4bcaab015d85bf92ed02037f8aae7af9cf6cd4c88913ee0a221df8ce7c0db33efc1d35473e9c762dee317e19f0f822b94ed15e1a64e004014a9aef52510643a888c5dcd4225cd3a6e93479e534cdacbbf71583f088f1ec7f501e97f33a0ee485963c547ac8a565a4f7af7bd90040ba32d850f64c78a4323758c0cc2d52ebcfb7ca546024da56bbfd3a4a1bd8c2937889a64c92e9ef4309ef90f99d46f416aadb08437ba2159cabdb9f579dfc95c08bd48399272a2818c5f4e0baf332ce7b9fd5a3abea7da90e1ae710c050a4d27c432ca1cbe2c1e30f35b53217fd68db220a7f7e208077e56fcef99aa6b37f1d1d302a1b22cd743ea20edb1bcfab878caa6c5ecbc69308a7c341bafea5c00686138e3a311305ee12ce01e3bf8a19ae56ddd8442a89b4235c7674e147baa95b2607a87f6189e8817c7d5a3fb422a834ba40702446c46ab8866ec15930580d48e7d25c2ccf1a086ef4adab7d70df4992959a64b28b31204b1486df3534d1cb31c8cb7833189b5893f9e1b7f2b77a53f69d0a1ba1a3cb1fe5ed1c72af37c6f0b0cb203a8941fba030ea8b77f179d8c32fbbc277bf5a9e1054cc88fd9f7971098461284e6e37dee7d721fc8b79b15dc7de3952f16b9b0fdbcfca7f9437aea0510b555abf6da926b03191a3eabcce9a1c9f713b874dfa9c5416b088afc1493bb6e9f599eb03539fa9f79d73f2bd3d6af23e74b8140641adeede4ef56c566ef68bf49eded854249f96eb46641a9dde0c49d91f6ee0eb75c83e43e6eb9605f8ad278902a4516c84af3fb06ab1d7b60e902e29751095871e3c1ebfdfe63612fa07389ed22eb9a6849783d6c2aff78e1440a5772c43053137f4d4e3291c1f3f0e8fce9c0e1915030e2648a9391d444b17c4c739116272947cd5ad6b6bbb3663e4c657d429db12a4915ba3a735940d7181ef4ce660cfd5efb5b28fcebf8237842d3acaf38f80e64b3c9fce750feef69e7920f5c9de14f25fa557f74d3c02c7612373436db5032b53002c0a52ddfe05992f02411f9c24c0712d090e7f4cd75d45ae137bc4a2ff6ff9e9c0a665d882b0e0f58a328fd103f161168d340d51535b4a2aaa4250e7ef24e355401d1eb7dc11388a05fc863ec40f05af1f8d70ddcdc399f39c3ca12525a867eab880c795d0697c40c1db55e03f90fdadc1b478040156be1738a85a657b11ea16ad48ae4b73214e07a2f21d260bb6031d4dbeaae5047bb4dbf8c3d3241ba44e9ef6ca83cd333c6d01372508cda911c647d950ce18a78a754a9226360bf5c55aa8a7522b992361e4ef9e1742e6dc6c894a356e17df19361a7dd15ac34fc389fdce4d04a45c0b1e5a57f37110c2c6ea99cd0b7fd5e6a6bf9fdee59e24df9f2a6abc7ed00fc5c5a04ede0d18bc9df3d1421de68a9f4e97dc91ed6bc9a846bb656a7a1d9eeaa4e312e370bef78abd9127f959207df76d37db83b45986bed47935beb08e90e3b619579f86821b568865275d317e9da14da85b9065d88076b4b2dcfd1d080fce83e63d3f9cb6280ef01817ecc9c98ac54025a6d60648a6a50ab5133172fcf1bcbaa61f1051c7b1074a810b56841f1d782d8ef81ce3d516f04198ac88a2feb63240414870bfc9b7ed5a5ee2eae1f2e21e0332c576a1becf66e16c899feea7758df603f70e7b61e739fc447804805f55f0da979614269b65cffc15d4ef4150a370143b3bbefa92ab9fc81abde08822074fff985ab3bb45ec5dc351a59e020a63fea5f3915e10d6cec659c5e75d72088d3198b3dc676c1275b036af633eb2970a8a2e70bc99c418030341571dae6789cf80c3a1</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密码123</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+        <p>钉钉的群组可以构建自定义机器人, 机器人添加成功之后会返回一个<code>token</code>, 你也可以在配置机器人的时候加签, 就会额外再返回一个<code>secret</code>, 提高通讯的安全性</p>
+<p>但是这样操作会复杂不少, 下面先给出不配置加签的代码:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> json
+
+<span class="token comment"># 钉钉机器人的webhook</span>
+webhook <span class="token operator">=</span> <span class="token string">"https://oapi.dingtalk.com/robot/send?access_token=your_token"</span>
+
+<span class="token comment"># 构建请求头部</span>
+header <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"application/json"</span><span class="token punctuation">,</span>
+    <span class="token string">"Charset"</span><span class="token punctuation">:</span> <span class="token string">"UTF-8"</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment"># 构建请求数据，此处为发送文本信息</span>
+message <span class="token operator">=</span><span class="token punctuation">&#123;</span>
+    <span class="token string">"msgtype"</span><span class="token punctuation">:</span> <span class="token string">"text"</span><span class="token punctuation">,</span>
+    <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"你想要发送的消息"</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token string">"at"</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token string">"isAtAll"</span><span class="token punctuation">:</span> <span class="token boolean">True</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment"># 对请求数据进行json封装</span>
+message_json <span class="token operator">=</span> json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+
+<span class="token comment"># 发送HTTP POST请求到钉钉webhook</span>
+info <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token operator">=</span>webhook<span class="token punctuation">,</span> data<span class="token operator">=</span>message_json<span class="token punctuation">,</span> headers<span class="token operator">=</span>header<span class="token punctuation">)</span>
+
+<span class="token comment"># 打印请求结果</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>info<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>quite simple and beautiful!</p>
+<p>如果你的钉钉机器人启用了加签安全设置，那么在发送消息时，你需要在URL中添加一个签名参数（<code>sign</code>）。</p>
+<p>下面是如何生成签名的步骤：</p>
+<ol>
+<li>获取当前时间戳和Secret</li>
+<li>拼接成字符串并用HmacSHA256算法加密</li>
+<li>将加密后的字符串进行Base64编码，得到签名</li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> requests
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> hmac
+<span class="token keyword">import</span> hashlib
+<span class="token keyword">import</span> base64
+<span class="token keyword">import</span> urllib<span class="token punctuation">.</span>parse
+<span class="token keyword">import</span> time
+
+<span class="token comment"># 钉钉机器人的access_token</span>
+access_token <span class="token operator">=</span> <span class="token string">"your_token"</span>
+
+<span class="token comment"># 钉钉机器人的Secret</span>
+secret <span class="token operator">=</span> <span class="token string">"your_secret"</span>
+
+<span class="token comment"># 获取当前时间戳（毫秒级），转换为字符串</span>
+timestamp <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token builtin">round</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 拼接需要加密的字符串</span>
+secret_enc <span class="token operator">=</span> secret<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+string_to_sign <span class="token operator">=</span> <span class="token string">'&#123;&#125;\n&#123;&#125;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>timestamp<span class="token punctuation">,</span> secret<span class="token punctuation">)</span>
+string_to_sign_enc <span class="token operator">=</span> string_to_sign<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 使用HmacSHA256算法计算签名，并进行Base64编码</span>
+hmac_code <span class="token operator">=</span> hmac<span class="token punctuation">.</span>new<span class="token punctuation">(</span>secret_enc<span class="token punctuation">,</span> string_to_sign_enc<span class="token punctuation">,</span> digestmod<span class="token operator">=</span>hashlib<span class="token punctuation">.</span>sha256<span class="token punctuation">)</span><span class="token punctuation">.</span>digest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sign <span class="token operator">=</span> urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote_plus<span class="token punctuation">(</span>base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>hmac_code<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 构建请求头部</span>
+header <span class="token operator">=</span> <span class="token punctuation">&#123;</span>
+    <span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"application/json"</span><span class="token punctuation">,</span>
+    <span class="token string">"Charset"</span><span class="token punctuation">:</span> <span class="token string">"UTF-8"</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment"># 构建请求数据，此处为发送文本信息</span>
+message <span class="token operator">=</span><span class="token punctuation">&#123;</span>
+    <span class="token string">"msgtype"</span><span class="token punctuation">:</span> <span class="token string">"text"</span><span class="token punctuation">,</span>
+    <span class="token string">"text"</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"你想要发送的消息"</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token string">"at"</span><span class="token punctuation">:</span> <span class="token punctuation">&#123;</span>
+        <span class="token string">"isAtAll"</span><span class="token punctuation">:</span> <span class="token boolean">True</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment"># 对请求数据进行json封装</span>
+message_json <span class="token operator">=</span> json<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+
+<span class="token comment"># 构建请求的URL，包含签名和时间戳</span>
+webhook <span class="token operator">=</span> <span class="token string">"https://oapi.dingtalk.com/robot/send?access_token=&#123;&#125;&amp;timestamp=&#123;&#125;&amp;sign=&#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>access_token<span class="token punctuation">,</span> timestamp<span class="token punctuation">,</span> sign<span class="token punctuation">)</span>
+
+<span class="token comment"># 发送HTTP POST请求到钉钉webhook</span>
+info <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token operator">=</span>webhook<span class="token punctuation">,</span> data<span class="token operator">=</span>message_json<span class="token punctuation">,</span> headers<span class="token operator">=</span>header<span class="token punctuation">)</span>
+
+<span class="token comment"># 打印请求结果</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>info<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
     </div>
 
     
@@ -308,7 +389,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://wenjiaran.github.io/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/" title="next主题源文件说明">http://wenjiaran.github.io/2023/01/24/next主题源文件说明/</a>
+    <a href="http://wenjiaran.github.io/2023/07/01/python%E6%8E%A7%E5%88%B6%E9%92%89%E9%92%89Bot/" title="python控制钉钉Bot">http://wenjiaran.github.io/2023/07/01/python控制钉钉Bot/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -319,7 +400,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98/" rel="tag"># hexo的next主题</a>
+              <a href="/tags/python/" rel="tag"># python</a>
           </div>
 
         
@@ -328,12 +409,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/01/13/%E6%89%92%E4%B8%80%E6%89%92buaa%E7%9A%84%E9%80%89%E8%AF%BE%E7%BD%91%E7%AB%99/" rel="prev" title="选课网站">
-      <i class="fa fa-chevron-left"></i> 选课网站
+    <a href="/2023/06/30/docker%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/" rel="prev" title="docker常见命令">
+      <i class="fa fa-chevron-left"></i> docker常见命令
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/01/26/%E5%A5%A5%E5%A8%81%E5%B0%94%E4%B8%8E%E8%B5%AB%E8%83%A5%E9%BB%8E%E4%B9%8B%E4%BA%89/" rel="next" title="奥威尔与赫胥黎之争">
-      奥威尔与赫胥黎之争 <i class="fa fa-chevron-right"></i>
+    <a href="/2023/07/01/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="next" title="docker使用教程">
+      docker使用教程 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -594,7 +675,7 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       repo        : 'BlogCommentSystem',
       owner       : 'WenjiaRan',
       admin       : ['WenjiaRan'],
-      id          : '692dcdece1b6992144539bade03b5d41',
+      id          : 'ff789e9bc659121e05ec775019048ddf',
         language: '',
       distractionFreeMode: true
     });

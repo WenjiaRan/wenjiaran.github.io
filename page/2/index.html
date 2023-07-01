@@ -202,6 +202,228 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/02/06/Midjourney%20AI%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/06/Midjourney%20AI%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="post-title-link" itemprop="url">Midjourney AI使用指导</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-06 20:48:50 / 修改时间：21:23:39" itemprop="dateCreated datePublished" datetime="2023-02-06T20:48:50+08:00">2023-02-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p> 通过Midjourney我们可以通过输入文本, 让AI在短短一分钟之内生成图像, 功能非常强大. 我们来了解一下怎么使用它</p>
+<p>Sintax: <code>/image ImagePrompts TextPromts Parameters</code></p>
+<p>语法非常简单易懂, ImagePrompts就是你想输入的图片的链接地址, 可以有多个, AI会采取你输入的图片的风格; TextPromts就是你的具体描述, 尽量使用更具体的词语</p>
+<p>详细介绍一下参数</p>
+<ul>
+<li><code>--iw</code> 图像权重,可以使用图像权重参数<code>--iw</code>来调整图像 URL 与文本的重要性 ,默认是0.25, 0表示输入图像完全不起作用, 一般5就说明输入图像占很大权重了</li>
+<li><code>--ar</code>纵横比</li>
+<li><code>--chaos &lt;number 0–100&gt;</code>改变结果的多样性。较高的值会产生更多不寻常和意外的结果</li>
+<li><code>--no</code>负面提示，<code>--no plants</code>会尝试从图像中移除植物。</li>
+<li><code>--quality &lt;.25, .5, 1, or 2&gt;</code>，您要花费多少渲染质量时间。默认值为 1。值越高成本越高，值越低成本越低。</li>
+<li><code>--stop &lt;integer between 10–100&gt;</code>使用<code>--stop</code>参数在流程中途完成作业。以较早的百分比停止作业会产生更模糊、更不详细的结果。</li>
+<li><code>--niji</code>另一种模型专注于动漫风格的图像。</li>
+<li></li>
+</ul>
+<h3 id="Focus-on-What-you-Want"><a href="#Focus-on-What-you-Want" class="headerlink" title="Focus on What you Want"></a>Focus on What you Want</h3><p>It is better to describe what you want instead of what you don’t want. If you ask for a party with “no cake,” your image will probably include a cake. If you want to ensure an object is not in the final image, try advance prompting using the <a target="_blank" rel="noopener" href="https://docs.midjourney.com/multi-prompts"><code>--no</code> parameter</a>.</p>
+<h3 id="Think-About-What-Details-Matter"><a href="#Think-About-What-Details-Matter" class="headerlink" title="Think About What Details Matter"></a>Think About What Details Matter</h3><p>Anything left unsaid may suprise you. Be as specific or vague as you want, but anything you leave out will be randomized. Being vague is a great way to get variety, but you may not get the specific details you want.</p>
+<p><strong>Try to be clear about any context or details that are important to you. Think about:</strong></p>
+<ul>
+<li><strong>Subject:</strong> person, animal, character, location, object, etc.</li>
+<li><strong>Medium:</strong> photo, painting, illustration(插图), sculpture(雕塑), doodle(涂鸦), tapestry, etc.</li>
+<li><strong>Environment:</strong> indoors, outdoors, on the moon, in Narnia(纳尼亚), underwater, the Emerald City(翡翠城), etc.</li>
+<li><strong>Lighting:</strong> soft, ambient, overcast, neon(霓虹灯), studio lights(工作室照明), etc</li>
+<li><strong>Color:</strong> vibrant(充满活力), muted, bright, monochromatic单色, colorful, black and white, pastel柔和, etc.</li>
+<li><strong>Mood:</strong> Sedate稳重, calm, raucous喧闹, energetic, etc.</li>
+<li><strong>Composition:</strong> Portrait, headshot, closeup, birds-eye view, etc.<ul>
+<li>​					人像、爆头、特写、鸟瞰图等</li>
+</ul>
+</li>
+</ul>
+<h3 id="Use-Collective-Nouns"><a href="#Use-Collective-Nouns" class="headerlink" title="Use Collective Nouns"></a>Use Collective Nouns</h3><p>Plural words leave a lot to chance. Try specific numbers. “Three cats” is more specific than “cats.” Collective nouns also work, “flock of birds” instead of “birds.”</p>
+<p><strong>Pick A Medium</strong></p>
+<img data-src="/2023/02/06/Midjourney AI使用指导/1.png" style="zoom:120%;">
+
+<p><strong>Get Specific</strong></p>
+<img data-src="/2023/02/06/Midjourney AI使用指导/2.png" style="zoom:100%;">
+
+<p><strong>Time Travel</strong></p>
+<img data-src="/2023/02/06/Midjourney AI使用指导/3.png" style="zoom:100%;">
+
+<p><strong>Emote</strong></p>
+<img data-src="/2023/02/06/Midjourney AI使用指导/4.png" style="zoom:100%;">
+
+<p><strong>Get Colorful</strong></p>
+<img data-src="/2023/02/06/Midjourney AI使用指导/5.png" style="zoom:100%;">
+
+<p><strong>Enviromental Exploration</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/02/06/ChatGPT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/06/ChatGPT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="post-title-link" itemprop="url">ChatGPT使用指导</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-06 19:58:41" itemprop="dateCreated datePublished" datetime="2023-02-06T19:58:41+08:00">2023-02-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-05-14 11:35:22" itemprop="dateModified" datetime="2023-05-14T11:35:22+08:00">2023-05-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          ChatGPT使用指导
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/02/06/ChatGPT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/#more" rel="contents" style="border-radius: 10px;">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/31/copilot%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -832,7 +1054,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">16</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -845,7 +1067,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -881,12 +1103,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">29k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">48 分钟</span>
+    <span title="站点阅读时长">55 分钟</span>
 </div>
 
 
