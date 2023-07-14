@@ -202,6 +202,233 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/03/07/python-openai%E5%BA%93%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/03/07/python-openai%E5%BA%93%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">python openai库教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-03-07 20:54:37 / 修改时间：21:33:26" itemprop="dateCreated datePublished" datetime="2023-03-07T20:54:37+08:00">2023-03-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">pip install openai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h1 id="列出模型"><a href="#列出模型" class="headerlink" title="列出模型"></a>列出模型</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
+openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
+openai<span class="token punctuation">.</span>Model<span class="token punctuation">.</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h1><h2 id="Create-completion"><a href="#Create-completion" class="headerlink" title="Create completion"></a>Create completion</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
+openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> <span class="token string">''</span>
+openai<span class="token punctuation">.</span>Completion<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+  model<span class="token operator">=</span><span class="token string">"gpt-3.5-turbo"</span><span class="token punctuation">,</span>
+  prompt<span class="token operator">=</span><span class="token string">"Say this is a test"</span><span class="token punctuation">,</span>
+  max_tokens<span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">,</span>
+  temperature<span class="token operator">=</span><span class="token number">0</span>
+<span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>response</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"cmpl-uqkvlQyYK7bGYrRHQ0eXlWi7"</span><span class="token punctuation">,</span>
+  <span class="token property">"object"</span><span class="token operator">:</span> <span class="token string">"text_completion"</span><span class="token punctuation">,</span>
+  <span class="token property">"created"</span><span class="token operator">:</span> <span class="token number">1589478378</span><span class="token punctuation">,</span>
+  <span class="token property">"model"</span><span class="token operator">:</span> <span class="token string">"text-davinci-003"</span><span class="token punctuation">,</span>
+  <span class="token property">"choices"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">&#123;</span>
+      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"\n\nThis is indeed a test"</span><span class="token punctuation">,</span>
+      <span class="token property">"index"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token property">"logprobs"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+      <span class="token property">"finish_reason"</span><span class="token operator">:</span> <span class="token string">"length"</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"usage"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"prompt_tokens"</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">"completion_tokens"</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
+    <span class="token property">"total_tokens"</span><span class="token operator">:</span> <span class="token number">12</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>请求参数</p>
+<ul>
+<li><p><code>model</code></p>
+</li>
+<li><p><code>prompt</code>: 如果没有, the model will generate as if from the beginning of a new document.</p>
+</li>
+<li><p><code>suffix</code>: 感觉没啥用</p>
+</li>
+<li><p><code>max_tokens integer Optional Defaults to 16</code></p>
+<p>gpt返回的最大tokens数量, 你的promt的tokens+max_tokens必须小于2048或4096(最新的model)</p>
+</li>
+<li><p><code>temperature number Optional Defaults to 1</code></p>
+<p>range from [0,2], 温度越高, 随机性越强</p>
+<p>官方建议, 温度和top_p值改变一个</p>
+</li>
+<li><p><code>top_p number Optional Defaults to 1</code> 用温度吧, 别用他</p>
+</li>
+<li><p><code>n int Opt Defau 1</code></p>
+<p>对于每个prompt, 产生的completions的条数</p>
+</li>
+</ul>
+<h2 id="chat"><a href="#chat" class="headerlink" title="chat"></a>chat</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
+openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
+
+completion <span class="token operator">=</span> openai<span class="token punctuation">.</span>ChatCompletion<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+  model<span class="token operator">=</span><span class="token string">"gpt-3.5-turbo"</span><span class="token punctuation">,</span>
+  messages<span class="token operator">=</span><span class="token punctuation">[</span>
+        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"system"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"You are a helpful assistant."</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"Who won the world series in 2020?"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"assistant"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"The Los Angeles Dodgers won the World Series in 2020."</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"Where was it played?"</span><span class="token punctuation">&#125;</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>completion<span class="token punctuation">.</span>choices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>response</p>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"chatcmpl-123"</span><span class="token punctuation">,</span>
+  <span class="token property">"object"</span><span class="token operator">:</span> <span class="token string">"chat.completion"</span><span class="token punctuation">,</span>
+  <span class="token property">"created"</span><span class="token operator">:</span> <span class="token number">1677652288</span><span class="token punctuation">,</span>
+  <span class="token property">"choices"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
+    <span class="token property">"index"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"message"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+      <span class="token property">"role"</span><span class="token operator">:</span> <span class="token string">"assistant"</span><span class="token punctuation">,</span>
+      <span class="token property">"content"</span><span class="token operator">:</span> <span class="token string">"\n\nHello there, how may I assist you today?"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+    <span class="token property">"finish_reason"</span><span class="token operator">:</span> <span class="token string">"stop"</span>
+  <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"usage"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">"prompt_tokens"</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+    <span class="token property">"completion_tokens"</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
+    <span class="token property">"total_tokens"</span><span class="token operator">:</span> <span class="token number">21</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在 Python 中，可以使用 提取助手的回复<code>response[‘choices’][0][‘message’][‘content’]</code></p>
+<p>  一般来说，<code>gpt-3.5-turbo-0301</code>对系统消息的关注度不高，因此重要的说明往往放在用户消息中比较好。</p>
+<h2 id="edit"><a href="#edit" class="headerlink" title="edit"></a>edit</h2><p>给定提示和指令，模型将返回提示的编辑版本。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
+openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
+openai<span class="token punctuation">.</span>Edit<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+  model<span class="token operator">=</span><span class="token string">"text-davinci-edit-001"</span><span class="token punctuation">,</span>
+  <span class="token builtin">input</span><span class="token operator">=</span><span class="token string">"What day of the wek is it?"</span><span class="token punctuation">,</span><span class="token comment">#用作编辑起点的输入文本。</span>
+  instruction<span class="token operator">=</span><span class="token string">"Fix the spelling mistakes"</span><span class="token comment"># it's like prompt</span>
+<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="图像生成"><a href="#图像生成" class="headerlink" title="图像生成"></a>图像生成</h2><p>建议用midjourney :)</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
+openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
+openai<span class="token punctuation">.</span>Image<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
+  prompt<span class="token operator">=</span><span class="token string">"A cute baby sea otter"</span><span class="token punctuation">,</span><span class="token comment">#最长1000个字符</span>
+  n<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token comment">#生成的图像数量, 在1~10之间</span>
+  size<span class="token operator">=</span><span class="token string">"1024x1024"</span>
+<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="图像编辑"><a href="#图像编辑" class="headerlink" title="图像编辑"></a>图像编辑</h2><p>在给定原始图像和提示的情况下创建编辑或扩展图像。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> openai
+openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
+openai<span class="token punctuation">.</span>Image<span class="token punctuation">.</span>create_edit<span class="token punctuation">(</span>
+  image<span class="token operator">=</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"otter.png"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#要编辑的图像</span>
+  mask<span class="token operator">=</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"mask.png"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#附加图像,可选</span>
+  prompt<span class="token operator">=</span><span class="token string">"A cute baby sea otter wearing a beret"</span><span class="token punctuation">,</span><span class="token comment">#最长1000个字符</span>
+  n<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>
+  size<span class="token operator">=</span><span class="token string">"1024x1024"</span>
+<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="嵌入"><a href="#嵌入" class="headerlink" title="嵌入"></a>嵌入</h2><p>这个感觉好高级, 留个坑</p>
+<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>所有文件最大1GB</p>
+<p>用到了fine-tunes, 暂时不太懂</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/02/06/Midjourney%20AI%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1054,7 +1281,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1103,12 +1330,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">39k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">55 分钟</span>
+    <span title="站点阅读时长">1:05</span>
 </div>
 
 

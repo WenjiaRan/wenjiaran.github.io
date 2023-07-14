@@ -202,6 +202,452 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/07/05/tkinder%E6%95%99%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/05/tkinder%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">tkinter教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-07-05 09:41:48" itemprop="dateCreated datePublished" datetime="2023-07-05T09:41:48+08:00">2023-07-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-14 20:35:28" itemprop="dateModified" datetime="2023-07-14T20:35:28+08:00">2023-07-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>10 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="常见组件"><a href="#常见组件" class="headerlink" title="常见组件"></a>常见组件</h1><h2 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h2><p>描述：窗口是Tkinter应用程序的主要容器。它可以包含其他组件，并提供应用程序的整体框架。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+<span class="token comment"># 创建主窗口</span>
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 设置窗口标题</span>
+window<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"My App"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 设置窗口大小</span>
+window<span class="token punctuation">.</span>geometry<span class="token punctuation">(</span><span class="token string">"400x300"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 运行窗口主循环</span>
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h2><p>描述：标签用于在GUI中显示文本或图像。它可以用于显示静态文本或作为其他组件的说明性文本。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建标签</span>
+label <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示标签</span>
+label<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h2><p>描述：按钮允许用户与应用程序进行交互。当按钮被点击时，可以执行相应的操作或触发事件。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">button_click</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Button clicked!"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建按钮</span>
+button <span class="token operator">=</span> tk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Click Me"</span><span class="token punctuation">,</span> command<span class="token operator">=</span>button_click<span class="token punctuation">)</span>
+
+<span class="token comment"># 显示按钮</span>
+button<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="文本框"><a href="#文本框" class="headerlink" title="文本框"></a>文本框</h2><p>描述：文本框允许用户输入文本。你可以使用文本框来收集用户的输入或显示文本数据</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    user_input <span class="token operator">=</span> entry<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"User input:"</span><span class="token punctuation">,</span> user_input<span class="token punctuation">)</span>
+
+<span class="token comment"># 创建文本框</span>
+entry <span class="token operator">=</span> tk<span class="token punctuation">.</span>Entry<span class="token punctuation">(</span>window<span class="token punctuation">)</span>
+
+<span class="token comment"># 显示文本框</span>
+entry<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建按钮</span>
+button <span class="token operator">=</span> tk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Submit"</span><span class="token punctuation">,</span> command<span class="token operator">=</span>get_input<span class="token punctuation">)</span>
+
+<span class="token comment"># 显示按钮</span>
+button<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="frame组件"><a href="#frame组件" class="headerlink" title="frame组件"></a>frame组件</h2><p>Tkinter的<code>Frame</code>组件是一个矩形区域，用于容纳其他Tkinter组件或布局管理器。它可以作为容器或边框，用于组织和布局其他组件。下面是对Tkinter的<code>Frame</code>组件的详细介绍和用法：</p>
+<p><strong>1. 创建<code>Frame</code>组件：</strong><br>要创建一个<code>Frame</code>组件，可以使用<code>tkinter.Frame</code>类。以下是一个基本的示例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个Frame组件</span>
+frame <span class="token operator">=</span> tk<span class="token punctuation">.</span>Frame<span class="token punctuation">(</span>window<span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">,</span> height<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">,</span> bg<span class="token operator">=</span><span class="token string">"red"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示Frame组件</span>
+frame<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在上述示例中，我们创建了一个宽度为200，高度为200，背景颜色为红色的<code>Frame</code>组件，并将其显示在窗口中。</p>
+<p><strong>2. 使用<code>Frame</code>组件作为容器：</strong><br><code>Frame</code>组件可以作为容器，用于容纳其他Tkinter组件。你可以在<code>Frame</code>中添加其他组件，如标签、按钮、文本框等。以下是一个示例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个Frame组件</span>
+frame <span class="token operator">=</span> tk<span class="token punctuation">.</span>Frame<span class="token punctuation">(</span>window<span class="token punctuation">)</span>
+
+<span class="token comment"># 在Frame组件中添加其他组件</span>
+label <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>frame<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span>
+button <span class="token operator">=</span> tk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>frame<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Click Me"</span><span class="token punctuation">)</span>
+
+label<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+button<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示Frame组件</span>
+frame<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在上述示例中，我们在<code>Frame</code>组件中添加了一个标签和一个按钮。</p>
+<p><strong>3. 使用布局管理器管理<code>Frame</code>中的组件：</strong><br>你可以使用Tkinter提供的布局管理器，如<code>pack</code>、<code>grid</code>或<code>place</code>，在<code>Frame</code>中管理和布局其他组件。以下是一个示例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个Frame组件</span>
+frame <span class="token operator">=</span> tk<span class="token punctuation">.</span>Frame<span class="token punctuation">(</span>window<span class="token punctuation">)</span>
+
+<span class="token comment"># 在Frame组件中使用grid布局管理器</span>
+label1 <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>frame<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Label 1"</span><span class="token punctuation">)</span>
+label1<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+label2 <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>frame<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Label 2"</span><span class="token punctuation">)</span>
+label2<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+button <span class="token operator">=</span> tk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>frame<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Click Me"</span><span class="token punctuation">)</span>
+button<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> columnspan<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示Frame组件</span>
+frame<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在上述示例中，我们使用<code>grid</code>布局管理器在<code>Frame</code>中布置了几个组件。</p>
+<p><strong>4. <code>Frame</code>组件的属性和方法：</strong><br><code>Frame</code>组件具有一些有用的属性和方法，用于自定义和操作它。以下是一些常用的属性和方法：</p>
+<ul>
+<li><code>bg</code>：设置<code>Frame</code>组件的背景颜色。</li>
+<li><code>width</code>：设置<code>Frame</code>组件的宽度。</li>
+<li><code>height</code>：设置<code>Frame</code>组件的高度。</li>
+<li><code>config(**options)</code>：配置<code>Frame</code>组件的属性，可以使用关键字参数传递多个选项。</li>
+<li><code>pack(**options)</code>：使用<code>pack</code>布局管理器显示<code>Frame</code>组</li>
+</ul>
+<p>件。</p>
+<ul>
+<li><code>grid(**options)</code>：使用<code>grid</code>布局管理器显示<code>Frame</code>组件。</li>
+<li><code>place(**options)</code>：使用<code>place</code>布局管理器显示<code>Frame</code>组件。</li>
+</ul>
+<p>这些是<code>Frame</code>组件的一些常见用法和功能。<code>Frame</code>组件在Tkinter中是一个非常有用的容器，可用于组织和布局其他组件。通过结合不同的布局管理器和其他Tkinter组件，你可以创建出丰富和灵活的用户界面。</p>
+<h1 id="布局管理器"><a href="#布局管理器" class="headerlink" title="布局管理器"></a>布局管理器</h1><h2 id="Grid布局管理器"><a href="#Grid布局管理器" class="headerlink" title="Grid布局管理器"></a>Grid布局管理器</h2><p>描述：<code>grid</code>布局管理器使用网格的形式来布置组件。你可以将组件放置在行和列的交叉点上，并控制它们的位置和大小。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建并显示三个标签，使用grid布局</span>
+label1 <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Label 1"</span><span class="token punctuation">)</span>
+label1<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+label2 <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Label 2"</span><span class="token punctuation">)</span>
+label2<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+label3 <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Label 3"</span><span class="token punctuation">)</span>
+label3<span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> columnspan<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#一个用grid布局的实例</span>
+<span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+<span class="token keyword">from</span> tkinter <span class="token keyword">import</span> messagebox
+
+root <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+root<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"C语言中文网"</span><span class="token punctuation">)</span>
+
+root<span class="token punctuation">.</span>iconbitmap<span class="token punctuation">(</span><span class="token string">'C:/Users/Administrator/Desktop/C语言中文网logo.ico'</span><span class="token punctuation">)</span>
+root<span class="token punctuation">.</span>resizable<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>root<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"用户名"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> sticky<span class="token operator">=</span><span class="token string">"w"</span><span class="token punctuation">)</span>
+tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>root<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"密码"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> sticky<span class="token operator">=</span><span class="token string">"w"</span><span class="token punctuation">)</span>
+
+tk<span class="token punctuation">.</span>Entry<span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+tk<span class="token punctuation">.</span>Entry<span class="token punctuation">(</span>root<span class="token punctuation">,</span> show<span class="token operator">=</span><span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment"># 加载图片LOGO,注意这里是gif格式的图片</span>
+photo <span class="token operator">=</span> tk<span class="token punctuation">.</span>PhotoImage<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token operator">=</span><span class="token string">"C:/Users/Administrator/Desktop/1.gif"</span><span class="token punctuation">)</span>
+
+tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>root<span class="token punctuation">,</span> image<span class="token operator">=</span>photo<span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> rowspan<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span> padx<span class="token operator">=</span><span class="token string">'4px'</span><span class="token punctuation">,</span> pady<span class="token operator">=</span><span class="token string">'5px'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 编写一个简单的回调函数</span>
+<span class="token keyword">def</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    messagebox<span class="token punctuation">.</span>showinfo<span class="token punctuation">(</span><span class="token string">'欢迎来到C语言中文网'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 使用grid()函数来布局，并控制按钮的显示位置</span>
+tk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>root<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"登录"</span><span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> command<span class="token operator">=</span>login<span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> columnspan<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>sticky<span class="token operator">=</span><span class="token string">"w"</span><span class="token punctuation">,</span> padx<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> pady<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+tk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>root<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"退出"</span><span class="token punctuation">,</span> width<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> command<span class="token operator">=</span>root<span class="token punctuation">.</span>quit<span class="token punctuation">)</span><span class="token punctuation">.</span>grid<span class="token punctuation">(</span>row<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> column<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> columnspan<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>sticky<span class="token operator">=</span><span class="token string">"e"</span><span class="token punctuation">,</span> padx<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> pady<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token comment"># 开启事件主循环</span>
+root<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h1 id="处理用户输入和事件"><a href="#处理用户输入和事件" class="headerlink" title="处理用户输入和事件"></a>处理用户输入和事件</h1><h2 id="按钮点击"><a href="#按钮点击" class="headerlink" title="按钮点击"></a>按钮点击</h2><p>描述：处理按钮点击事件是最常见的用户交互操作之一。你可以定义一个回调函数，当按钮被点击时，这个函数会被调用执行相应的操作。</p>
+<p>详细代码见上面的</p>
+<h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><p>描述：Tkinter提供了几种鼠标事件，例如鼠标点击、鼠标移动等。你可以为组件绑定相应的事件处理函数，并根据需要执行操作。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+<span class="token keyword">def</span> <span class="token function">mouse_click</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Mouse clicked at:"</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>x<span class="token punctuation">,</span> event<span class="token punctuation">.</span>y<span class="token punctuation">)</span>
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个标签并为其绑定鼠标点击事件</span>
+label <span class="token operator">=</span> tk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Click me!"</span><span class="token punctuation">)</span>
+label<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token string">"&lt;Button-1>"</span><span class="token punctuation">,</span> mouse_click<span class="token punctuation">)</span>
+label<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><p>描述：你可以捕捉键盘事件，例如按键按下和释放等。通过为组件绑定键盘事件处理函数，你可以执行相应的操作。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+
+<span class="token keyword">def</span> <span class="token function">key_pressed</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Key pressed:"</span><span class="token punctuation">,</span> event<span class="token punctuation">.</span>char<span class="token punctuation">)</span>
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个文本框并为其绑定键盘事件</span>
+entry <span class="token operator">=</span> tk<span class="token punctuation">.</span>Entry<span class="token punctuation">(</span>window<span class="token punctuation">)</span>
+entry<span class="token punctuation">.</span>bind<span class="token punctuation">(</span><span class="token string">"&lt;Key>"</span><span class="token punctuation">,</span> key_pressed<span class="token punctuation">)</span>
+entry<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="样式和主题"><a href="#样式和主题" class="headerlink" title="样式和主题"></a>样式和主题</h1><h2 id="样式选项："><a href="#样式选项：" class="headerlink" title="样式选项："></a>样式选项：</h2><ul>
+<li><p>描述：每个Tkinter组件都有一些可用的样式选项，可以用于自定义组件的外观。你可以通过设置这些选项来改变字体、颜色、边框等属性。</p>
+</li>
+<li><p>grid() 函数的常用参数如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>column</td>
+<td>控件位于表格中的第几列，窗体最左边的为起始列，默认为第 0 列</td>
+</tr>
+<tr>
+<td>columnsapn</td>
+<td>控件实例所跨的列数，默认为 1 列，通过该参数可以合并一行中多个领近单元格。</td>
+</tr>
+<tr>
+<td>ipadx,ipady</td>
+<td>用于控制内边距，在单元格内部，左右、上下方向上填充指定大小的空间。</td>
+</tr>
+<tr>
+<td>padx,pady</td>
+<td>用于控制外边距，在单元格外部，左右、上下方向上填充指定大小的空间。</td>
+</tr>
+<tr>
+<td>row</td>
+<td>控件位于表格中的第几行，窗体最上面为起始行，默认为第 0 行</td>
+</tr>
+<tr>
+<td>rowspan</td>
+<td>控件实例所跨的行数，默认为 1 行，通过该参数可以合并一列中多个领近单元格。</td>
+</tr>
+<tr>
+<td>sticky</td>
+<td>该属性用来设置控件位于单元格那个方位上，参数值和 anchor 相同，若不设置该参数则控件在单元格内居中</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+<span class="token keyword">from</span> tkinter <span class="token keyword">import</span> ttk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个按钮</span>
+button <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Button"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 设置样式选项</span>
+button<span class="token punctuation">.</span>config<span class="token punctuation">(</span>foreground<span class="token operator">=</span><span class="token string">"red"</span><span class="token punctuation">,</span> background<span class="token operator">=</span><span class="token string">"lightgray"</span><span class="token punctuation">,</span> font<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">"Arial"</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token string">"bold"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示按钮</span>
+button<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>描述：Tkinter还提供了一些预定义的主题，可以快速改变整个应用程序的外观。你可以选择不同的主题，如<code>clam</code>、<code>alt</code>、<code>default</code>等。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+<span class="token keyword">from</span> tkinter <span class="token keyword">import</span> ttk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个标签</span>
+label <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Label<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 设置主题</span>
+ttk<span class="token punctuation">.</span>Style<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>theme_use<span class="token punctuation">(</span><span class="token string">"clam"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示标签</span>
+label<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="自定义样式"><a href="#自定义样式" class="headerlink" title="自定义样式"></a>自定义样式</h2><p>描述：除了使用预定义的样式选项和主题外，你还可以创建自定义样式。这样可以更灵活地定义组件的外观和样式。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tkinter <span class="token keyword">as</span> tk
+<span class="token keyword">from</span> tkinter <span class="token keyword">import</span> ttk
+
+window <span class="token operator">=</span> tk<span class="token punctuation">.</span>Tk<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个按钮</span>
+button <span class="token operator">=</span> ttk<span class="token punctuation">.</span>Button<span class="token punctuation">(</span>window<span class="token punctuation">,</span> text<span class="token operator">=</span><span class="token string">"Button"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建一个自定义样式</span>
+ttk<span class="token punctuation">.</span>Style<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>configure<span class="token punctuation">(</span><span class="token string">"CustomButton.TButton"</span><span class="token punctuation">,</span> foreground<span class="token operator">=</span><span class="token string">"blue"</span><span class="token punctuation">,</span> background<span class="token operator">=</span><span class="token string">"yellow"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 应用自定义样式</span>
+button<span class="token punctuation">.</span>config<span class="token punctuation">(</span>style<span class="token operator">=</span><span class="token string">"CustomButton.TButton"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示按钮</span>
+button<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+window<span class="token punctuation">.</span>mainloop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="常见样式选项"><a href="#常见样式选项" class="headerlink" title="常见样式选项"></a>常见样式选项</h2><ol>
+<li><p>通用样式选项：</p>
+<ul>
+<li><code>background</code>：背景颜色</li>
+<li><code>foreground</code>：前景（文本）颜色</li>
+<li><code>font</code>：字体（可以设置字体名称、大小和样式）</li>
+<li><code>borderwidth</code>：边框宽度</li>
+<li><code>relief</code>：边框样式（如<code>tk.SUNKEN</code>、<code>tk.RAISED</code>、<code>tk.FLAT</code>等）</li>
+</ul>
+</li>
+<li><p>按钮样式选项：</p>
+<ul>
+<li><code>activebackground</code>：鼠标悬停时的背景颜色</li>
+<li><code>activeforeground</code>：鼠标悬停时的前景颜色</li>
+<li><code>disabledforeground</code>：禁用状态下的前景颜色</li>
+<li><code>highlightbackground</code>：焦点框背景颜色</li>
+<li><code>highlightcolor</code>：焦点框颜色</li>
+</ul>
+</li>
+<li><p>标签样式选项：</p>
+<ul>
+<li><code>anchor</code>：文本对齐方式（如<code>tk.W</code>, <code>tk.E</code>, <code>tk.N</code>, <code>tk.S</code>, <code>tk.CENTER</code>等）</li>
+<li><code>justify</code>：文本对齐方式（如<code>tk.LEFT</code>, <code>tk.RIGHT</code>, <code>tk.CENTER</code>等）</li>
+<li><code>wraplength</code>：文本换行的宽度限制</li>
+</ul>
+</li>
+<li><p>文本框样式选项：</p>
+<ul>
+<li><code>show</code>：用于替代显示实际文本内容的字符（用于密码输入框等）</li>
+<li><code>width</code>：文本框的宽度（以字符数为单位）</li>
+<li><code>height</code>：文本框的高度（以文本行数为单位）</li>
+</ul>
+</li>
+</ol>
+<p>这只是一小部分常见的样式选项示例。对于每个组件，可以通过查阅Tkinter的官方文档或其他资源来获取完整的样式选项列表和其详细说明。此外，你还可以创建自定义样式选项，以满足你的特定需求。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/07/01/docker%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1693,233 +2139,6 @@ print(response)
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/03/07/python-openai%E5%BA%93%E6%95%99%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="文文文">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一叶小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/03/07/python-openai%E5%BA%93%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">python openai库教程</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-03-07 20:54:37 / 修改时间：21:33:26" itemprop="dateCreated datePublished" datetime="2023-03-07T20:54:37+08:00">2023-03-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">pip install openai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h1 id="列出模型"><a href="#列出模型" class="headerlink" title="列出模型"></a>列出模型</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
-<span class="token keyword">import</span> openai
-openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
-openai<span class="token punctuation">.</span>Model<span class="token punctuation">.</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h1 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h1><h2 id="Create-completion"><a href="#Create-completion" class="headerlink" title="Create completion"></a>Create completion</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
-<span class="token keyword">import</span> openai
-openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> <span class="token string">''</span>
-openai<span class="token punctuation">.</span>Completion<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
-  model<span class="token operator">=</span><span class="token string">"gpt-3.5-turbo"</span><span class="token punctuation">,</span>
-  prompt<span class="token operator">=</span><span class="token string">"Say this is a test"</span><span class="token punctuation">,</span>
-  max_tokens<span class="token operator">=</span><span class="token number">7</span><span class="token punctuation">,</span>
-  temperature<span class="token operator">=</span><span class="token number">0</span>
-<span class="token punctuation">)</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>response</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"cmpl-uqkvlQyYK7bGYrRHQ0eXlWi7"</span><span class="token punctuation">,</span>
-  <span class="token property">"object"</span><span class="token operator">:</span> <span class="token string">"text_completion"</span><span class="token punctuation">,</span>
-  <span class="token property">"created"</span><span class="token operator">:</span> <span class="token number">1589478378</span><span class="token punctuation">,</span>
-  <span class="token property">"model"</span><span class="token operator">:</span> <span class="token string">"text-davinci-003"</span><span class="token punctuation">,</span>
-  <span class="token property">"choices"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">&#123;</span>
-      <span class="token property">"text"</span><span class="token operator">:</span> <span class="token string">"\n\nThis is indeed a test"</span><span class="token punctuation">,</span>
-      <span class="token property">"index"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-      <span class="token property">"logprobs"</span><span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
-      <span class="token property">"finish_reason"</span><span class="token operator">:</span> <span class="token string">"length"</span>
-    <span class="token punctuation">&#125;</span>
-  <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"usage"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">"prompt_tokens"</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
-    <span class="token property">"completion_tokens"</span><span class="token operator">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
-    <span class="token property">"total_tokens"</span><span class="token operator">:</span> <span class="token number">12</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p>请求参数</p>
-<ul>
-<li><p><code>model</code></p>
-</li>
-<li><p><code>prompt</code>: 如果没有, the model will generate as if from the beginning of a new document.</p>
-</li>
-<li><p><code>suffix</code>: 感觉没啥用</p>
-</li>
-<li><p><code>max_tokens integer Optional Defaults to 16</code></p>
-<p>gpt返回的最大tokens数量, 你的promt的tokens+max_tokens必须小于2048或4096(最新的model)</p>
-</li>
-<li><p><code>temperature number Optional Defaults to 1</code></p>
-<p>range from [0,2], 温度越高, 随机性越强</p>
-<p>官方建议, 温度和top_p值改变一个</p>
-</li>
-<li><p><code>top_p number Optional Defaults to 1</code> 用温度吧, 别用他</p>
-</li>
-<li><p><code>n int Opt Defau 1</code></p>
-<p>对于每个prompt, 产生的completions的条数</p>
-</li>
-</ul>
-<h2 id="chat"><a href="#chat" class="headerlink" title="chat"></a>chat</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
-<span class="token keyword">import</span> openai
-openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
-
-completion <span class="token operator">=</span> openai<span class="token punctuation">.</span>ChatCompletion<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
-  model<span class="token operator">=</span><span class="token string">"gpt-3.5-turbo"</span><span class="token punctuation">,</span>
-  messages<span class="token operator">=</span><span class="token punctuation">[</span>
-        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"system"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"You are a helpful assistant."</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"Who won the world series in 2020?"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"assistant"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"The Los Angeles Dodgers won the World Series in 2020."</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-        <span class="token punctuation">&#123;</span><span class="token string">"role"</span><span class="token punctuation">:</span> <span class="token string">"user"</span><span class="token punctuation">,</span> <span class="token string">"content"</span><span class="token punctuation">:</span> <span class="token string">"Where was it played?"</span><span class="token punctuation">&#125;</span>
-    <span class="token punctuation">]</span>
-<span class="token punctuation">)</span>
-
-<span class="token keyword">print</span><span class="token punctuation">(</span>completion<span class="token punctuation">.</span>choices<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>message<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>response</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span>
-  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"chatcmpl-123"</span><span class="token punctuation">,</span>
-  <span class="token property">"object"</span><span class="token operator">:</span> <span class="token string">"chat.completion"</span><span class="token punctuation">,</span>
-  <span class="token property">"created"</span><span class="token operator">:</span> <span class="token number">1677652288</span><span class="token punctuation">,</span>
-  <span class="token property">"choices"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">&#123;</span>
-    <span class="token property">"index"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
-    <span class="token property">"message"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-      <span class="token property">"role"</span><span class="token operator">:</span> <span class="token string">"assistant"</span><span class="token punctuation">,</span>
-      <span class="token property">"content"</span><span class="token operator">:</span> <span class="token string">"\n\nHello there, how may I assist you today?"</span><span class="token punctuation">,</span>
-    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
-    <span class="token property">"finish_reason"</span><span class="token operator">:</span> <span class="token string">"stop"</span>
-  <span class="token punctuation">&#125;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"usage"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">"prompt_tokens"</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
-    <span class="token property">"completion_tokens"</span><span class="token operator">:</span> <span class="token number">12</span><span class="token punctuation">,</span>
-    <span class="token property">"total_tokens"</span><span class="token operator">:</span> <span class="token number">21</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>在 Python 中，可以使用 提取助手的回复<code>response[‘choices’][0][‘message’][‘content’]</code></p>
-<p>  一般来说，<code>gpt-3.5-turbo-0301</code>对系统消息的关注度不高，因此重要的说明往往放在用户消息中比较好。</p>
-<h2 id="edit"><a href="#edit" class="headerlink" title="edit"></a>edit</h2><p>给定提示和指令，模型将返回提示的编辑版本。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
-<span class="token keyword">import</span> openai
-openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
-openai<span class="token punctuation">.</span>Edit<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
-  model<span class="token operator">=</span><span class="token string">"text-davinci-edit-001"</span><span class="token punctuation">,</span>
-  <span class="token builtin">input</span><span class="token operator">=</span><span class="token string">"What day of the wek is it?"</span><span class="token punctuation">,</span><span class="token comment">#用作编辑起点的输入文本。</span>
-  instruction<span class="token operator">=</span><span class="token string">"Fix the spelling mistakes"</span><span class="token comment"># it's like prompt</span>
-<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="图像生成"><a href="#图像生成" class="headerlink" title="图像生成"></a>图像生成</h2><p>建议用midjourney :)</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
-<span class="token keyword">import</span> openai
-openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
-openai<span class="token punctuation">.</span>Image<span class="token punctuation">.</span>create<span class="token punctuation">(</span>
-  prompt<span class="token operator">=</span><span class="token string">"A cute baby sea otter"</span><span class="token punctuation">,</span><span class="token comment">#最长1000个字符</span>
-  n<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token comment">#生成的图像数量, 在1~10之间</span>
-  size<span class="token operator">=</span><span class="token string">"1024x1024"</span>
-<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="图像编辑"><a href="#图像编辑" class="headerlink" title="图像编辑"></a>图像编辑</h2><p>在给定原始图像和提示的情况下创建编辑或扩展图像。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
-<span class="token keyword">import</span> openai
-openai<span class="token punctuation">.</span>api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>getenv<span class="token punctuation">(</span><span class="token string">"OPENAI_API_KEY"</span><span class="token punctuation">)</span>
-openai<span class="token punctuation">.</span>Image<span class="token punctuation">.</span>create_edit<span class="token punctuation">(</span>
-  image<span class="token operator">=</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"otter.png"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#要编辑的图像</span>
-  mask<span class="token operator">=</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"mask.png"</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#附加图像,可选</span>
-  prompt<span class="token operator">=</span><span class="token string">"A cute baby sea otter wearing a beret"</span><span class="token punctuation">,</span><span class="token comment">#最长1000个字符</span>
-  n<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>
-  size<span class="token operator">=</span><span class="token string">"1024x1024"</span>
-<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="嵌入"><a href="#嵌入" class="headerlink" title="嵌入"></a>嵌入</h2><p>这个感觉好高级, 留个坑</p>
-<h2 id="上传文件"><a href="#上传文件" class="headerlink" title="上传文件"></a>上传文件</h2><p>所有文件最大1GB</p>
-<p>用到了fine-tunes, 暂时不太懂</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -2005,7 +2224,7 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -2054,12 +2273,12 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">39k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">55 分钟</span>
+    <span title="站点阅读时长">1:05</span>
 </div>
 
 
