@@ -1239,6 +1239,29 @@ window<span class="token punctuation">.</span>mainloop<span class="token punctua
       </tags>
   </entry>
   <entry>
+    <title>win10消除弹窗</title>
+    <url>/2023/04/06/win10%E6%B6%88%E9%99%A4%E5%BC%B9%E7%AA%97/</url>
+    <content><![CDATA[<p>需要管理员权限才能执行以下操作：</p>
+<ol>
+<li>打开任务管理器（快捷键Ctrl+Shift+Esc）。</li>
+<li>在“进程”选项卡中找到要禁止启动的进程。</li>
+<li>右键点击该进程，选择“打开文件位置”。</li>
+<li>关闭任务管理器，找到刚才打开的文件位置。</li>
+<li>右键点击该程序或文件，选择“属性”。</li>
+<li>在“安全”选项卡中，选择当前用户。</li>
+<li>在“权限”中，选中“拒绝”启动该进程。</li>
+<li>确认保存更改。</li>
+</ol>
+<p>这样就可以长期禁止某个进程启动了。注意，如果想要启动该进程，需要解除该进程的启动禁止权限。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ubuntu常见命令</title>
     <url>/2023/06/30/ubuntu%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<h4 id="1-ls-list列出文件夹内容"><a href="#1-ls-list列出文件夹内容" class="headerlink" title="1. ls: list列出文件夹内容"></a>1. ls: list列出文件夹内容</h4><pre class="line-numbers language-none"><code class="language-none">ls -l<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1352,29 +1375,6 @@ root@learnubuntu:~# <span aria-hidden="true" class="line-numbers-rows"><span></s
       </tags>
   </entry>
   <entry>
-    <title>win10消除弹窗</title>
-    <url>/2023/04/06/win10%E6%B6%88%E9%99%A4%E5%BC%B9%E7%AA%97/</url>
-    <content><![CDATA[<p>需要管理员权限才能执行以下操作：</p>
-<ol>
-<li>打开任务管理器（快捷键Ctrl+Shift+Esc）。</li>
-<li>在“进程”选项卡中找到要禁止启动的进程。</li>
-<li>右键点击该进程，选择“打开文件位置”。</li>
-<li>关闭任务管理器，找到刚才打开的文件位置。</li>
-<li>右键点击该程序或文件，选择“属性”。</li>
-<li>在“安全”选项卡中，选择当前用户。</li>
-<li>在“权限”中，选中“拒绝”启动该进程。</li>
-<li>确认保存更改。</li>
-</ol>
-<p>这样就可以长期禁止某个进程启动了。注意，如果想要启动该进程，需要解除该进程的启动禁止权限。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>编程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>中国国家治理的制度逻辑摘抄</title>
     <url>/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -1392,28 +1392,6 @@ root@learnubuntu:~# <span aria-hidden="true" class="line-numbers-rows"><span></s
       <categories>
         <category>中国国家治理的制度逻辑摘抄</category>
       </categories>
-  </entry>
-  <entry>
-    <title>奥威尔与赫胥黎之争</title>
-    <url>/2023/01/26/%E5%A5%A5%E5%A8%81%E5%B0%94%E4%B8%8E%E8%B5%AB%E8%83%A5%E9%BB%8E%E4%B9%8B%E4%BA%89/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="f32af45a7459e535ed40ba4c98253a0951a119c742a9488087157d0c4af3fc61">165d50f05814027fb7fe5e4ae8a088d87abb8fd8cf0ea37b0884bd86e6b55f15c5ff65a637624079f726550d7abe6127ee7c48c48a34d03e7eb930209fd089eb1e1de91c2804f379140b6af17c6ae6f29ec4d49a93a0f99a8266bbd61da51e1b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密码是123</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>社会学</category>
-      </categories>
-      <tags>
-        <tag>日常</tag>
-      </tags>
   </entry>
   <entry>
     <title>前端基础</title>
@@ -1540,6 +1518,28 @@ root@learnubuntu:~# <span aria-hidden="true" class="line-numbers-rows"><span></s
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>奥威尔与赫胥黎之争</title>
+    <url>/2023/01/26/%E5%A5%A5%E5%A8%81%E5%B0%94%E4%B8%8E%E8%B5%AB%E8%83%A5%E9%BB%8E%E4%B9%8B%E4%BA%89/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="f32af45a7459e535ed40ba4c98253a0951a119c742a9488087157d0c4af3fc61">165d50f05814027fb7fe5e4ae8a088d87abb8fd8cf0ea37b0884bd86e6b55f15c5ff65a637624079f726550d7abe6127ee7c48c48a34d03e7eb930209fd089eb1e1de91c2804f379140b6af17c6ae6f29ec4d49a93a0f99a8266bbd61da51e1b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">密码是123</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>社会学</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
       </tags>
   </entry>
   <entry>
