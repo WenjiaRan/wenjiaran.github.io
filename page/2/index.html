@@ -709,7 +709,7 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-05-14 11:35:22" itemprop="dateModified" datetime="2023-05-14T11:35:22+08:00">2023-05-14</time>
+                <time title="修改时间：2024-02-12 11:51:04" itemprop="dateModified" datetime="2024-02-12T11:51:04+08:00">2024-02-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -746,15 +746,258 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
     <div class="post-body" itemprop="articleBody">
 
       
-          ChatGPT使用指导
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/02/06/ChatGPT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/#more" rel="contents" style="border-radius: 10px;">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p> chatgpt是一个很强大的AI, 本文旨在解决如何提高提问效率, 来更好地让chatgpt解决问题</p>
+<h1 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h1><ul>
+<li><p>&#96;&#96;&#96;<br>优化[]中的文案, 扩充到500字<br>[我国是一个美丽的国家]</p>
+<pre class="line-numbers language-none"><code class="language-none">- 尽量使用英文提问
+- 设置简写: &#96;接下来的对话, 如果我发送的内容是 again, 我的意思是 重新回答这一问题&#96;
+- **编写代码**
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>用 {编程语言} 实现：{描述需要实现的功能}</p>
+<pre class="line-numbers language-none"><code class="language-none">
+- 要求越详细越好
+- **正则表达式**
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>正则表达式：{描述需要实现的功能}</p>
+<pre class="line-numbers language-none"><code class="language-none">
+- 例子：
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>  正则表达式：大于0的正整数</p>
+  <pre class="line-numbers language-none"><code class="language-none">- **评审代码**
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Review code and explain in Chinese</p>
+<pre class="line-numbers language-none"><code class="language-none">- **检查代码出错原因**
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Check the cause of the code error and explain in Chinese</p>
+<pre class="line-numbers language-none"><code class="language-none">- **重构&#x2F;优化代码**
+
+  - 重构代码
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>  refactor the code</p>
+  <pre class="line-numbers language-none"><code class="language-none">- 重构代码，以 vimdiff 格式展示更改的内容，并解释更改的内容
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>  Refactor the code to present the changes in vimdiff format and explain the changes in Chinese</p>
+  <pre class="line-numbers language-none"><code class="language-none">- **生成接口文档**
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Generate markdown API Chinese documentation</p>
+<pre class="line-numbers language-none"><code class="language-none">
+### 测试
+
+---
+
+- **添加单元测试**
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Adding unit tests</p>
+<pre class="line-numbers language-none"><code class="language-none">- **生成 Mock 数据**
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Generate data in json format</p>
+<pre class="line-numbers language-none"><code class="language-none">
+- 例子：
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>  Generate data in json format</p>
+<p>  interface AComponent {<br>      id: string;<br>      name: string;<br>      bComponent: BComponent;<br>  }<br>  interface BComponent {<br>      id: string;<br>      name: string;<br>  }</p>
+  <pre class="line-numbers language-none"><code class="language-none">
+下面举几个例子:
+
+## 编程
+
+我们可以让chatgpt写各种常见不常见的算法题, 只要题目描述足够清楚, chatgpt大概率能够AC
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ul>
+<p>c++编程题：对于一个长度为 n 的序列 a1,a2,…,an，所有前缀的中位数是多少？<br>第一行一个正整数 t（1≤t≤10），表示数据组数。<br>对于每组数据，第一行一个正奇数 n（1≤n≤100000），含义同题目描述。<br>第二行 n 个整数 a1, a2, …, an（0≤ai≤100000），含义同题目描述。<br>对于每组数据，输出一行 (n + 1)&#x2F;2 个整数，第 i 个数表示长度为 2*i−1 的前缀的中位数。直接给出你的代码</p>
+<pre class="line-numbers language-none"><code class="language-none">
+下面是chatgpt的答案
+
+&#96;&#96;&#96;cpp
+#include &lt;bits&#x2F;stdc++.h&gt;
+using namespace std;
+
+const int N &#x3D; 100005;
+int n, t, a[N];
+multiset&lt;int&gt; s;
+multiset&lt;int&gt;::iterator it;
+
+int main() &#123;
+    cin &gt;&gt; t;
+    while (t--) &#123;
+        cin &gt;&gt; n;
+        for (int i &#x3D; 0; i &lt; n; i++) &#123;
+            cin &gt;&gt; a[i];
+            s.insert(a[i]);
+            if (i &amp; 1) &#123;
+                it &#x3D; s.begin();
+                advance(it, (i + 1) &#x2F; 2 - 1);
+                cout &lt;&lt; *it &lt;&lt; &quot; &quot;;
+            &#125; else &#123;
+                it &#x3D; s.begin();
+                advance(it, i &#x2F; 2);
+                int x &#x3D; *it;
+                it &#x3D; s.end();
+                advance(it, -i &#x2F; 2 - 1);
+                int y &#x3D; *it;
+                cout &lt;&lt; (x + y) &#x2F; 2 &lt;&lt; &quot; &quot;;
+            &#125;
+        &#125;
+        cout &lt;&lt; endl;
+        s.clear();
+    &#125;
+    return 0;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h2><p>我们在上机的时候, 代码是会查重的<code>&lt;del&gt;</code>如果我们又想抄同学的代码, 又不想被查重<code>&lt;/del&gt;</code>, 就可以让chatgpt修改代码. 需要注意的是, 小打小闹地改变量, for换成while是没用的. 如果代码里有很多函数, 我们可以让chatgpt把函数都写到main函数里, 反之亦然. 如果代码是递归的, 我们可以让chatgpt改成迭代的.</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">N</span> <span class="token expression"><span class="token number">100010</span></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> t<span class="token punctuation">,</span> n<span class="token punctuation">;</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> tree<span class="token punctuation">[</span><span class="token number">4</span> <span class="token operator">*</span> N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> p<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">==</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        tree<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;=</span> mid<span class="token punctuation">)</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">,</span> l<span class="token punctuation">,</span> mid<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> p <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> r<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    tree<span class="token punctuation">[</span>p<span class="token punctuation">]</span> <span class="token operator">=</span> tree<span class="token punctuation">[</span><span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">]</span> <span class="token operator">+</span> tree<span class="token punctuation">[</span><span class="token number">2</span> <span class="token operator">*</span> p <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">int</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token keyword">int</span> p<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 查第x大</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">==</span> r<span class="token punctuation">)</span> <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;=</span> tree<span class="token punctuation">[</span><span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">,</span> l<span class="token punctuation">,</span> mid<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> p <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> r<span class="token punctuation">,</span> x <span class="token operator">-</span> tree<span class="token punctuation">[</span><span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">memset</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100000</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100000</span><span class="token punctuation">,</span> i <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们想把其他代码都写入主函数, 或者把递归改成迭代</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 迭代</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">N</span> <span class="token expression"><span class="token number">100010</span></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> t<span class="token punctuation">,</span> n<span class="token punctuation">;</span>
+<span class="token keyword">int</span> a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> tree<span class="token punctuation">[</span><span class="token number">4</span> <span class="token operator">*</span> N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> p<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;=</span> mid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+p <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+p <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> p <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+tree<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+tree<span class="token punctuation">[</span>p<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">int</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token keyword">int</span> p<span class="token punctuation">,</span> <span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>l <span class="token operator">&lt;</span> r<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;=</span> tree<span class="token punctuation">[</span><span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+r <span class="token operator">=</span> mid<span class="token punctuation">;</span>
+p <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+l <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+x <span class="token operator">-=</span> tree<span class="token punctuation">[</span><span class="token number">2</span> <span class="token operator">*</span> p<span class="token punctuation">]</span><span class="token punctuation">;</span>
+p <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> p <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">return</span> l<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">memset</span><span class="token punctuation">(</span>tree<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token function">add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100000</span><span class="token punctuation">,</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d "</span><span class="token punctuation">,</span> <span class="token function">query</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100000</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="文案"><a href="#文案" class="headerlink" title="文案"></a>文案</h1><ul>
+<li><code>扩写一下这段话，加入一些例子和金句:我国是历史悠久的国家。</code>要求提示越多越好</li>
+<li><code>把下面这段话，改写成100字以内的摘要</code></li>
+<li><code>校对下面这段话</code></li>
+<li>也可以让它检查你英语的语法和用词, 甚至可以让它对你的句子进行修改, 给出更高级地道的表达</li>
+<li>翻译: 感觉没有google translate好</li>
+</ul>
+<h1 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h1><p>这是一个神奇的功能, 我们可以通过chatgpt来阅读</p>
+<p>作为一种在多样化的文本数据集上训练的语言模型，<strong>ChatGPT</strong>能够理解和总结 2021 年之前几乎所有书籍的内容。凭借其先进的自然语言处理能力，<strong>ChatGPT</strong>可以将冗长的作品压缩成易于消化的信息块，提供您可以快速轻松地学习一本书的要点。</p>
+<p>这听起来很难理解, 我举一个例子:</p>
+<p>比如我想阅读Yuval Noah Harari  的《智人：人类简史》, 该书全面概述了从非洲智人出现到今天的人类历史。但是这本书超过500也, 对注意力愈发缺失的现代人是一个不小的挑战</p>
+<p>我们可以对chatgpt输入: <code>列出尤瓦尔·诺亚·哈拉里 (Yuval Noah Harari) 的《智人：人类简史》一书的所有章节</code></p>
+<p>Chatgpt</p>
+<pre class="line-numbers language-none"><code class="language-none">《智人：人类简史》一共有十章：
+
+起源
+智人社会
+智人革命
+智人帝国
+宗教革命
+科学革命
+工业革命
+政治革命
+知识革命
+现代革命
+请注意，本答案的知识截至日期为2021年，可能会存在更新版本。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>比如我现在对”智人革命”一章感兴趣, 我可以让它展开说说</p>
+<p>我:</p>
+<pre class="line-numbers language-none"><code class="language-none">深入研究“智人革命”一章并给出较长的内容描述，并提供该章的重点<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Chatgpt</p>
+<pre class="line-numbers language-none"><code class="language-none">“智人革命”一章是《智人：人类简史》中的第三章，是关于智人（Homo sapiens）的起源和发展的重要章节。该章的重点包括：
+
+1.智人的起源：作者在这一章中探讨了智人如何诞生并在非洲蔓延。
+
+2.智人与其他人类物种的区别：作者在这一章中比较了智人与其他人类物种（如尼安德特人和半人猿）的差异，包括智力、语言和文化传承方面的差异。
+
+3.智人的迁徙：作者在这一章中描述了智人如何从非洲迁徙到全球其他地区。
+
+4.智人的文化创新：作者在这一章中探讨了智人如何创造了全新的文化，包括音乐、艺术、宗教和社会制度。
+
+5.智人对环境的影响：作者在这一章中描述了智人对环境的影响，包括对动物种群的影响和对生态系统的影响。
+
+总的来说，“智人革命”一章是一个关于智人起源、发展和影响的全面概述，是该书的重要章节之一。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>比如我对第四点很有兴趣, 我就可以让它讲讲</p>
+<p>我: 深入探讨“智人的文化创新”并给出较长的内容描述和要点</p>
+<p>chatgpt</p>
+<pre class="line-numbers language-none"><code class="language-none">“智人的文化创新”是《智人：人类简史》中“智人革命”一章中的一个重要内容。该内容探讨了智人如何创造了全新的文化。下面是关于“智人的文化创新”的更详细的内容描述和要点：
+
+智人的语言能力：智人的语言能力是其创造文化的关键因素。语言不仅允许智人将想法和信息传递给他人，还允许他们进行抽象思维。
+
+智人的艺术：智人创造了各种形式的艺术，如音乐、绘画、雕塑和剧场。艺术不仅是智人表现自己的情感和思想的方式，还是他们建立起文化传承的重要工具。
+
+智人的宗教：智人创造了各种不同的宗教，包括基督教、伊斯兰教、佛教和犹太教等。宗教不仅是智人对自然界和生活意义的探索，还是他们社会组织的重要因素。
+
+智人的社会制度：智人创造了各种不同的社会制度，如皇权制度、共和制度和民主制度。社会制度不仅决定了智人的社会地位和权力关系，还是他们经济活动的重要框架。
+
+总的来说，“智人的文化创新”一章讲述了智人如何通过语言、艺术、宗教和社会制度等创造了人类文化。这些文化创新是智人不断探索、表现和组织自己的生活的结果，是人类文化发展的重要标志。因此，“智人的文化创新”一章的重点是强调智人的创造力和创新能力。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>除此之外, 如果我们在阅读过程中产生问题, 也可以用chatgpt进行提问</p>
+<p>这样，我们就可以更深入地了解本书及其主要论点，而无需花费数小时通读整篇文章。</p>
+
       
     </div>
 
@@ -796,10 +1039,16 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-01-31 10:45:05 / 修改时间：11:50:08" itemprop="dateCreated datePublished" datetime="2023-01-31T10:45:05+08:00">2023-01-31</time>
+              <time title="创建时间：2023-01-31 10:45:05" itemprop="dateCreated datePublished" datetime="2023-01-31T10:45:05+08:00">2023-01-31</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-12 11:51:17" itemprop="dateModified" datetime="2024-02-12T11:51:17+08:00">2024-02-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -835,15 +1084,123 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
     <div class="post-body" itemprop="articleBody">
 
       
-          copilot使用指导
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/31/copilot%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/#more" rel="contents" style="border-radius: 10px;">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>其实在上学期(2022年9月)我就成功申请了github学生认证, 拿到了免费使用copilot的机会. 但是那时copilot还不支持在代理服务器上使用, 于是体验AI编程的想法被搁置. 昨天心血来潮尝试了一下, 发现可以用代理服务器连接copilot了, 于是迫不及待开始学习体验</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>Copilot 也提供了一些快捷键，可以很方便地使用。</p>
+<ul>
+<li>接受建议：<code>Tab</code></li>
+<li>拒绝建议：<code>Esc</code></li>
+<li>打开Copilot：<code>Ctrl + Enter</code> （会打开一个单独的面板，展示10个建议）</li>
+<li>下一条建议：<code>Alt/Option + ]</code></li>
+<li>上一条建议：<code>Alt/Option + [</code></li>
+<li>触发行内Copilot：<code>Alt/Option + \</code> （copilot还没有给出建议或者建议被拒绝了，希望手工触发它提供建议）</li>
+</ul>
+<h2 id="HTTP代理"><a href="#HTTP代理" class="headerlink" title="HTTP代理"></a>HTTP代理</h2><p>有些用户(几乎所有中国大陆用户)可能会遇到连接不上的问题, 报错信息 <code>GitHub Copilot could not connect to server. Extension activation failed: &quot;connect ETIMEDOUT xxx.xxx.xxx:443&quot;</code></p>
+<p>对于中国大陆用户, 首先你要有一个代理软件, 在设置中找得到代理地址和端口. 比如 <code>127.0.0.1:7890</code></p>
+<p>然后打开VSCode的设置, 搜索 <code>http.proxy</code>, 输入 <code>127.0.0.1:7890</code>(你的代理地址和端口)</p>
+<p>然后就可以啦</p>
+<h1 id="copilot使用场景"><a href="#copilot使用场景" class="headerlink" title="copilot使用场景"></a>copilot使用场景</h1><h2 id="解决算法问题"><a href="#解决算法问题" class="headerlink" title="解决算法问题"></a>解决算法问题</h2><p>你可以先写出函数头, 然后在注释中解释函数的作用, 传入的参数和返回的参数, 然后copilot可以自动帮你生成代码</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 使用heap sort对数组排序                          (自己写的)</span>
+<span class="token comment"># 1. 将数组转换为最大堆</span>
+<span class="token comment"># 2. 将最大堆的根节点与最后一个节点交换</span>
+<span class="token comment"># 3. 将剩余的节点重新构造为最大堆</span>
+<span class="token comment"># 4. 重复2,3步骤直到剩余节点数为1</span>
+<span class="token keyword">def</span> <span class="token function">heap_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>                              <span class="token comment">#(自己写的)   </span>
+    n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token comment"># 将数组转换为最大堆</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">//</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    <span class="token comment"># 将最大堆的根节点与最后一个节点交换</span>
+    <span class="token comment"># 将剩余的节点重新构造为最大堆</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> arr
+
+<span class="token keyword">def</span> <span class="token function">heapify</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>							 <span class="token comment">#(自己写的)</span>
+    <span class="token comment"># 将数组转换为最大堆</span>
+    <span class="token comment"># n: 数组长度</span>
+    <span class="token comment"># i: 当前节点索引</span>
+    largest <span class="token operator">=</span> i
+    l <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>i <span class="token operator">+</span> <span class="token number">1</span>
+    r <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>i <span class="token operator">+</span> <span class="token number">2</span>
+    <span class="token keyword">if</span> l <span class="token operator">&lt;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> l
+    <span class="token keyword">if</span> r <span class="token operator">&lt;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> r
+    <span class="token keyword">if</span> largest <span class="token operator">!=</span> i<span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> largest<span class="token punctuation">)</span>
+<span class="token comment"># 编写5组测试数据并进行测试                      #(自己写的)</span>
+test_data <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span>
+<span class="token keyword">for</span> data <span class="token keyword">in</span> test_data<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>heap_sort<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到, 在这个样例中, 50行代码, 我只写了四行注释, 其他代码和注释还有测试样例都是一直按 <code>Tab</code>键生成的, 不要太爽</p>
+<h2 id="写注释"><a href="#写注释" class="headerlink" title="写注释"></a>写注释</h2><p>在行数上面一行写下 <code>/**</code>, copilot可以自动为你写下注释</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 使用heap sort对数组排序</span>
+<span class="token comment"># 1. 将数组转换为最大堆</span>
+<span class="token comment"># 2. 将最大堆的根节点与最后一个节点交换</span>
+<span class="token comment"># 3. 将剩余的节点重新构造为最大堆</span>
+<span class="token comment"># 4. 重复2,3步骤直到剩余节点数为1</span>
+
+   <span class="token operator">/</span><span class="token operator">**</span>
+    <span class="token operator">*</span> @param <span class="token punctuation">&#123;</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span> nums
+    <span class="token operator">*</span> @<span class="token keyword">return</span> <span class="token punctuation">&#123;</span>number<span class="token punctuation">&#125;</span>
+    <span class="token operator">*</span><span class="token operator">/</span>
+
+<span class="token keyword">def</span> <span class="token function">heap_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token comment"># 将数组转换为最大堆</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">//</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+    <span class="token comment"># 将最大堆的根节点与最后一个节点交换</span>
+    <span class="token comment"># 将剩余的节点重新构造为最大堆</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> arr
+
+ <span class="token operator">/</span><span class="token operator">**</span>
+    <span class="token operator">*</span> @param <span class="token punctuation">&#123;</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">&#125;</span> arr
+    <span class="token operator">*</span> @param <span class="token punctuation">&#123;</span>number<span class="token punctuation">&#125;</span> n
+    <span class="token operator">*</span> @param <span class="token punctuation">&#123;</span>number<span class="token punctuation">&#125;</span> i
+    <span class="token operator">*</span> @<span class="token keyword">return</span> <span class="token punctuation">&#123;</span>number<span class="token punctuation">&#125;</span>
+    <span class="token operator">*</span><span class="token operator">/</span>
+  
+<span class="token keyword">def</span> <span class="token function">heapify</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 将数组转换为最大堆</span>
+    <span class="token comment"># n: 数组长度</span>
+    <span class="token comment"># i: 当前节点索引</span>
+    largest <span class="token operator">=</span> i
+    l <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>i <span class="token operator">+</span> <span class="token number">1</span>
+    r <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>i <span class="token operator">+</span> <span class="token number">2</span>
+    <span class="token keyword">if</span> l <span class="token operator">&lt;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>l<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> l
+    <span class="token keyword">if</span> r <span class="token operator">&lt;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>r<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> r
+    <span class="token keyword">if</span> largest <span class="token operator">!=</span> i<span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> largest<span class="token punctuation">)</span>
+<span class="token comment"># 编写5组测试数据并进行测试</span>
+test_data <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">]</span>
+<span class="token punctuation">]</span>
+<span class="token keyword">for</span> data <span class="token keyword">in</span> test_data<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>heap_sort<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>lol 但是python的注释语法貌似不是 <code>/**</code></p>
+<p><strong>Hope you have fun with copilot!</strong></p>
+
       
     </div>
 
@@ -885,10 +1242,16 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-01-29 20:30:20 / 修改时间：20:56:00" itemprop="dateCreated datePublished" datetime="2023-01-29T20:30:20+08:00">2023-01-29</time>
+              <time title="创建时间：2023-01-29 20:30:20" itemprop="dateCreated datePublished" datetime="2023-01-29T20:30:20+08:00">2023-01-29</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-12 11:51:25" itemprop="dateModified" datetime="2024-02-12T11:51:25+08:00">2024-02-12</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -924,15 +1287,28 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
     <div class="post-body" itemprop="articleBody">
 
       
-          google搜索技巧
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/29/google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/#more" rel="contents" style="border-radius: 10px;">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p> 用了这么多年搜索引擎了, 现在才发现有这么多高级搜索技巧可以让我们搜到自己心中所想</p>
+<h2 id="精确搜索-双引号"><a href="#精确搜索-双引号" class="headerlink" title="精确搜索:双引号"></a>精确搜索:双引号</h2><p>完全的匹配你所要的词</p>
+<img data-src="/2023/01/29/google搜索技巧/1.png" style="zoom:70%;">
+
+<h2 id="站内搜索-site"><a href="#站内搜索-site" class="headerlink" title="站内搜索:site"></a>站内搜索:site</h2><p><code>site:后面加上你要搜索的网站地址</code>, 表示在这个网站站内搜索</p>
+<p>比如 <code>site:stackoverflow.com</code>就是在StackOverflow里搜索(但是感觉作用不大, 因为StackOverflow网站里本来就可以搜索lol)</p>
+<p>比如搜索 <code>python哈哈哈 site:stackoverflow.com</code></p>
+<h2 id="筛选语言-时间"><a href="#筛选语言-时间" class="headerlink" title="筛选语言\时间"></a>筛选语言\时间</h2><p>点击Tools, 即可筛选</p>
+<img data-src="/2023/01/29/google搜索技巧/2.PNG" style="zoom:70%;">
+
+<p>ps: 今天是Bubble Tea Day, Google的界面好好看</p>
+<h2 id="通配符搜索"><a href="#通配符搜索" class="headerlink" title="通配符搜索 *"></a>通配符搜索 *</h2><p>这里的用法就很像正则表达式了</p>
+<p>比如我想搜一句诗歌, 春眠不觉晓, “不觉”俩字忘了(这是可能的吗lol)</p>
+<p>这时我就可以搜索 <code>春眠**晓</code></p>
+<h2 id="排除关键字"><a href="#排除关键字" class="headerlink" title="排除关键字 -"></a>排除关键字 -</h2><p>假设你的搜索内容是 &#x3D;&gt; <strong>how to write components in React -class</strong>（如何编写React组件 -class），返回的搜索结果会不包含“class”</p>
+<h2 id="文档搜索-filetype"><a href="#文档搜索-filetype" class="headerlink" title="文档搜索 filetype"></a>文档搜索 filetype</h2><p>返回你搜索的文档的相应格式</p>
+<p>比如我想搜索三国演义这本书的pdf(如果有的话), 搜索 <code>三国演义 filetype:pdf</code>, 用这个命令搜索一些资料非常方便</p>
+<h2 id="搜索特定大小的图片-imagesize"><a href="#搜索特定大小的图片-imagesize" class="headerlink" title="搜索特定大小的图片 imagesize"></a>搜索特定大小的图片 imagesize</h2><p>尺寸仅以 <strong>pixels</strong> 为单位 – 例如：<code>imagesize:500x500</code>的搜索结果是尺寸为 500px x 500px的图片。 所以如果搜索查询是 &#x3D;&gt; “cute dog images imagesize:500x600”（可爱小狗图片 imagesize：500*600）的搜索结果是尺寸为 <code>500px x 600px</code>的可爱小狗的图片</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Google高级搜索和命令行有点相似, 不过google是内容在前, 然后空格, 命令在后. Anyway, 这很容易就能掌握</p>
+<hr>
+<p>PS: 有些人没有办法访问Google, 但是上述的命令对于baidu同样适用哦. 搜索愉快!</p>
+
       
     </div>
 
@@ -1077,7 +1453,7 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-01-26 11:43:00" itemprop="dateModified" datetime="2023-01-26T11:43:00+08:00">2023-01-26</time>
+                <time title="修改时间：2024-02-12 11:51:41" itemprop="dateModified" datetime="2024-02-12T11:51:41+08:00">2024-02-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1114,15 +1490,215 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
     <div class="post-body" itemprop="articleBody">
 
       
-          Welcome to my blog, enter password to read.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/24/next%E4%B8%BB%E9%A2%98%E6%BA%90%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E/#more" rel="contents" style="border-radius: 10px;">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p><strong>现在的说明并不全面，本文将在接触到更详细的知识之后随时更新</strong></p>
+<p>主题文件夹保存在 <code>BLOG/themes/next</code>里</p>
+<ul>
+<li><p><code>layout</code>文件夹里保存了博客的布局</p>
+<ul>
+<li><p><code>_custom</code>里保存了博客的通用布局，主要有鼠标点击特效、禁止复制粘贴、节日弹窗、动态标题等代码</p>
+</li>
+<li><p><code>_macro</code>是博客宏观布局</p>
+<ul>
+<li><code>post.swig</code>应该是对博文的排布</li>
+<li><code>sidebar.swig</code>是对侧边栏的布局，我自己在这里加了”欢迎来客, 显示地理位置”的功能和查看”访客地图”的功能</li>
+</ul>
+</li>
+<li><p><code>_partials</code>是局部布局</p>
+<ul>
+<li><code>head</code>文件夹是左上角”一叶小屋”标题的显示</li>
+<li><code>header</code>掌管菜单</li>
+<li><code>post</code>掌管博文的版权、关注、脚注、打赏等功能的布局</li>
+<li><code>search</code>是本地搜索功能</li>
+<li><code>sidebar</code>是侧边栏</li>
+<li><code>footer.swig</code>是博客的最底部的内容, 比如有备案信息、版权、作者、访客、建站时间等信息</li>
+</ul>
+</li>
+<li><p>_<code>scipts</code></p>
+</li>
+<li><p><code>_third-party</code>第三方的一些插件</p>
+</li>
+<li><p><code>_layout.swig</code>这个掌管了整体的布局，很重要</p>
+</li>
+</ul>
+</li>
+<li><p><code>sourcce</code></p>
+<ul>
+<li><code>js</code> 网站自定义功能要用到的js代码主要保存在这<ul>
+<li><code>cursor/fireworks.js</code>鼠标点击产生烟花效果</li>
+<li><code>my-own-fun-code</code>里面有禁止鼠标右键，腾讯地图插件两个文件</li>
+<li><code>special-day</code>特定日子弹窗提醒的代码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/20/%E6%88%91%E7%9A%84%E7%96%AB%E6%83%85%E8%AE%B0%E5%BF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="文文文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶小屋">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/01/20/%E6%88%91%E7%9A%84%E7%96%AB%E6%83%85%E8%AE%B0%E5%BF%86/" class="post-title-link" itemprop="url">我的疫情记忆</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-01-20 20:15:56" itemprop="dateCreated datePublished" datetime="2023-01-20T20:15:56+08:00">2023-01-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-12 11:50:27" itemprop="dateModified" datetime="2024-02-12T11:50:27+08:00">2024-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/covid-19/" itemprop="url" rel="index"><span itemprop="name">covid 19</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>8 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="李文亮医生"><a href="#李文亮医生" class="headerlink" title="李文亮医生"></a>李文亮医生</h1><p>谈到这三年的疫情，第一个关键词应该是”李文亮医生”。</p>
+<p>2019年12月30日下午，李文亮在同学群里发信息：“华南水果海鲜市场确诊了7例SARS。在武汉市中心医院后湖院区急诊科隔离。”一个小时后，他又在群里补充，“最新消息是冠状病毒感染确定了，正在进行病毒分型”。</p>
+<img data-src="/2023/01/20/我的疫情记忆/1.png" style="zoom:80%;">
+
+<p>消息发出后，1月3日，武汉警方找到李文亮，要求他签下训诫书——“依法对你在互联网上发表不属实的言论的违法行为提出警示和训诫……”武汉警方事后称，当时进行了教育、批评，未给予警告、罚款、拘留的处罚。</p>
+<p>后来李文亮医生被感染，医治无效而辞世, 引发大规模的人群悼念.</p>
+<img data-src="/2023/01/20/我的疫情记忆/2.png" style="zoom:80%;">
+
+<p>很遗憾, 我当时正处于高三的重压与疫情的心理折磨, 有关李文亮医生, 都是在他去世以后知道的.</p>
+<p>我怀着一种怅然若失地感觉翻看了他的微博，他喜欢庆余年，转发各种抽奖微博，喜欢吃德克士炸鸡腿、鸡蛋灌饼、火锅、日料。有一天他下班去逛超市，看见158一斤的车厘子，他发微博半开玩笑地说“吃不起”。他的最后一条动态发布于2020年2月1日，说自己“尘埃落定，终于确诊”。但此后三年，无数的网友来到他的微博，留下细碎的句子，或是自己开心的不开心的经历、或是对李文亮医生的怀念，很快被淹没在留言中。</p>
+<p>我想起那个时候的日子，在晚上，我站在阳台上，世界安静极了，没有一辆车的呼啸，连犬吠鸡鸣也听不见，更无人声，惟一排排矗立的路灯若无其事地散发暗黄色光。我那时想，这样的情形此生怕是仅此一次了。那时候，疫情于我而言，是远方飘渺的鬼厉，我沉浸与当时的安宁与平静，没有想过在1000公里外的武汉，正在经历着不可言说的苦难与绝望。</p>
+<img data-src="/2023/01/20/我的疫情记忆/3.png" style="zoom:80%;">
+
+<p>直到今天, 无数的人, 依然在这座”哭墙”上留下自己生命的点滴</p>
+<h1 id="全国封城"><a href="#全国封城" class="headerlink" title="全国封城"></a>全国封城</h1><p>2020年2月到4月，全国各个城市都经历过一次封城</p>
+<img data-src="/2023/01/20/我的疫情记忆/4.png" style="zoom:80%;">
+
+<p><a target="_blank" rel="noopener" href="http://www.bjnews.com.cn/feature/2020/02/08/686501.html">重庆所有小区实行封闭式管理 每户定期派1人外出采购</a></p>
+<p>那个时候，在重庆，每户每天有一个人可以出去采购，没有限制时间。但是这项规定很快就被取消了，并没有强制限制大家的自由。出于对新病毒的恐惧，大部分人都很配合地呆在家里。物资也没有短缺，药也可以买到。</p>
+<p>这次封城，与后来的各种“非必要..”政策相比，简直是小巫见大巫</p>
+<h1 id="高考延期"><a href="#高考延期" class="headerlink" title="高考延期"></a>高考延期</h1><p>我记得那天在上网课，上午十点，有同学在微信群里转发了高考延期的通知，引发了大家极为热烈的讨论，微信群从未这样热火朝天，大家也都无心上课了。</p>
+<img data-src="/2023/01/20/我的疫情记忆/5.png" style="zoom:80%;">
+
+<h1 id="返校-高考"><a href="#返校-高考" class="headerlink" title="返校  高考"></a>返校  高考</h1><p>2020年4月20日，重庆市高三学生返校线下上课。没有人想到，这寒假一放就是4个月。我坐高铁到了沙坪坝，那个时候还没有核酸阴性证明，没有行程码健康码，一切看起来畅通无阻。我们在学校门口排好队，保安提着消毒液给我们的行李消毒。在学校，除了睡觉的时间都是带着口罩的，食堂的座位上贴上了每个人的名字，固定分批就餐，班主任每日给我们三次测温。</p>
+<p>大概坚持了一个月，后来的管控就渐渐放松了，班里也没人戴口罩了。除了上自习的时候，一半的人得去楼上空教室，其它似乎与正常的高三生活无异了</p>
+<p>虽然延期了一个月，但是很快高考的时间还是到了.全年级的老师都穿上红色的衣服在楼下给我们打气. 高考那两天就像任何一次模拟考一样稀松平常. 除了在英语考试结束的前十分钟, 我写完最后一个单词, 突然意识到高考, 三年高中终于要结束了. 内心充满着激动与高兴.</p>
+<h1 id="战时状态"><a href="#战时状态" class="headerlink" title="战时状态"></a>战时状态</h1><p>在第一次封城后到冬天之间的日子，大部分城市都过着疫情前一样正常的生活。中国甚至有好一段时间，全国都没有一例新增</p>
+<p>在我去北京上大学的时候，也只需要出示7天以内的核酸阴性证明</p>
+<p>在大学，开学的前两周被封在学校，但是大一上的剩下的日子都相对自由</p>
+<p>很快到了冬天，那是北京70年以来最冷的一个冬天，被我一个从来没有感受过零下气温的初来乍到的南方人赶上，在上学放学的路上，我每天都和严寒做着心理上和生理上的顽强对抗，最终被冻得一败涂地</p>
+<p>不仅是我的冬天，那个冬天对很多城市也异常”寒冷”。2020年12月8日，因为成都两天新增六确诊，四川首先发出<a target="_blank" rel="noopener" href="http://news.hnr.cn/202012/08/165251.html">四川省委书记彭清华：迅速进入战时状态，把影响控制在最小范围</a>的新闻。”战时状态”在疫情期间第一次被提出。</p>
+<p>多地紧随其后，时髦地使用”战时状态”</p>
+<ul>
+<li>12月10日，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%BB%91%E9%BE%99%E6%B1%9F%E7%9C%81">黑龙江省</a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%89%A1%E4%B8%B9%E6%B1%9F%E5%B8%82">牡丹江市</a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%B8%9C%E5%AE%81%E5%B8%82">东宁市</a>、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%BB%A5%E8%8A%AC%E6%B2%B3%E5%B8%82">绥芬河市</a>各新增1例本土确诊病例。随后，东宁市启动《新冠肺炎疫情控制应急预案》，东宁市各高速公路收费站实施交通管制措施，非必要不可外出。受此影响，哈尔滨市、绥化市、伊春市等多地将幼儿园、中小学寒假时间提前至2021年元旦前后。12月12日，东宁市按照市疫情防控预案进入<strong>战时状态</strong>，提升管控措施级别</li>
+<li>12月20日，大连出现疫情复发现象，进入疫情防控<strong>战时状态</strong></li>
+<li>12月26日，<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%8C%97%E4%BA%AC%E5%B8%82">北京市</a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%A1%BA%E4%B9%89%E5%8C%BA">顺义区</a>因近日出现的疫情复发现象进入<strong>战时状态</strong></li>
+<li>1月3日，因2日河北省<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%9F%B3%E5%AE%B6%E5%BA%84%E5%B8%82">石家庄市</a><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%97%81%E5%9F%8E%E5%8C%BA">藁城区</a>报告新增本土确诊病例, 石家庄市进入<strong>战时状态</strong></li>
+<li>1月5日，全河北省进入<strong>战时状态</strong></li>
+<li>1月12日，正在北京开会的黑龙江省委书记<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%BC%B5%E6%85%B6%E5%81%89">张庆伟</a>专程请假返黑，连夜主持召开会议，宣布全省进入紧急状态</li>
+</ul>
+<p>全面的核酸检测也是在这个时候被河北省提出并纳用的</p>
+<ul>
+<li>1月6日，石家庄市和邢台市全面开展<strong>全员核酸检测</strong></li>
+<li><strong>1月13日，中国大陆新增138宗确诊病例，新增1宗死亡病例。这是自2020年5月17日以来，时隔242天，中国大陆再次出现死亡病例</strong></li>
+</ul>
+<h1 id="疫苗接种"><a href="#疫苗接种" class="headerlink" title="疫苗接种"></a>疫苗接种</h1><p>进入2021年3月，中国大陆各省开始推动大规模疫苗接种。自2021年3月23日起，国家卫健委宣布将每日公布<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/2019%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E7%97%85%E7%96%AB%E8%8B%97">2019冠状病毒病疫苗</a>的接种数量。同时，随着国内第二轮疫情的基本平息，中国大陆政府的防疫中心又返回到外防输入、内防反弹的路线上。</p>
+<p>中国大陆多地纷纷悬挂标语吸引民众接种疫苗，主要标语包括“我们一起打疫苗，一起苗苗苗苗苗”、“建立全民免疫，需要你一‘臂’之力”、“2021年头等大事，就是接种新冠疫苗”、“防疫道路千万条，接种疫苗第一条”、“朋友一生一起走，先打疫苗再聚首”、“每个人的身上都有苗苗，让我为你打苗苗”等。《<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%96%B0%E4%BA%AC%E6%8A%A5">新京报</a>》评论认为，这些标语的文本体现出的是一种平等尊重、欢迎公众参与的价值观，没有居高临下和刻板说教，相信当地社区的居民相约去打疫苗时，提到这条标语也会会心一笑</p>
+<p>但是就我个人的经历而言, 我记得在21年暑假的某一段时间, 重庆市政府推出了”二码联查”政策, 也就是出入公共场合要同时出示健康码和疫苗接种码, 甚至出入小区也会有保安阻拦查验. 我仍然记得社区的书记发布的通告”不接种疫苗的老年人将被取消养老金的发放”, 我也记得各级初等学校发布的通知”开学时凭借学生本人甚至全家的疫苗接种证明返校, 未完成者, 不得返校”. 我想在当时, 这一幕幕相似的经历, 应当在全国各地都在上演, 于是我国疫苗覆盖率突飞猛进:</p>
+<img data-src="/2023/01/20/我的疫情记忆/6.png" style="zoom:80%;">
+
+<p>从流行病防控学的观点看，接种疫苗是相当有必要的(当然在2023年的今天，大部分专家和民众都已经意识到，由于新冠病毒极强的变异率，我们的疫苗研发的速度要远远落后于病毒变异的速度)，但是对推行一项措施所采用的无所不用其极的手段，却让我异常反感。我犹记得新冠疫苗刚上市时官方发布的一页长长的禁忌，但是到后期，无论你有什么慢性病，医生(甚至社区工作人员)都会大言不惭地说没有禁忌。人民群体是不存在记忆的，但是个体存在。出于对这些的厌恶和抵触、以及本身对疫苗保护效力的怀疑，我始终没有接种疫苗。一年半以后我不幸阳了，和无数接种过疫苗的人一样。最终我还是产生抗体了，最新版本的</p>
+<img data-src="/2023/01/20/我的疫情记忆/7.jpg" style="zoom:110%;">
+
+<h1 id="动态清零"><a href="#动态清零" class="headerlink" title="动态清零"></a>动态清零</h1><p>12月1日，国家卫生健康委主任马晓伟接受新华社记者采访时表示，中国大陆疫情防控已进入第三阶段。其中，第一阶段是<strong>突发疫情应急围堵</strong>阶段；第二阶段是<strong>常态化防控探索</strong>阶段；第三阶段是<strong>全链条精准防控的“动态清零”阶段</strong></p>
+<p>疫苗的接种率越来越高，从最早的8%一直到80%，90%，我们没有迎来专家说的群体免疫。这篇土地仍然时不时因为疫情而被封锁。</p>
+<p>然后到了2022年，疫情最艰难的一年，对中国所有人。</p>
+<p>3月15日，国务院联防联控机制召开发布会，会上国家卫生健康委新闻发言人、宣传司副司长米锋介绍中国大陆疫情形势，称自3月以来，中国大陆疫情发生频次明显增加，感染人数快速增长，波及范围不断扩大，已波及28个省份，形容疫情防控难度加大，防控形势严峻复杂。国家卫生健康委疾控局副局长、一级巡视员<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E9%9B%B7%E6%AD%A3%E9%BE%99&action=edit&redlink=1">雷正龙</a>对本次大规模暴发进行了详细分析。他表示，2022年3月以来，境外输入疫情引发的本土疫情发生频次明显增加，波及范围不断扩大。3月1日至14日，本土疫情累计报告感染者已经超过15000例，吉林、山东、上海、广东、河北等地疫情还在发展中，部分地区的疫情上升速度较快，社会面传播扩散和外溢风险比较高，各地方正加快风险人员筛查、转运、隔离等工作。本次大规模暴发呈现出点多、面广、频发的特点</p>
+<p><strong>3月18日，吉林通报有2起COVID-19本土死亡病例，是自2021年1月以来中国大陆再度出现本土死亡病例</strong></p>
+<p>然后到了四月, “4月7日0-24时，中国大陆单日新增2019冠状病毒病感染病例连续第三天破两万，并再次突破<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/2019%E5%86%A0%E7%8A%B6%E7%97%85%E6%AF%92%E7%97%85%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E7%96%AB%E6%83%85">2019冠状病毒病中国大陆疫情</a>的最高日增感染病例记录，单日新增感染者达24224例，其中本土感染病例达24101例。感染病例多数集中在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E4%B8%8A%E6%B5%B7%E5%B8%82">上海市</a>，当日0-24时该市新增感染者达21222例”</p>
+<p>之后的记忆越来越清晰, 也越来越和我有关</p>
+<p>根据<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E9%87%8E%E6%9D%91%E8%AF%81%E5%88%B8">野村证券</a>的经济学家估计，截至4月11日，中国有45座城市的<strong>大约3.73亿人处于全面或部分封控状态</strong>，这些城市的人口占中国总人口的26%，经济产出占中国总产出的40%。</p>
+<p>后来上海疫情爆发，有人记录下上海四月的各种纪实对话发布到网上，是为“四月之声”。引起极大反响，迅速遭到全面禁封。越来越多的人开始怀疑和反思，继续严格的封控是否真的可持续。5月5日，中共中央政治局常务委员会召开会议，习近平表示要坚持动态清零，坚决同一切歪曲、怀疑、否定中国防疫方针政策的言行作斗争。</p>
+<p>然后完全是我的记忆了。</p>
+<p>北京的疫情从四月底开始，每况愈下，流言纷飞，</p>
+<hr>
+<p>动态清零的部分搁置了好久, 每每回想起那一部分记忆, 依然觉得难受而荒谬. 我无权代替所有遭受苦难的人记录这一段生活, 我只能诉说一个细微个体的浮沉</p>
+<p>我被疫情深深影响是从四月份开始的, 最初传闻北京某中学确诊70例阳性, 然而无官方报道, 我也没有重视. 后来北京疫情每况愈下, 学校在劳动节开始封校. 大家人心惶惶, 每日下午锁定北京卫健委的新闻发布会. 尽管采取了极其严厉的封锁, 北京在五月一整月都雷打不动每日新增50+. 当时学校一旦有疫情, 整个学校直接封寝, 依稀记得全市985高校几乎无一幸免(为什么没提211及其以下呢, 因为当时北京市的防疫政策是全国最严的, 非985北京高校根本不准线下开学)</p>
+<p>我还记得一个一公里见方的学校内部被一道一道的铁皮与护栏划分成一块一块, 仿佛这些就能把病毒颗粒与学校内部隔绝.</p>
+<img data-src="/2023/01/20/我的疫情记忆/8.jpg" style="zoom:80%;">
+
+<p>我的心也被这铁皮划分成一块一块, 我不觉得我们在做任何伟大的事, 我只为2022年发生的事情而感到悲哀.</p>
+<p>我看到公众号上的一段话</p>
+<pre class="line-numbers language-none"><code class="language-none">我是从去年一二月就放寒假回家的大学生，因为疫情，我已经放了五个月的假了，封在家里的时光确实让我很受折磨。
+旅游对我来说是一件很重要的事，去外面看看云朵飘，看看水在我面前流过，是我能想象到最美好的事。虽然说不应该给国家添麻烦，但我也真的不希望在这个年纪禁锢自己<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>我已经丢失了太多</p>
+<p>后来北京市让绝大部分高校学生返乡, 然后我被隔离了八天, 不表</p>
+<p>(好难继续写下去, but i’ll try)</p>
+<p>就这样吧 不想写了</p>
+
       
     </div>
 
@@ -1223,105 +1799,10 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="文文文">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一叶小屋">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/" class="post-title-link" itemprop="url">中国国家治理的制度逻辑摘抄</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-01-07 20:43:00" itemprop="dateCreated datePublished" datetime="2023-01-07T20:43:00+08:00">2023-01-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-01-24 10:35:35" itemprop="dateModified" datetime="2023-01-24T10:35:35+08:00">2023-01-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/" itemprop="url" rel="index"><span itemprop="name">中国国家治理的制度逻辑摘抄</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>2 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          一些摘抄
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/01/07/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E6%B2%BB%E7%90%86%E7%9A%84%E5%88%B6%E5%BA%A6%E9%80%BB%E8%BE%91%E6%91%98%E6%8A%84/#more" rel="contents" style="border-radius: 10px;">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1403,20 +1884,20 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1452,12 +1933,12 @@ openai<span class="token punctuation">.</span>Image<span class="token punctuatio
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">41k</span>
+    <span title="站点总字数">45k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:08</span>
+    <span title="站点阅读时长">1:16</span>
 </div>
 
 
