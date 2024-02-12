@@ -10,8 +10,8 @@ description: "hh"
 <p><button onclick="window.location.href= 'Memory-Game/'" type="button" id="add">记忆小游戏</button></p>
 <p><button onclick="window.location.href= 'pacman-master/'" type="button" id="add">吃豆人</button></p>
 <p><button onclick="window.location.href= '2048-master/'" type="button" id="add">玩2048</button></p>
-<p><button onclick="window.location.href= 'https://wenjiaran.github.io/RanGPT/'" type="button" id="add">RanGPT</button></p>
-<p><button onclick="window.location.href= 'https://wenjiaran.github.io/xing-cheng-ka/'" type="button" id="add">行程卡</button></p>
+
+<p><button onclick="window.location.href= 'https://buaa.lol/xing-cheng-ka/'" type="button" id="add">行程卡</button></p>
 
 <style>
     button
@@ -24,7 +24,7 @@ description: "hh"
         letter-spacing: 0.05em;
         cursor: pointer;
         border-radius: 10px; */
-      
+    
         display: block;
         width: 30%;
         padding: 10px 15px;

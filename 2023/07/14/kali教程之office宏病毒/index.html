@@ -21,25 +21,25 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"wenjiaran.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"buaa.lol","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="kali好久之前就已经安装好了, 当时不知道具体用法. 今天偶然发现kali如此有趣, 于是开一个kali系列的教程. VBA是基于Visual Basic发展而来的，与Visual Basic具有相似的语言结构。使用VBA可以完成很多事情，基于Excel、Word的VBA小程序不计其数。宏病毒在Word中引入宏之后出现的。目前Office 是较为流行的编辑软件，并且跨越了多种操作系统，宏病毒利用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="kali教程之office宏病毒">
-<meta property="og:url" content="http://wenjiaran.github.io/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/index.html">
+<meta property="og:url" content="http://buaa.lol/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/index.html">
 <meta property="og:site_name" content="一叶小屋">
 <meta property="og:description" content="kali好久之前就已经安装好了, 当时不知道具体用法. 今天偶然发现kali如此有趣, 于是开一个kali系列的教程. VBA是基于Visual Basic发展而来的，与Visual Basic具有相似的语言结构。使用VBA可以完成很多事情，基于Excel、Word的VBA小程序不计其数。宏病毒在Word中引入宏之后出现的。目前Office 是较为流行的编辑软件，并且跨越了多种操作系统，宏病毒利用">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://wenjiaran.github.io/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/1.png">
+<meta property="og:image" content="http://buaa.lol/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/1.png">
 <meta property="article:published_time" content="2023-07-14T12:38:40.945Z">
 <meta property="article:modified_time" content="2023-07-14T13:17:27.378Z">
 <meta property="article:author" content="文文文">
 <meta property="article:tag" content="kali">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://wenjiaran.github.io/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/1.png">
+<meta name="twitter:image" content="http://buaa.lol/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/1.png">
 
-<link rel="canonical" href="http://wenjiaran.github.io/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/">
+<link rel="canonical" href="http://buaa.lol/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/">
 
 
 <script id="page-configurations">
@@ -211,7 +211,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wenjiaran.github.io/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/">
+    <link itemprop="mainEntityOfPage" href="http://buaa.lol/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -363,7 +363,7 @@ exploit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://wenjiaran.github.io/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/" title="kali教程之office宏病毒">http://wenjiaran.github.io/2023/07/14/kali教程之office宏病毒/</a>
+    <a href="http://buaa.lol/2023/07/14/kali%E6%95%99%E7%A8%8B%E4%B9%8Boffice%E5%AE%8F%E7%97%85%E6%AF%92/" title="kali教程之office宏病毒">http://buaa.lol/2023/07/14/kali教程之office宏病毒/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
